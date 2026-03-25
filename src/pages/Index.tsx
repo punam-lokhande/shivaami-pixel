@@ -24,70 +24,103 @@ const heroPhone = phones.find((p) => p.id === "pixel-10a")!;
 const Index = () => (
   <div className="min-h-screen">
     {/* Hero — Pixel 10a */}
-    <section className="relative overflow-hidden">
+    <section className="relative overflow-hidden min-h-[90vh] flex items-center">
+      {/* Animated gradient orbs */}
       <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute -top-40 -right-40 h-[500px] w-[500px] rounded-full bg-google-blue/8 blur-3xl animate-float" />
-        <div className="absolute top-20 -left-20 h-[400px] w-[400px] rounded-full bg-google-green/6 blur-3xl animate-float" style={{ animationDelay: "1s" }} />
-        <div className="absolute bottom-0 right-1/3 h-[300px] w-[300px] rounded-full bg-google-yellow/6 blur-3xl animate-float" style={{ animationDelay: "2s" }} />
+        <div className="absolute -top-32 -right-32 h-[600px] w-[600px] rounded-full bg-google-blue/10 blur-[100px] animate-float" />
+        <div className="absolute top-1/2 -left-32 h-[500px] w-[500px] rounded-full bg-google-green/8 blur-[100px] animate-float" style={{ animationDelay: "1s" }} />
+        <div className="absolute -bottom-20 right-1/4 h-[400px] w-[400px] rounded-full bg-google-yellow/8 blur-[100px] animate-float" style={{ animationDelay: "2s" }} />
+        <div className="absolute top-1/4 left-1/2 h-[300px] w-[300px] rounded-full bg-google-red/5 blur-[80px] animate-float" style={{ animationDelay: "3s" }} />
       </div>
 
-      <div className="container relative py-20 md:py-32 lg:py-40">
-        <div className="grid items-center gap-12 lg:grid-cols-2">
-          <motion.div initial={{ opacity: 0, x: -40 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.8, ease: "easeOut" }}>
-            <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }} className="inline-flex items-center gap-2 rounded-full border border-border bg-secondary/60 px-4 py-1.5 text-xs font-medium text-muted-foreground backdrop-blur-sm">
-              <Sparkles className="h-3.5 w-3.5 text-google-yellow" />
-              New Launch — Google Pixel 10a
+      {/* Subtle grid pattern */}
+      <div className="absolute inset-0 opacity-[0.03]" style={{ backgroundImage: "radial-gradient(hsl(var(--foreground)) 1px, transparent 1px)", backgroundSize: "24px 24px" }} />
+
+      <div className="container relative py-20 md:py-28 lg:py-36">
+        <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-20">
+          {/* Left — Copy */}
+          <motion.div initial={{ opacity: 0, x: -50 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}>
+            <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.15 }} className="inline-flex items-center gap-2 rounded-full border border-google-blue/20 bg-google-blue/5 px-4 py-1.5 text-xs font-semibold text-google-blue backdrop-blur-sm">
+              <span className="relative flex h-2 w-2">
+                <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-google-blue opacity-75" />
+                <span className="relative inline-flex h-2 w-2 rounded-full bg-google-blue" />
+              </span>
+              Just Launched
             </motion.div>
 
-            <h1 className="mt-6 text-4xl font-bold leading-[1.1] tracking-tight md:text-5xl lg:text-6xl text-foreground">
+            <h1 className="mt-6 text-5xl font-extrabold leading-[1.05] tracking-tight md:text-6xl lg:text-7xl text-foreground">
               Meet the New<br />
-              <span className="text-gradient">Google Pixel 10a</span>
+              <span className="text-gradient bg-clip-text">Google Pixel 10a</span>
             </h1>
-            <p className="mt-5 max-w-lg text-lg text-muted-foreground leading-relaxed">
-              Everything you need, powered by Google AI. Stunning camera, 30+ hour battery, durable design — starting at just <strong className="text-foreground">{formatPrice(heroPhone.price)}</strong>.
-            </p>
 
-            <div className="mt-8 flex flex-wrap gap-4">
+            <motion.p initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.3 }} className="mt-6 max-w-lg text-lg text-muted-foreground leading-relaxed md:text-xl">
+              Everything you need, powered by Google AI. Stunning camera, all-day battery — starting at just{" "}
+              <span className="inline-flex items-baseline gap-1 font-bold text-foreground text-xl">{formatPrice(heroPhone.price)}</span>
+            </motion.p>
+
+            {/* Stats row */}
+            <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.4 }} className="mt-8 grid grid-cols-4 gap-3">
               {[
-                { value: "50MP", label: "AI Camera" },
-                { value: "30+ hrs", label: "Battery" },
-                { value: "Tensor G5", label: "Chip" },
-                { value: "7 Years", label: "Updates" },
+                { value: "50MP", label: "AI Camera", color: "border-google-blue/20 bg-google-blue/5" },
+                { value: "30+hrs", label: "Battery", color: "border-google-green/20 bg-google-green/5" },
+                { value: "Tensor G5", label: "Chip", color: "border-google-red/20 bg-google-red/5" },
+                { value: "7 Years", label: "Updates", color: "border-google-yellow/20 bg-google-yellow/5" },
               ].map((s, i) => (
-                <motion.div key={s.label} initial={{ opacity: 0, y: 15 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.4 + i * 0.1 }}>
-                  <p className="text-xl font-bold text-foreground md:text-2xl">{s.value}</p>
-                  <p className="text-xs text-muted-foreground">{s.label}</p>
+                <motion.div key={s.label} initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }} transition={{ delay: 0.5 + i * 0.08 }} className={`rounded-xl border ${s.color} p-3 text-center backdrop-blur-sm`}>
+                  <p className="text-lg font-bold text-foreground md:text-xl leading-tight">{s.value}</p>
+                  <p className="text-[10px] uppercase tracking-wider text-muted-foreground mt-0.5">{s.label}</p>
                 </motion.div>
               ))}
-            </div>
+            </motion.div>
 
-            <div className="mt-10 flex flex-wrap gap-3">
+            {/* CTAs */}
+            <motion.div initial={{ opacity: 0, y: 15 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.6 }} className="mt-10 flex flex-wrap gap-3">
               <Link to={`/product/${heroPhone.slug}`}>
-                <Button size="lg" className="gradient-cta border-0 text-primary-foreground gap-2 rounded-full px-8 shadow-lg shadow-primary/25 hover:shadow-xl hover:shadow-primary/30 transition-all">
+                <Button size="lg" className="gradient-cta border-0 text-primary-foreground gap-2 rounded-full px-10 py-6 text-base shadow-lg shadow-primary/25 hover:shadow-xl hover:shadow-primary/35 hover:scale-[1.02] transition-all duration-300">
                   Buy Now <ArrowRight className="h-4 w-4" />
                 </Button>
               </Link>
               <Link to={`/product/${heroPhone.slug}`}>
-                <Button size="lg" variant="outline" className="rounded-full px-8">Explore Features</Button>
+                <Button size="lg" variant="outline" className="rounded-full px-10 py-6 text-base hover:bg-secondary transition-all duration-300">
+                  Explore Features
+                </Button>
               </Link>
-            </div>
+            </motion.div>
           </motion.div>
 
-          <motion.div initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }} transition={{ delay: 0.3, duration: 0.8 }} className="relative hidden lg:flex items-center justify-center">
-            <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-google-blue/10 via-transparent to-google-green/10 blur-2xl" />
-            <div className="relative rounded-3xl border border-border/50 bg-card/50 p-8 backdrop-blur-sm shadow-2xl">
-              <img src={heroPhone.image} alt={heroPhone.name} className="h-80 w-auto object-contain animate-float" width={400} height={400} />
-              <div className="absolute -top-3 -right-3 rounded-full bg-google-red px-3 py-1 text-xs font-bold text-primary-foreground shadow-lg">
-                New Launch
-              </div>
-              <div className="mt-4 text-center">
-                <p className="font-semibold text-foreground">{heroPhone.name}</p>
-                <p className="text-sm text-muted-foreground">Starting at {formatPrice(heroPhone.price)}</p>
-              </div>
+          {/* Right — Product showcase */}
+          <motion.div initial={{ opacity: 0, y: 40, scale: 0.95 }} animate={{ opacity: 1, y: 0, scale: 1 }} transition={{ delay: 0.25, duration: 1, ease: [0.22, 1, 0.36, 1] }} className="relative hidden lg:flex items-center justify-center">
+            {/* Glow ring behind phone */}
+            <div className="absolute inset-0 m-auto h-[420px] w-[420px] rounded-full bg-gradient-to-br from-google-blue/15 via-google-green/10 to-google-yellow/10 blur-3xl animate-pulse" style={{ animationDuration: "4s" }} />
+            
+            {/* Glass card */}
+            <div className="relative rounded-[2rem] border border-border/40 bg-gradient-to-b from-card/80 to-card/40 p-10 backdrop-blur-xl shadow-[0_30px_80px_-20px_hsl(var(--google-blue)/0.15)]">
+              {/* Decorative rings */}
+              <div className="absolute -top-8 -left-8 h-16 w-16 rounded-full border border-google-blue/10" />
+              <div className="absolute -bottom-6 -right-6 h-12 w-12 rounded-full border border-google-green/10" />
+              
+              <img src={heroPhone.image} alt={heroPhone.name} className="h-[340px] w-auto object-contain animate-float drop-shadow-2xl" width={400} height={400} />
+              
+              {/* Badge */}
+              <motion.div initial={{ scale: 0, rotate: -12 }} animate={{ scale: 1, rotate: 0 }} transition={{ delay: 0.8, type: "spring", stiffness: 200 }} className="absolute -top-4 -right-4 flex items-center gap-1.5 rounded-full bg-google-red px-4 py-2 text-xs font-bold text-primary-foreground shadow-lg shadow-google-red/30">
+                <Sparkles className="h-3.5 w-3.5" /> New Launch
+              </motion.div>
+
+              {/* Price tag */}
+              <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.9 }} className="mt-6 rounded-2xl bg-secondary/60 backdrop-blur-sm border border-border/50 p-4 text-center">
+                <p className="font-bold text-lg text-foreground">{heroPhone.name}</p>
+                <p className="text-sm text-muted-foreground mt-0.5">Starting at <span className="text-google-blue font-semibold">{formatPrice(heroPhone.price)}</span></p>
+              </motion.div>
             </div>
           </motion.div>
         </div>
       </div>
+
+      {/* Scroll indicator */}
+      <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 1.2 }} className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2">
+        <span className="text-[10px] uppercase tracking-[0.2em] text-muted-foreground">Scroll</span>
+        <div className="h-8 w-[1px] bg-gradient-to-b from-muted-foreground/40 to-transparent animate-pulse" />
+      </motion.div>
     </section>
 
     {/* Brand bar */}
