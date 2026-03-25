@@ -40,8 +40,7 @@ const Index = () => (
           </motion.div>
 
           <motion.h1 initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.1 }} className="mt-6 text-4xl font-extrabold leading-[1.1] tracking-tight md:text-5xl lg:text-6xl text-foreground">
-            The Future of<br />
-            <span className="text-gradient">Work is Here</span>
+            The Future of <span className="text-gradient">Work is Here</span>
           </motion.h1>
 
           <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.25 }} className="mt-5 mx-auto max-w-2xl text-lg text-muted-foreground leading-relaxed md:text-xl">
