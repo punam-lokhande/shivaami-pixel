@@ -1,0 +1,46 @@
+import { Link } from "react-router-dom";
+
+const Footer = () => (
+  <footer className="border-t border-border bg-secondary/50">
+    <div className="container py-12">
+      <div className="grid gap-8 md:grid-cols-4">
+        <div>
+          <h3 className="text-lg font-bold text-foreground">Shivaami</h3>
+          <p className="mt-2 text-sm text-muted-foreground">Your trusted Google Pixel partner. Experience the best of Google, delivered to your doorstep.</p>
+        </div>
+        <div>
+          <h4 className="font-semibold text-foreground">Shop</h4>
+          <div className="mt-3 flex flex-col gap-2">
+            <Link to="/products" className="text-sm text-muted-foreground hover:text-primary transition-colors">All Phones</Link>
+            <Link to="/compare" className="text-sm text-muted-foreground hover:text-primary transition-colors">Compare</Link>
+          </div>
+        </div>
+        <div>
+          <h4 className="font-semibold text-foreground">Support</h4>
+          <div className="mt-3 flex flex-col gap-2">
+            <span className="text-sm text-muted-foreground">FAQ</span>
+            <span className="text-sm text-muted-foreground">Shipping</span>
+            <span className="text-sm text-muted-foreground">Returns</span>
+          </div>
+        </div>
+        <div>
+          <h4 className="font-semibold text-foreground">Contact</h4>
+          <div className="mt-3 flex flex-col gap-2">
+            <span className="text-sm text-muted-foreground">hello@shivaami.com</span>
+            <span className="text-sm text-muted-foreground">+1 (800) PIXEL-10</span>
+            <div className="flex gap-3 mt-2">
+              {["Twitter", "Instagram", "YouTube"].map((s) => (
+                <span key={s} className="text-xs font-medium text-primary cursor-pointer hover:underline">{s}</span>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="mt-8 border-t border-border pt-6 text-center text-xs text-muted-foreground">
+        © 2026 Shivaami. Google Pixel is a trademark of Google LLC.
+      </div>
+    </div>
+  </footer>
+);
+
+export default Footer;
