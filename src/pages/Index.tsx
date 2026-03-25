@@ -287,3 +287,7 @@ const Index = () => (
         </div>
       </motion.div>
     </section>
+  </div>
+);
+
+export default Index;
