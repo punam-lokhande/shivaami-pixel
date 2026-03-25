@@ -1,12 +1,18 @@
 import { Link } from "react-router-dom";
+import shivaamiLogo from "@/assets/shivaami-logo.png";
+import pixelLogo from "@/assets/pixel-logo.svg";
 
 const Footer = () => (
   <footer className="border-t border-border bg-secondary/50">
     <div className="container py-12">
       <div className="grid gap-8 md:grid-cols-4">
         <div>
-          <h3 className="text-lg font-bold text-foreground">Shivaami</h3>
-          <p className="mt-2 text-sm text-muted-foreground">Your trusted Google Pixel partner. Experience the best of Google, delivered to your doorstep.</p>
+          <div className="flex items-center gap-3">
+            <img src={shivaamiLogo} alt="Shivaami" className="h-7 w-auto" />
+            <span className="text-muted-foreground">×</span>
+            <img src={pixelLogo} alt="Google Pixel" className="h-5 w-auto" />
+          </div>
+          <p className="mt-4 text-sm text-muted-foreground">Your trusted Google Pixel partner. Experience the best of Google, delivered to your doorstep.</p>
         </div>
         <div>
           <h4 className="font-semibold text-foreground">Shop</h4>

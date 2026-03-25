@@ -61,7 +61,7 @@
 
 @layer utilities {
   .gradient-hero {
-    background: linear-gradient(135deg, hsl(217 89% 61% / 0.08), hsl(142 71% 45% / 0.05), hsl(43 96% 56% / 0.05));
+    background: linear-gradient(135deg, hsl(217 89% 61% / 0.06), hsl(142 71% 45% / 0.04), hsl(43 96% 56% / 0.04));
   }
   .gradient-cta {
     background: linear-gradient(135deg, hsl(var(--primary)), hsl(217 89% 70%));
@@ -70,10 +70,10 @@
     background: linear-gradient(180deg, hsl(var(--surface)) 0%, hsl(var(--background)) 100%);
   }
   .shadow-soft {
-    box-shadow: 0 2px 20px -4px hsl(220 15% 15% / 0.08);
+    box-shadow: 0 2px 20px -4px hsl(220 15% 15% / 0.06);
   }
   .shadow-hover {
-    box-shadow: 0 8px 30px -8px hsl(220 15% 15% / 0.15);
+    box-shadow: 0 12px 40px -10px hsl(220 15% 15% / 0.12);
   }
   .text-gradient {
     background: linear-gradient(135deg, hsl(var(--google-blue)), hsl(var(--google-green)));
