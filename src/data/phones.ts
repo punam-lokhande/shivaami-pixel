@@ -1,9 +1,9 @@
-import pixel9a from "@/assets/pixel-9a.jpg";
-import pixel10 from "@/assets/pixel-10.jpg";
+import pixel9a from "@/assets/pixel-9a.png";
+import pixel10 from "@/assets/pixel-10.png";
 import pixel10Pro from "@/assets/pixel-10-pro.jpg";
-import pixel10ProFold from "@/assets/pixel-10-pro-fold.jpg";
-import pixel10ProXl from "@/assets/pixel-10-pro-xl.jpg";
-import pixel10a from "@/assets/pixel-10a.jpg";
+import pixel10ProFold from "@/assets/pixel-10-pro-fold.png";
+import pixel10ProXl from "@/assets/pixel-10-pro-xl.png";
+import pixel10a from "@/assets/pixel-10a.png";
 
 export interface Phone {
   id: string;
