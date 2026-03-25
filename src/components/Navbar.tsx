@@ -4,6 +4,7 @@ import { ShoppingCart, Search, Menu, X } from "lucide-react";
 import { useCart } from "@/context/CartContext";
 import { motion, AnimatePresence } from "framer-motion";
 import shivaamiLogo from "@/assets/shivaami-logo.png";
+import pixelLogo from "@/assets/pixel-logo.png";
 
 const navLinks = [
   { to: "/", label: "Home" },
