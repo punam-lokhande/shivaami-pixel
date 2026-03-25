@@ -5,6 +5,7 @@ import { phones, formatPrice } from "@/data/phones";
 import PhoneCard from "@/components/PhoneCard";
 import { Button } from "@/components/ui/button";
 import pixelLogo from "@/assets/pixel-logo.svg";
+import heroPhoneImg from "@/assets/pixel-10a-hero.png";
 
 const features = [
   { icon: Camera, title: "AI Camera", desc: "Camera Coach, Add Me, Magic Eraser — every photo is stunning", color: "text-google-blue", bg: "bg-google-blue/10" },
