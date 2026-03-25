@@ -1,7 +1,7 @@
 import { useParams, Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { ShoppingCart, Star, Check } from "lucide-react";
-import { getPhoneBySlug, phones } from "@/data/phones";
+import { getPhoneBySlug, phones, formatPrice } from "@/data/phones";
 import { useCart } from "@/context/CartContext";
 import { Button } from "@/components/ui/button";
 import PhoneCard from "@/components/PhoneCard";
@@ -19,12 +19,13 @@ const ProductDetail = () => {
   return (
     <div className="container py-10">
       <div className="grid gap-10 lg:grid-cols-2">
-        {/* Image */}
-        <motion.div initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }} className="gradient-card rounded-2xl border border-border p-8 flex items-center justify-center">
+        <motion.div initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }} className="relative gradient-card rounded-2xl border border-border p-8 flex items-center justify-center">
+          {phone.tag && (
+            <span className="absolute top-4 left-4 rounded-full bg-google-red px-3 py-1 text-xs font-bold text-primary-foreground shadow">{phone.tag}</span>
+          )}
           <img src={phone.image} alt={phone.name} className="max-h-[500px] object-contain" width={500} height={500} />
         </motion.div>
 
-        {/* Info */}
         <motion.div initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} className="space-y-6">
           <div>
             <p className="text-sm font-medium text-primary">{phone.category === "foldable" ? "Foldable" : phone.category === "flagship" ? "Flagship" : "Mid-Range"}</p>
@@ -35,7 +36,12 @@ const ProductDetail = () => {
             </div>
           </div>
 
-          <p className="text-2xl font-bold text-foreground">${phone.price}</p>
+          <div className="flex items-center gap-3">
+            <p className="text-2xl font-bold text-foreground">{formatPrice(phone.price)}</p>
+            {phone.originalPrice && (
+              <p className="text-lg text-muted-foreground line-through">{formatPrice(phone.originalPrice)}</p>
+            )}
+          </div>
           <p className="text-muted-foreground">{phone.description}</p>
 
           <div>
@@ -43,7 +49,7 @@ const ProductDetail = () => {
             <div className="mt-2 grid grid-cols-2 gap-2">
               {phone.features.map((f) => (
                 <div key={f} className="flex items-center gap-2 text-sm text-muted-foreground">
-                  <Check className="h-4 w-4 text-google-green" /> {f}
+                  <Check className="h-4 w-4 text-google-green shrink-0" /> {f}
                 </div>
               ))}
             </div>
@@ -60,20 +66,18 @@ const ProductDetail = () => {
         </motion.div>
       </div>
 
-      {/* Specs */}
       <section className="mt-16">
         <h2 className="text-2xl font-bold">Specifications</h2>
         <div className="mt-6 grid gap-3 sm:grid-cols-2">
           {specs.map(([key, val]) => (
             <div key={key} className="flex items-center justify-between rounded-xl border border-border bg-card p-4">
               <span className="text-sm font-medium capitalize text-muted-foreground">{key}</span>
-              <span className="text-sm font-semibold text-foreground">{val}</span>
+              <span className="text-sm font-semibold text-foreground text-right max-w-[60%]">{val}</span>
             </div>
           ))}
         </div>
       </section>
 
-      {/* Reviews */}
       <section className="mt-16">
         <h2 className="text-2xl font-bold">Reviews</h2>
         <div className="mt-6 space-y-4">
@@ -87,7 +91,6 @@ const ProductDetail = () => {
         </div>
       </section>
 
-      {/* Related */}
       <section className="mt-16">
         <h2 className="text-2xl font-bold">You May Also Like</h2>
         <div className="mt-6 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">

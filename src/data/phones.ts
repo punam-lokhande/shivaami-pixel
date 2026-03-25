@@ -1,5 +1,6 @@
 import pixel9a from "@/assets/pixel-9a.jpg";
 import pixel10 from "@/assets/pixel-10.jpg";
+import pixel10Pro from "@/assets/pixel-10-pro.jpg";
 import pixel10ProFold from "@/assets/pixel-10-pro-fold.jpg";
 import pixel10ProXl from "@/assets/pixel-10-pro-xl.jpg";
 import pixel10a from "@/assets/pixel-10a.jpg";
@@ -9,11 +10,13 @@ export interface Phone {
   name: string;
   slug: string;
   price: number;
+  originalPrice?: number;
   shortDesc: string;
   description: string;
   image: string;
   color: string;
   category: "flagship" | "mid-range" | "foldable";
+  tag?: string;
   specs: {
     display: string;
     camera: string;
@@ -29,76 +32,137 @@ export interface Phone {
   reviews: number;
 }
 
+export const formatPrice = (price: number) =>
+  "₹" + price.toLocaleString("en-IN");
+
 export const phones: Phone[] = [
   {
-    id: "pixel-9a",
-    name: "Google Pixel 9a",
-    slug: "pixel-9a",
-    price: 499,
-    shortDesc: "Smart, secure, and built to last — the essential Pixel experience.",
-    description: "The Google Pixel 9a delivers the core Pixel experience at an accessible price. With Google's advanced AI camera system, all-day battery life, and the Tensor G4 chip, it's the smartest phone in its class.",
-    image: pixel9a,
-    color: "Mint Green",
+    id: "pixel-10a",
+    name: "Google Pixel 10a",
+    slug: "pixel-10a",
+    price: 49999,
+    shortDesc: "The real deal. Built for real life — powered by Google AI.",
+    description:
+      "Pixel 10a delivers the core Pixel experience at an accessible price. With Google's advanced AI camera, 30+ hours of battery life, durable design, and Gemini built in — it's everything you need, for less.",
+    image: pixel10a,
+    color: "Lavender",
     category: "mid-range",
+    tag: "New Launch",
     specs: {
       display: '6.3" OLED, 120Hz',
-      camera: "64MP main + 13MP ultrawide",
-      battery: "5,000 mAh",
-      processor: "Google Tensor G4",
+      camera: "50MP main + 13MP ultrawide",
+      battery: "30+ hours, 5,000 mAh",
+      processor: "Google Tensor G5",
       ram: "8 GB",
       storage: "128 GB / 256 GB",
-      os: "Android 15",
+      os: "Android 16",
       ai: "Gemini Nano on-device",
     },
-    features: ["AI Camera", "Magic Eraser", "Call Screening", "7 years of updates"],
-    rating: 4.5,
-    reviews: 1842,
+    features: [
+      "Camera Coach with Gemini",
+      "Add Me group photos",
+      "Magic Eraser",
+      "30+ hr battery",
+      "IP68 water resistance",
+      "7 years of updates",
+    ],
+    rating: 4.7,
+    reviews: 2340,
   },
   {
     id: "pixel-10",
     name: "Google Pixel 10",
     slug: "pixel-10",
-    price: 799,
-    shortDesc: "The purest Google phone — refined design, flagship AI power.",
-    description: "Google Pixel 10 brings the most refined Pixel experience yet. Powered by the new Tensor G5, it features an incredible AI-powered camera, stunning LTPO display, and seamless integration with Google's ecosystem.",
+    price: 74999,
+    originalPrice: 79999,
+    shortDesc: "Do spectacular things, every day. All-new telephoto lens.",
+    description:
+      "Google Pixel 10 brings the most refined Pixel experience yet. With a new 5x telephoto lens, Tensor G5 chip, Gemini AI assistant, and twice the durability of Pixel 8 — it's all the essentials and more of the extras.",
     image: pixel10,
-    color: "Obsidian",
+    color: "Indigo",
     category: "flagship",
     specs: {
-      display: '6.4" LTPO OLED, 120Hz',
-      camera: "50MP main + 48MP ultrawide + 48MP telephoto",
-      battery: "5,100 mAh",
+      display: '6.3" Actua OLED, 120Hz',
+      camera: "48MP wide + 13MP ultrawide + 10.8MP 5x telephoto",
+      battery: "24+ hours, fast charging",
       processor: "Google Tensor G5",
       ram: "12 GB",
-      storage: "128 GB / 256 GB / 512 GB",
+      storage: "256 GB",
       os: "Android 16",
-      ai: "Gemini Pro on-device",
+      ai: "Gemini built-in",
     },
-    features: ["AI Camera Pro", "Video Boost", "Circle to Search", "Live Translate"],
-    rating: 4.7,
+    features: [
+      "5x Telephoto lens (NEW)",
+      "Camera Coach",
+      "Circle to Search",
+      "Pixelsnap Wireless Charging",
+      "2x more durable than Pixel 8",
+      "7 years of updates",
+    ],
+    rating: 4.8,
     reviews: 2156,
+  },
+  {
+    id: "pixel-10-pro",
+    name: "Google Pixel 10 Pro",
+    slug: "pixel-10-pro",
+    price: 109999,
+    shortDesc: "Unbelievable camera. Unprecedented AI. The new status pro.",
+    description:
+      "Pixel 10 Pro features our highest quality photos and videos with a pro triple camera, 100x Pro Zoom, 8K video, and the most advanced AI on Pixel. Powered by the next-gen Tensor G5 chip for peak performance.",
+    image: pixel10Pro,
+    color: "Hazel",
+    category: "flagship",
+    specs: {
+      display: '6.3" Super Actua OLED, 120Hz',
+      camera: "50MP wide + 48MP ultrawide + 48MP 5x telephoto",
+      battery: "24+ hours, fast + wireless charging",
+      processor: "Google Tensor G5",
+      ram: "16 GB",
+      storage: "256 GB",
+      os: "Android 16",
+      ai: "Gemini Advanced + Google AI Pro",
+    },
+    features: [
+      "Pro Zoom up to 100x",
+      "8K Video recording",
+      "Night Sight Video",
+      "Video Boost",
+      "Magic Cue AI",
+      "7 years of updates",
+    ],
+    rating: 4.9,
+    reviews: 1870,
   },
   {
     id: "pixel-10-pro-fold",
     name: "Google Pixel 10 Pro Fold",
     slug: "pixel-10-pro-fold",
-    price: 1799,
-    shortDesc: "Unfold possibilities — the thinnest foldable with Pixel intelligence.",
-    description: "The Google Pixel 10 Pro Fold redefines the foldable phone category. Ultra-thin when folded, expansive when opened, and powered by Google's most advanced AI capabilities for unmatched productivity and creativity.",
+    price: 172999,
+    shortDesc: "Unfold extraordinary. Our best phone for multitasking.",
+    description:
+      "The Pixel 10 Pro Fold features an 8\" Super Actua Flex display — our largest yet. Ultra-thin when folded, it handles 10+ years of folding. With advanced AI, Split Screen multitasking, and the Pixel Camera folded in.",
     image: pixel10ProFold,
     color: "Silver Titanium",
     category: "foldable",
     specs: {
-      display: '8.0" inner + 6.3" outer LTPO OLED, 120Hz',
-      camera: "50MP main + 48MP ultrawide + 48MP telephoto",
-      battery: "5,200 mAh",
-      processor: "Google Tensor G5 Pro",
+      display: '8" inner Super Actua Flex + 6.4" outer Actua, 120Hz',
+      camera: "48MP wide + 10.5MP ultrawide + 10.8MP telephoto",
+      battery: "24+ hours, fast + wireless charging",
+      processor: "Google Tensor G5",
       ram: "16 GB",
-      storage: "256 GB / 512 GB / 1 TB",
+      storage: "256 GB",
       os: "Android 16",
-      ai: "Gemini Ultra on-device",
+      ai: "Gemini Advanced + Google AI Pro",
     },
-    features: ["Dual Screen Multitasking", "Tabletop Mode", "AI Camera Pro", "Gemini Ultra"],
+    features: [
+      '8" Super Actua Flex display',
+      "Split Screen multitasking",
+      "Instant View photos",
+      "10+ years fold durability",
+      "Video Boost",
+      "7 years of updates",
+    ],
     rating: 4.8,
     reviews: 987,
   },
@@ -106,50 +170,68 @@ export const phones: Phone[] = [
     id: "pixel-10-pro-xl",
     name: "Google Pixel 10 Pro XL",
     slug: "pixel-10-pro-xl",
-    price: 1099,
-    shortDesc: "Maximum screen, maximum power — the ultimate Pixel flagship.",
-    description: "Google Pixel 10 Pro XL is the ultimate Pixel smartphone. Featuring a massive 6.9-inch display, the most advanced camera system on any Pixel, and the powerhouse Tensor G5 Pro processor for uncompromising performance.",
+    price: 124999,
+    shortDesc: "Maximum screen, maximum power — the ultimate Pro experience.",
+    description:
+      "Pixel 10 Pro XL is the ultimate Pixel smartphone with a massive 6.8\" Super Actua display. Featuring the same pro-grade triple camera, 100x Pro Zoom, 8K video, and Tensor G5 — in a larger, more immersive form.",
     image: pixel10ProXl,
     color: "Porcelain",
     category: "flagship",
     specs: {
-      display: '6.9" LTPO OLED, 120Hz, 2800 nits',
-      camera: "50MP main + 48MP ultrawide + 48MP 5x telephoto",
-      battery: "5,500 mAh",
-      processor: "Google Tensor G5 Pro",
+      display: '6.8" Super Actua OLED, 120Hz',
+      camera: "50MP wide + 48MP ultrawide + 48MP 5x telephoto",
+      battery: "24+ hours, fast + wireless charging",
+      processor: "Google Tensor G5",
       ram: "16 GB",
-      storage: "256 GB / 512 GB / 1 TB",
+      storage: "256 GB",
       os: "Android 16",
-      ai: "Gemini Ultra on-device",
+      ai: "Gemini Advanced + Google AI Pro",
     },
-    features: ["AI Camera Ultra", "8K Video", "Super Res Zoom 30x", "Gemini Ultra"],
+    features: [
+      "Pro Zoom up to 100x",
+      "8K Video recording",
+      "Night Sight Video",
+      "Video Boost",
+      "Magic Cue AI",
+      "7 years of updates",
+    ],
     rating: 4.9,
     reviews: 3241,
   },
   {
-    id: "pixel-10a",
-    name: "Google Pixel 10a",
-    slug: "pixel-10a",
-    price: 549,
-    shortDesc: "Everything you love about Pixel, now even more affordable.",
-    description: "The Google Pixel 10a combines the best of Pixel's AI features with a price that's easy to love. Get Google's latest camera innovations, long-lasting battery, and the smoothest Android experience.",
-    image: pixel10a,
-    color: "Bay Blue",
+    id: "pixel-9a",
+    name: "Google Pixel 9a",
+    slug: "pixel-9a",
+    price: 39999,
+    originalPrice: 49999,
+    shortDesc: "Magic made simple. Stunning photos, all-day battery.",
+    description:
+      "Google Pixel 9a delivers stunning photos and videos effortlessly. With 30+ hours of battery, up to 256 GB storage, lasting durability, water resistance, and Gemini across your apps — it's magic, made simple.",
+    image: pixel9a,
+    color: "Iris",
     category: "mid-range",
     specs: {
-      display: '6.5" OLED, 120Hz',
-      camera: "64MP main + 13MP ultrawide",
-      battery: "5,200 mAh",
-      processor: "Google Tensor G5",
+      display: '6.3" Actua OLED, 120Hz',
+      camera: "48MP main + 13MP ultrawide",
+      battery: "30+ hours, 5,000 mAh",
+      processor: "Google Tensor G4",
       ram: "8 GB",
       storage: "128 GB / 256 GB",
-      os: "Android 16",
+      os: "Android 15",
       ai: "Gemini Nano on-device",
     },
-    features: ["AI Camera", "Magic Eraser", "Circle to Search", "7 years of updates"],
-    rating: 4.6,
-    reviews: 1523,
+    features: [
+      "Macro Focus",
+      "Add Me",
+      "Magic Editor",
+      "Best Take",
+      "Night Sight",
+      "7 years of updates",
+    ],
+    rating: 4.5,
+    reviews: 1842,
   },
 ];
 
-export const getPhoneBySlug = (slug: string) => phones.find((p) => p.slug === slug);
+export const getPhoneBySlug = (slug: string) =>
+  phones.find((p) => p.slug === slug);
