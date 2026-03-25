@@ -23,7 +23,8 @@ const Navbar = () => {
       <div className="container flex h-16 items-center justify-between">
         <Link to="/" className="flex items-center gap-2">
           <img src={shivaamiLogo} alt="Shivaami" className="h-8 w-auto" />
-          <span className="text-xs text-muted-foreground font-medium">× Google Pixel</span>
+          <span className="text-xs text-muted-foreground font-medium mx-1">×</span>
+          <img src={pixelLogo} alt="Google Pixel" className="h-5 w-auto" />
         </Link>
 
         {/* Desktop Nav */}
