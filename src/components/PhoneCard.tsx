@@ -21,7 +21,7 @@ const PhoneCard = ({ phone, index = 0 }: { phone: Phone; index?: number }) => {
         </span>
       )}
       <Link to={`/product/${phone.slug}`}>
-        <div className="gradient-card overflow-hidden rounded-xl h-64 flex items-center justify-center p-6">
+        <div className="gradient-card overflow-hidden rounded-xl h-64 flex items-center justify-center p-2">
           <img src={phone.image} alt={phone.name} className="max-h-full max-w-full object-contain transition-transform duration-500 group-hover:scale-105" loading="lazy" width={400} height={400} />
         </div>
       </Link>
