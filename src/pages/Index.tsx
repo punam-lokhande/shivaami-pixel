@@ -148,6 +148,66 @@ const Index = () => (
       </div>
     </section>
 
+    {/* The Shivaami Advantage */}
+    <section className="relative py-20 md:py-28 overflow-hidden">
+      {/* Background accents */}
+      <div className="absolute inset-0 bg-gradient-to-b from-secondary/40 via-background to-secondary/30" />
+      <div className="absolute top-0 left-1/4 h-[400px] w-[400px] rounded-full bg-google-blue/5 blur-[100px]" />
+      <div className="absolute bottom-0 right-1/4 h-[400px] w-[400px] rounded-full bg-google-green/5 blur-[100px]" />
+
+      <div className="container relative">
+        <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center">
+          <span className="inline-flex items-center gap-2 rounded-full border border-google-green/20 bg-google-green/5 px-5 py-2 text-sm font-semibold text-google-green">
+            <Sparkles className="h-4 w-4" /> Only at Shivaami
+          </span>
+          <h2 className="mt-5 text-3xl font-extrabold md:text-5xl text-foreground">The Shivaami Advantage</h2>
+          <p className="mt-4 text-muted-foreground max-w-2xl mx-auto text-lg">Every Pixel purchased from Shivaami comes with exclusive benefits you won't find anywhere else.</p>
+        </motion.div>
+
+        <div className="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+          {[
+            { icon: ShieldCheck, title: "2-Year Device Protection", desc: "Accidental & liquid damage covered by OneAssist — at no extra cost", color: "text-google-blue", bg: "bg-google-blue/10", border: "border-google-blue/20", highlight: true },
+            { icon: Bot, title: "1 Year Google Gemini AI Free", desc: "Your team starts using AI from day one — included with every device", color: "text-google-red", bg: "bg-google-red/10", border: "border-google-red/20", highlight: true },
+            { icon: GraduationCap, title: "AI Workshops by Google & Shivaami", desc: "Hands-on training so your team actually uses what they have", color: "text-google-yellow", bg: "bg-google-yellow/10", border: "border-google-yellow/20" },
+            { icon: Cloud, title: "Free Google Cloud Storage", desc: "3 / 6 / 12 months free — backup contacts, photos & videos", color: "text-google-green", bg: "bg-google-green/10", border: "border-google-green/20" },
+            { icon: Receipt, title: "Corporate Pricing + GST Benefits", desc: "Proper invoicing, input tax credit, and real savings for your business", color: "text-google-blue", bg: "bg-google-blue/10", border: "border-google-blue/20" },
+            { icon: Settings, title: "Zero Touch Deployment", desc: "Devices arrive pre-configured and ready to use — zero setup needed", color: "text-google-red", bg: "bg-google-red/10", border: "border-google-red/20" },
+            { icon: Sparkles, title: "6 Months Gemini AI Free", desc: "Hit the ground running with Google's most capable AI from day one", color: "text-google-yellow", bg: "bg-google-yellow/10", border: "border-google-yellow/20", highlight: true },
+            { icon: Truck, title: "Free Pan-India Pickup & Drop", desc: "We collect and deliver across India — your team does nothing", color: "text-google-green", bg: "bg-google-green/10", border: "border-google-green/20" },
+          ].map((item, i) => (
+            <motion.div
+              key={item.title}
+              initial={{ opacity: 0, y: 25 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: i * 0.06 }}
+              className={`group relative rounded-2xl border bg-card p-6 transition-all duration-300 hover:shadow-hover hover:-translate-y-1 ${item.highlight ? `${item.border} shadow-lg` : "border-border shadow-soft"}`}
+            >
+              {item.highlight && (
+                <div className="absolute -top-2.5 right-4 rounded-full bg-google-red px-3 py-0.5 text-[10px] font-bold uppercase tracking-wider text-primary-foreground shadow-md">
+                  Popular
+                </div>
+              )}
+              <div className={`flex h-12 w-12 items-center justify-center rounded-xl ${item.bg} transition-transform duration-300 group-hover:scale-110`}>
+                <item.icon className={`h-6 w-6 ${item.color}`} />
+              </div>
+              <h3 className="mt-4 font-bold text-foreground leading-snug">{item.title}</h3>
+              <p className="mt-2 text-sm text-muted-foreground leading-relaxed">{item.desc}</p>
+            </motion.div>
+          ))}
+        </div>
+
+        {/* CTA */}
+        <motion.div initial={{ opacity: 0, y: 15 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="mt-12 text-center">
+          <Link to="/products">
+            <Button size="lg" className="gradient-cta border-0 text-primary-foreground gap-2 rounded-full px-10 py-6 text-base font-semibold shadow-lg shadow-primary/25 hover:shadow-xl hover:scale-105 transition-all duration-300">
+              Shop with Shivaami Advantage <ArrowRight className="h-5 w-5" />
+            </Button>
+          </Link>
+        </motion.div>
+      </div>
+    </section>
+
     {/* Brand bar */}
     <section className="border-y border-border bg-secondary/30">
       <div className="container flex items-center justify-center gap-4 py-5">
