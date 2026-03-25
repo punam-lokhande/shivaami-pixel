@@ -1,4 +1,5 @@
 import { useCart } from "@/context/CartContext";
+import { formatPrice } from "@/data/phones";
 import { Trash2, Plus, Minus, ShoppingBag } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
@@ -41,7 +42,7 @@ const Cart = () => {
                     <button onClick={() => updateQuantity(item.phone.id, item.quantity + 1)} className="rounded-full p-1 hover:bg-secondary"><Plus className="h-4 w-4" /></button>
                   </div>
                   <div className="flex items-center gap-3">
-                    <span className="font-semibold text-foreground">${item.phone.price * item.quantity}</span>
+                    <span className="font-semibold text-foreground">{formatPrice(item.phone.price * item.quantity)}</span>
                     <button onClick={() => removeFromCart(item.phone.id)} className="rounded-full p-1 text-destructive hover:bg-destructive/10"><Trash2 className="h-4 w-4" /></button>
                   </div>
                 </div>
@@ -54,9 +55,9 @@ const Cart = () => {
           <div className="rounded-2xl border border-border bg-card p-6 shadow-soft">
             <h3 className="font-semibold text-foreground">Order Summary</h3>
             <div className="mt-4 space-y-2">
-              <div className="flex justify-between text-sm"><span className="text-muted-foreground">Subtotal</span><span className="text-foreground">${totalPrice}</span></div>
+              <div className="flex justify-between text-sm"><span className="text-muted-foreground">Subtotal</span><span className="text-foreground">{formatPrice(totalPrice)}</span></div>
               <div className="flex justify-between text-sm"><span className="text-muted-foreground">Shipping</span><span className="text-google-green font-medium">Free</span></div>
-              <div className="border-t border-border pt-2 flex justify-between font-semibold"><span>Total</span><span>${totalPrice}</span></div>
+              <div className="border-t border-border pt-2 flex justify-between font-semibold"><span>Total</span><span>{formatPrice(totalPrice)}</span></div>
             </div>
             <Button className="mt-6 w-full gradient-cta border-0 text-primary-foreground" onClick={() => setShowCheckout(true)}>Checkout</Button>
           </div>
@@ -73,7 +74,7 @@ const Cart = () => {
                 <input placeholder="CVC" className="rounded-lg border border-border bg-secondary px-3 py-2 text-sm outline-none focus:ring-2 focus:ring-primary" />
               </div>
               <Button className="w-full gradient-cta border-0 text-primary-foreground" onClick={() => { clearCart(); setShowCheckout(false); toast.success("Order placed successfully!"); }}>
-                Place Order — ${totalPrice}
+                Place Order — {formatPrice(totalPrice)}
               </Button>
             </motion.div>
           )}
