@@ -14,11 +14,6 @@ const features = [
   { icon: Shield, title: "Titan M2 Security", desc: "7 years of updates, IP68 water resistance, built to last", color: "text-google-yellow", bg: "bg-google-yellow/10" },
 ];
 
-const testimonials = [
-  { name: "Sarah K.", role: "Photographer", text: "The Pixel camera is simply unmatched. Night Sight shots look like they were taken by a professional.", rating: 5, avatar: "S" },
-  { name: "James R.", role: "Developer", text: "Stock Android experience with AI features that actually work. Best phone I've ever owned.", rating: 5, avatar: "J" },
-  { name: "Priya M.", role: "Content Creator", text: "Magic Eraser and Video Boost changed how I create content. Absolutely love my Pixel 10 Pro.", rating: 5, avatar: "P" },
-];
 
 const heroPhone = phones.find((p) => p.id === "pixel-10a")!;
 
