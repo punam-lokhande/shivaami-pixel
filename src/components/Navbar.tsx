@@ -22,9 +22,9 @@ const Navbar = () => {
     <nav className="sticky top-0 z-50 border-b border-border bg-background/80 backdrop-blur-xl">
       <div className="container flex h-16 items-center justify-between">
         <Link to="/" className="flex items-center gap-2">
-          <img src={shivaamiLogo} alt="Shivaami" className="h-8 w-auto" />
+          <img src={shivaamiLogo} alt="Shivaami" className="h-7 w-auto" />
           <span className="text-xs text-muted-foreground font-medium mx-1">×</span>
-          <img src={pixelLogo} alt="Google Pixel" className="h-5 w-auto" />
+          <img src={pixelLogo} alt="Google Pixel" className="h-7 w-auto" />
         </Link>
 
         {/* Desktop Nav */}
