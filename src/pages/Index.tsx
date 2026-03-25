@@ -216,26 +216,6 @@ const Index = () => (
       </div>
     </section>
 
-    {/* Feature Highlights */}
-    <section className="container py-20 md:py-28">
-      <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center">
-        <span className="text-xs font-semibold uppercase tracking-widest text-primary">Why Pixel</span>
-        <h2 className="mt-2 text-3xl font-bold md:text-4xl text-foreground">Built Different. Built Better.</h2>
-        <p className="mt-3 text-muted-foreground max-w-lg mx-auto">Every Pixel phone is designed with cutting-edge AI, premium materials, and Google's best software.</p>
-      </motion.div>
-      <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-        {features.map((f, i) => (
-          <motion.div key={f.title} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.1 }} className="group rounded-2xl border border-border bg-card p-6 shadow-soft text-center transition-all duration-300 hover:shadow-hover hover:-translate-y-1">
-            <div className={`mx-auto flex h-14 w-14 items-center justify-center rounded-2xl ${f.bg} transition-transform duration-300 group-hover:scale-110`}>
-              <f.icon className={`h-7 w-7 ${f.color}`} />
-            </div>
-            <h3 className="mt-4 font-semibold text-foreground">{f.title}</h3>
-            <p className="mt-2 text-sm text-muted-foreground">{f.desc}</p>
-          </motion.div>
-        ))}
-      </div>
-    </section>
-
     {/* Product Showcase Grid */}
     <section className="relative py-20 md:py-28">
       <div className="absolute inset-0 bg-secondary/30" />
@@ -276,29 +256,23 @@ const Index = () => (
       </motion.div>
     </section>
 
-    {/* Testimonials */}
-    <section className="relative py-20 md:py-28">
-      <div className="absolute inset-0 bg-secondary/30" />
-      <div className="container relative">
-        <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center">
-          <span className="text-xs font-semibold uppercase tracking-widest text-primary">Testimonials</span>
-          <h2 className="mt-2 text-3xl font-bold md:text-4xl text-foreground">Loved by Pixel Fans</h2>
-        </motion.div>
-        <div className="mt-14 grid gap-6 md:grid-cols-3">
-          {testimonials.map((t, i) => (
-            <motion.div key={t.name} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.1 }} className="rounded-2xl border border-border bg-card p-6 shadow-soft transition-all duration-300 hover:shadow-hover">
-              <div className="flex gap-0.5">{Array.from({ length: t.rating }).map((_, j) => <Star key={j} className="h-4 w-4 fill-google-yellow text-google-yellow" />)}</div>
-              <p className="mt-4 text-sm text-muted-foreground leading-relaxed">"{t.text}"</p>
-              <div className="mt-5 flex items-center gap-3">
-                <div className="flex h-10 w-10 items-center justify-center rounded-full bg-primary/10 text-sm font-bold text-primary">{t.avatar}</div>
-                <div>
-                  <p className="text-sm font-semibold text-foreground">{t.name}</p>
-                  <p className="text-xs text-muted-foreground">{t.role}</p>
-                </div>
-              </div>
-            </motion.div>
-          ))}
-        </div>
+    {/* Feature Highlights (Why Pixel) */}
+    <section className="container py-20 md:py-28">
+      <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center">
+        <span className="text-xs font-semibold uppercase tracking-widest text-primary">Why Pixel</span>
+        <h2 className="mt-2 text-3xl font-bold md:text-4xl text-foreground">Built Different. Built Better.</h2>
+        <p className="mt-3 text-muted-foreground max-w-lg mx-auto">Every Pixel phone is designed with cutting-edge AI, premium materials, and Google's best software.</p>
+      </motion.div>
+      <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+        {features.map((f, i) => (
+          <motion.div key={f.title} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.1 }} className="group rounded-2xl border border-border bg-card p-6 shadow-soft text-center transition-all duration-300 hover:shadow-hover hover:-translate-y-1">
+            <div className={`mx-auto flex h-14 w-14 items-center justify-center rounded-2xl ${f.bg} transition-transform duration-300 group-hover:scale-110`}>
+              <f.icon className={`h-7 w-7 ${f.color}`} />
+            </div>
+            <h3 className="mt-4 font-semibold text-foreground">{f.title}</h3>
+            <p className="mt-2 text-sm text-muted-foreground">{f.desc}</p>
+          </motion.div>
+        ))}
       </div>
     </section>
 
@@ -313,7 +287,3 @@ const Index = () => (
         </div>
       </motion.div>
     </section>
-  </div>
-);
-
-export default Index;
