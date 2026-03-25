@@ -145,18 +145,23 @@ const Index = () => (
 
     {/* The Shivaami Advantage */}
     <section className="relative py-20 md:py-28 overflow-hidden">
-      {/* Background accents */}
+      {/* Animated background accents */}
       <div className="absolute inset-0 bg-gradient-to-b from-secondary/40 via-background to-secondary/30" />
-      <div className="absolute top-0 left-1/4 h-[400px] w-[400px] rounded-full bg-google-blue/5 blur-[100px]" />
-      <div className="absolute bottom-0 right-1/4 h-[400px] w-[400px] rounded-full bg-google-green/5 blur-[100px]" />
+      <div className="absolute top-0 left-1/4 h-[400px] w-[400px] rounded-full bg-google-blue/5 blur-[100px] animate-float" />
+      <div className="absolute bottom-0 right-1/4 h-[400px] w-[400px] rounded-full bg-google-green/5 blur-[100px] animate-float" style={{ animationDelay: "1.5s" }} />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-[300px] w-[300px] rounded-full bg-google-yellow/3 blur-[80px] animate-float" style={{ animationDelay: "3s" }} />
 
       <div className="container relative">
-        <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center">
-          <span className="inline-flex items-center gap-2 rounded-full border border-google-green/20 bg-google-green/5 px-5 py-2 text-sm font-semibold text-google-green">
-            <Sparkles className="h-4 w-4" /> Only at Shivaami
-          </span>
-          <h2 className="mt-5 text-3xl font-extrabold md:text-5xl text-foreground">The Shivaami Advantage</h2>
-          <p className="mt-4 text-muted-foreground max-w-2xl mx-auto text-lg">Every Pixel purchased from Shivaami comes with exclusive benefits you won't find anywhere else.</p>
+        <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.7 }} className="text-center">
+          <motion.span initial={{ opacity: 0, scale: 0.8 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ type: "spring", stiffness: 200, delay: 0.1 }} className="inline-flex items-center gap-2 rounded-full border border-google-green/20 bg-google-green/5 px-5 py-2 text-sm font-semibold text-google-green">
+            <Sparkles className="h-4 w-4 animate-pulse" /> Only at Shivaami
+          </motion.span>
+          <motion.h2 initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.2, duration: 0.6 }} className="mt-5 text-3xl font-extrabold md:text-5xl text-foreground">
+            The Shivaami Advantage
+          </motion.h2>
+          <motion.p initial={{ opacity: 0, y: 15 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.3, duration: 0.6 }} className="mt-4 text-muted-foreground max-w-2xl mx-auto text-lg">
+            Every Pixel purchased from Shivaami comes with exclusive benefits you won't find anywhere else.
+          </motion.p>
         </motion.div>
 
         <div className="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
@@ -172,32 +177,41 @@ const Index = () => (
           ].map((item, i) => (
             <motion.div
               key={item.title}
-              initial={{ opacity: 0, y: 25 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, y: 40, scale: 0.95 }}
+              whileInView={{ opacity: 1, y: 0, scale: 1 }}
               viewport={{ once: true }}
-              transition={{ delay: i * 0.06 }}
-              className={`group relative rounded-2xl border bg-card p-6 transition-all duration-300 hover:shadow-hover hover:-translate-y-1 ${item.highlight ? `${item.border} shadow-lg` : "border-border shadow-soft"}`}
+              transition={{ delay: 0.1 + i * 0.08, duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
+              whileHover={{ y: -8, scale: 1.02, transition: { duration: 0.25 } }}
+              className={`group relative rounded-2xl border bg-card p-6 transition-shadow duration-300 hover:shadow-hover cursor-default ${item.highlight ? `${item.border} shadow-lg` : "border-border shadow-soft"}`}
             >
               {item.highlight && (
-                <div className="absolute -top-2.5 right-4 rounded-full bg-google-red px-3 py-0.5 text-[10px] font-bold uppercase tracking-wider text-primary-foreground shadow-md">
+                <motion.div initial={{ scale: 0 }} whileInView={{ scale: 1 }} viewport={{ once: true }} transition={{ delay: 0.3 + i * 0.08, type: "spring", stiffness: 300 }} className="absolute -top-2.5 right-4 rounded-full bg-google-red px-3 py-0.5 text-[10px] font-bold uppercase tracking-wider text-primary-foreground shadow-md">
                   Popular
-                </div>
+                </motion.div>
               )}
-              <div className={`flex h-12 w-12 items-center justify-center rounded-xl ${item.bg} transition-transform duration-300 group-hover:scale-110`}>
+              <motion.div
+                whileHover={{ scale: 1.15, rotate: 5 }}
+                transition={{ type: "spring", stiffness: 300 }}
+                className={`flex h-12 w-12 items-center justify-center rounded-xl ${item.bg}`}
+              >
                 <item.icon className={`h-6 w-6 ${item.color}`} />
-              </div>
+              </motion.div>
               <h3 className="mt-4 font-bold text-foreground leading-snug">{item.title}</h3>
               <p className="mt-2 text-sm text-muted-foreground leading-relaxed">{item.desc}</p>
+              {/* Animated bottom accent line */}
+              <div className={`mt-4 h-0.5 w-0 rounded-full ${item.bg.replace('/10', '')} group-hover:w-full transition-all duration-500`} />
             </motion.div>
           ))}
         </div>
 
         {/* CTA */}
-        <motion.div initial={{ opacity: 0, y: 15 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="mt-12 text-center">
+        <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.5 }} className="mt-12 text-center">
           <Link to="/products">
-            <Button size="lg" className="gradient-cta border-0 text-primary-foreground gap-2 rounded-full px-10 py-6 text-base font-semibold shadow-lg shadow-primary/25 hover:shadow-xl hover:scale-105 transition-all duration-300">
-              Shop with Shivaami Advantage <ArrowRight className="h-5 w-5" />
-            </Button>
+            <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.97 }} className="inline-block">
+              <Button size="lg" className="gradient-cta border-0 text-primary-foreground gap-2 rounded-full px-10 py-6 text-base font-semibold shadow-lg shadow-primary/25 hover:shadow-xl transition-shadow duration-300">
+                Shop with Shivaami Advantage <ArrowRight className="h-5 w-5" />
+              </Button>
+            </motion.div>
           </Link>
         </motion.div>
       </div>
