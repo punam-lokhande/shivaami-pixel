@@ -3,6 +3,7 @@ import { Link, useLocation } from "react-router-dom";
 import { ShoppingCart, Search, Menu, X } from "lucide-react";
 import { useCart } from "@/context/CartContext";
 import { motion, AnimatePresence } from "framer-motion";
+import shivaamiLogo from "@/assets/shivaami-logo.png";
 
 const navLinks = [
   { to: "/", label: "Home" },
@@ -20,10 +21,8 @@ const Navbar = () => {
     <nav className="sticky top-0 z-50 border-b border-border bg-background/80 backdrop-blur-xl">
       <div className="container flex h-16 items-center justify-between">
         <Link to="/" className="flex items-center gap-2">
-          <div className="flex items-center gap-1">
-            <span className="text-xl font-bold text-foreground">Shivaami</span>
-            <span className="text-xs text-muted-foreground">× Google Pixel</span>
-          </div>
+          <img src={shivaamiLogo} alt="Shivaami" className="h-8 w-auto" />
+          <span className="text-xs text-muted-foreground font-medium">× Google Pixel</span>
         </Link>
 
         {/* Desktop Nav */}
