@@ -39,7 +39,7 @@ const Index = () => (
             Just Launched — Pixel 10a
           </motion.div>
 
-          <motion.h1 initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.1 }} className="mt-6 text-5xl font-extrabold leading-[1.05] tracking-tight md:text-7xl lg:text-8xl text-foreground">
+          <motion.h1 initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.1 }} className="mt-6 text-4xl font-extrabold leading-[1.1] tracking-tight md:text-5xl lg:text-6xl text-foreground">
             The Future of<br />
             <span className="text-gradient">Work is Here</span>
           </motion.h1>
