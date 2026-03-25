@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import { Camera, Cpu, Battery, Shield, Star, ArrowRight, Sparkles, Zap, ChevronRight, ShieldCheck, GraduationCap, Cloud, Receipt, Settings, Bot, Truck } from "lucide-react";
+import { Camera, Cpu, Battery, Shield, ArrowRight, Sparkles, Zap, ChevronRight, ShieldCheck, GraduationCap, Cloud, Receipt, Settings, Bot, Truck } from "lucide-react";
 import { phones, formatPrice } from "@/data/phones";
 import PhoneCard from "@/components/PhoneCard";
 import { Button } from "@/components/ui/button";
