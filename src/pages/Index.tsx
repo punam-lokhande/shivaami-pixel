@@ -40,12 +40,12 @@ const Index = () => (
           </motion.div>
 
           <motion.h1 initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.1 }} className="mt-6 text-5xl font-extrabold leading-[1.05] tracking-tight md:text-7xl lg:text-8xl text-foreground">
-            Meet the New<br />
-            <span className="text-gradient">Google Pixel 10a</span>
+            The Future of<br />
+            <span className="text-gradient">Work is Here</span>
           </motion.h1>
 
           <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.25 }} className="mt-5 mx-auto max-w-2xl text-lg text-muted-foreground leading-relaxed md:text-xl">
-            Everything you need, powered by Google AI. Stunning camera, all-day battery — starting at just{" "}
+            Make it <strong className="text-foreground">Smarter</strong>, <strong className="text-foreground">Safer</strong>, <strong className="text-foreground">Smoother</strong> with Shivaami — starting at just{" "}
             <span className="font-bold text-foreground">{formatPrice(heroPhone.price)}</span>
           </motion.p>
 
