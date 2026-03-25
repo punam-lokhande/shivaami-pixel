@@ -32,8 +32,9 @@ const Footer = () => (
         <div>
           <h4 className="font-semibold text-foreground">Contact</h4>
           <div className="mt-3 flex flex-col gap-2">
-            <span className="text-sm text-muted-foreground">hello@shivaami.com</span>
-            <span className="text-sm text-muted-foreground">+1 (800) PIXEL-10</span>
+            <span className="text-sm text-muted-foreground">1001, 10th Floor, Runwal R Square, LBS Road, Mulund West, Mumbai - 400080</span>
+            <a href="tel:917272072072" className="text-sm text-muted-foreground hover:text-primary transition-colors">+91 72720 72072</a>
+            <a href="mailto:maaz@shivaami.com" className="text-sm text-muted-foreground hover:text-primary transition-colors">maaz@shivaami.com</a>
             <div className="flex gap-3 mt-2">
               {["Twitter", "Instagram", "YouTube"].map((s) => (
                 <span key={s} className="text-xs font-medium text-primary cursor-pointer hover:underline">{s}</span>
