@@ -112,7 +112,7 @@ const Index = () => (
             />
 
             {/* Floating badges — desktop only */}
-            <motion.div initial={{ opacity: 0, x: -30 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 0.8 }} className="absolute left-0 top-[15%] hidden lg:flex items-center gap-2 rounded-2xl border border-border/50 bg-card/80 backdrop-blur-md px-3 py-2 shadow-lg">
+            <motion.div initial={{ opacity: 0, x: -30 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 0.8 }} className="absolute left-0 top-[15%] hidden lg:flex items-center gap-2 rounded-2xl border border-border/50 bg-card/80 backdrop-blur-md px-3 py-2 shadow-lg z-20">
               <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-google-blue/10">
                 <Camera className="h-4 w-4 text-google-blue" />
               </div>
