@@ -25,14 +25,14 @@ const specIconMap: Record<string, React.ElementType> = {
 };
 
 const shivaamiAdvantages = [
-  { icon: ShieldCheck, title: "2-Year Device Protection", desc: "Accidental & liquid damage covered by OneAssist — free", color: "text-google-blue", bg: "bg-google-blue/10" },
-  { icon: Bot, title: "1 Year Gemini AI Free", desc: "Your team starts using AI from day one", color: "text-google-red", bg: "bg-google-red/10" },
-  { icon: GraduationCap, title: "AI Workshops", desc: "Hands-on training by Google & Shivaami", color: "text-google-yellow", bg: "bg-google-yellow/10" },
-  { icon: Cloud, title: "Free Cloud Storage", desc: "3 / 6 / 12 months free backup", color: "text-google-green", bg: "bg-google-green/10" },
-  { icon: Receipt, title: "Corporate Pricing + GST", desc: "Proper invoicing & input tax credit", color: "text-google-blue", bg: "bg-google-blue/10" },
-  { icon: Settings, title: "Zero Touch Deployment", desc: "Devices arrive pre-configured", color: "text-google-red", bg: "bg-google-red/10" },
-  { icon: Sparkles, title: "6 Months Gemini AI Free", desc: "Hit the ground running with AI", color: "text-google-yellow", bg: "bg-google-yellow/10" },
-  { icon: Truck, title: "Free Pan-India Pickup & Drop", desc: "We collect and deliver across India", color: "text-google-green", bg: "bg-google-green/10" },
+  { icon: ShieldCheck, title: "2-Year Device Protection", desc: "Accidental & liquid damage covered by OneAssist — at no extra cost", color: "text-google-blue", bg: "bg-google-blue/10" },
+  { icon: Bot, title: "1 Year Google Gemini AI Free", desc: "Your team starts using AI from day one — included with every device", color: "text-google-red", bg: "bg-google-red/10" },
+  { icon: GraduationCap, title: "AI Workshops by Google & Shivaami", desc: "Hands-on training so your team actually uses what they have", color: "text-google-yellow", bg: "bg-google-yellow/10" },
+  { icon: Cloud, title: "Free Google Cloud Storage", desc: "3 / 6 / 12 months free — backup contacts, photos & videos", color: "text-google-green", bg: "bg-google-green/10" },
+  { icon: Receipt, title: "Corporate Pricing + GST Benefits", desc: "Proper invoicing, input tax credit, and real savings for your business", color: "text-google-blue", bg: "bg-google-blue/10" },
+  { icon: Settings, title: "Zero Touch Deployment", desc: "Devices arrive pre-configured and ready to use — zero setup needed", color: "text-google-red", bg: "bg-google-red/10" },
+  { icon: Sparkles, title: "6 Months Gemini AI Free", desc: "Hit the ground running with Google's most capable AI from day one", color: "text-google-yellow", bg: "bg-google-yellow/10" },
+  { icon: Truck, title: "Free Pan-India Pickup & Drop", desc: "We collect and deliver across India — your team does nothing", color: "text-google-green", bg: "bg-google-green/10" },
 ];
 
 // Quick highlight icons per category
@@ -300,7 +300,7 @@ const ProductDetail = () => {
                 <h3 className="text-sm font-bold text-foreground">The Shivaami Advantage</h3>
               </div>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
-                {shivaamiAdvantages.slice(0, 4).map((item) => (
+                {shivaamiAdvantages.map((item) => (
                   <div key={item.title} className="flex items-start gap-2.5 rounded-lg bg-card/80 border border-border/50 p-3">
                     <div className={`flex h-8 w-8 shrink-0 items-center justify-center rounded-lg ${item.bg}`}>
                       <item.icon className={`h-4 w-4 ${item.color}`} />
