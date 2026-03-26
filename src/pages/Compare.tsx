@@ -33,7 +33,7 @@ const Compare = () => (
                 <p className="mt-2 text-xs font-semibold text-foreground">{p.name}</p>
                 <div className="flex flex-col items-center gap-0.5">
                   <p className="text-sm font-bold text-primary">{formatPrice(p.price)}</p>
-                  <p className="text-[9px] text-google-green font-medium">+ GST @ {p.gstRate}%</p>
+                  <p className="text-[9px] text-google-green font-medium">Exclusive of GST</p>
                   {p.originalPrice && <p className="text-[10px] text-muted-foreground line-through">{formatPrice(p.originalPrice)}</p>}
                 </div>
               </th>

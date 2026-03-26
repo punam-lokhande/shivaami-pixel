@@ -54,8 +54,7 @@ const ProductDetail = () => {
                 <p className="text-lg text-muted-foreground line-through">{formatPrice(phone.originalPrice)}</p>
               )}
             </div>
-            <p className="mt-1 text-sm text-google-green font-medium">+ GST @ {phone.gstRate}% ({formatPrice(Math.round(phone.price * phone.gstRate / 100))})</p>
-            <p className="text-xs text-muted-foreground mt-0.5">Total incl. GST: <span className="font-semibold text-foreground">{formatPrice(Math.round(phone.price * (1 + phone.gstRate / 100)))}</span></p>
+            <p className="mt-1 text-sm text-google-green font-medium">Exclusive of GST</p>
           </div>
 
           {/* Color options */}
