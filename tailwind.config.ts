@@ -61,6 +61,7 @@ export default {
         },
         "spin-slow": { "0%": { transform: "translate(-50%, -50%) rotate(0deg)" }, "100%": { transform: "translate(-50%, -50%) rotate(360deg)" } },
         "spin-slow-reverse": { "0%": { transform: "translate(-50%, -50%) rotate(0deg)" }, "100%": { transform: "translate(-50%, -50%) rotate(-360deg)" } },
+        "pulse-glow": { "0%, 100%": { opacity: "0.6", transform: "scale(1)" }, "50%": { opacity: "1", transform: "scale(1.1)" } },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",

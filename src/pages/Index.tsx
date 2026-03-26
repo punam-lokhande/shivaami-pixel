@@ -20,134 +20,134 @@ const heroPhone = phones.find((p) => p.id === "pixel-10a")!;
 const Index = () => (
   <div className="min-h-screen">
     {/* Hero — Pixel 10a */}
-    <section className="relative overflow-hidden bg-gradient-to-br from-background via-secondary/40 to-background">
+    <section className="relative overflow-hidden bg-gradient-to-br from-background via-secondary/40 to-background hero-section">
       {/* Animated gradient mesh */}
       <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute -top-40 right-0 h-[700px] w-[700px] rounded-full bg-google-blue/12 blur-[120px] animate-float" />
-        <div className="absolute bottom-0 -left-40 h-[500px] w-[500px] rounded-full bg-google-green/10 blur-[120px] animate-float" style={{ animationDelay: "1.5s" }} />
-        <div className="absolute top-1/3 left-1/3 h-[400px] w-[400px] rounded-full bg-google-yellow/8 blur-[100px] animate-float" style={{ animationDelay: "3s" }} />
+        <div className="absolute -top-40 right-0 h-[500px] w-[500px] rounded-full bg-google-blue/15 blur-[100px] animate-float" />
+        <div className="absolute bottom-0 -left-40 h-[400px] w-[400px] rounded-full bg-google-green/12 blur-[100px] animate-float" style={{ animationDelay: "1.5s" }} />
+        <div className="absolute top-1/3 left-1/3 h-[350px] w-[350px] rounded-full bg-google-yellow/10 blur-[80px] animate-float" style={{ animationDelay: "3s" }} />
+        <div className="absolute top-1/2 right-1/4 h-[300px] w-[300px] rounded-full bg-google-red/8 blur-[90px] animate-float" style={{ animationDelay: "2s" }} />
         {/* Moving particles */}
         <div className="absolute top-[10%] left-[15%] h-2 w-2 rounded-full bg-google-blue/30 animate-hero-particle" />
         <div className="absolute top-[30%] right-[20%] h-1.5 w-1.5 rounded-full bg-google-red/25 animate-hero-particle" style={{ animationDelay: "1s" }} />
         <div className="absolute top-[60%] left-[10%] h-1 w-1 rounded-full bg-google-green/30 animate-hero-particle" style={{ animationDelay: "2s" }} />
         <div className="absolute top-[20%] right-[35%] h-2.5 w-2.5 rounded-full bg-google-yellow/20 animate-hero-particle" style={{ animationDelay: "3s" }} />
         <div className="absolute bottom-[20%] right-[10%] h-1.5 w-1.5 rounded-full bg-google-blue/20 animate-hero-particle" style={{ animationDelay: "4s" }} />
-        {/* Rotating ring */}
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-[600px] w-[600px] rounded-full border border-google-blue/5 animate-spin-slow" />
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-[800px] w-[800px] rounded-full border border-dashed border-google-green/5 animate-spin-slow-reverse" />
+        {/* Rotating rings */}
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-[500px] w-[500px] rounded-full border border-google-blue/5 animate-spin-slow" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-[700px] w-[700px] rounded-full border border-dashed border-google-green/5 animate-spin-slow-reverse" />
       </div>
 
       <div className="container relative">
-        {/* Top section - centered headline */}
-        <div className="pt-6 sm:pt-10 md:pt-16 text-center">
-          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} className="inline-flex items-center gap-2 rounded-full border border-google-blue/20 bg-google-blue/5 px-5 py-2 text-sm font-semibold text-google-blue backdrop-blur-sm">
-            <span className="relative flex h-2 w-2">
-              <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-google-blue opacity-75" />
-              <span className="relative inline-flex h-2 w-2 rounded-full bg-google-blue" />
-            </span>
-            Just Launched — Pixel 10a
-          </motion.div>
+        <div className="flex flex-col md:flex-row items-center justify-between gap-4 md:gap-8 py-4 sm:py-6 md:py-10 lg:py-14 min-h-[calc(100vh-80px)] md:min-h-0 md:h-auto">
+          {/* Left — Text content */}
+          <div className="flex-1 text-center md:text-left order-1 md:order-1 pt-2 sm:pt-0">
+            <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} className="inline-flex items-center gap-2 rounded-full border border-google-blue/20 bg-google-blue/5 px-4 py-1.5 text-xs sm:text-sm font-semibold text-google-blue backdrop-blur-sm">
+              <span className="relative flex h-2 w-2">
+                <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-google-blue opacity-75" />
+                <span className="relative inline-flex h-2 w-2 rounded-full bg-google-blue" />
+              </span>
+              Just Launched — Pixel 10a
+            </motion.div>
 
-          <motion.h1 initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.1 }} className="mt-6 text-2xl font-extrabold leading-[1.1] tracking-tight sm:text-3xl md:text-5xl lg:text-6xl text-foreground whitespace-nowrap">
-            The Future of <span className="text-gradient">Work is Here</span>
-          </motion.h1>
+            <motion.h1 initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.1 }} className="mt-4 sm:mt-5 text-3xl font-extrabold leading-[1.1] tracking-tight sm:text-4xl md:text-5xl lg:text-6xl text-foreground">
+              The Future of{" "}
+              <span className="text-gradient">Work is Here</span>
+            </motion.h1>
 
-          <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.25 }} className="mt-4 mx-auto max-w-2xl text-sm text-muted-foreground leading-relaxed sm:text-base md:text-xl px-4 sm:px-0">
-            Make it <strong className="text-foreground">Smarter</strong>, <strong className="text-foreground">Safer</strong>, <strong className="text-foreground">Smoother</strong> with Shivaami — starting at just{" "}
-            <span className="font-bold text-foreground">{formatPrice(heroPhone.price)}</span> <span className="text-xs text-google-green">+ GST</span>
-          </motion.p>
+            <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.25 }} className="mt-3 sm:mt-4 max-w-lg text-sm text-muted-foreground leading-relaxed sm:text-base md:text-lg mx-auto md:mx-0">
+              Make it <strong className="text-foreground">Smarter</strong>, <strong className="text-foreground">Safer</strong>, <strong className="text-foreground">Smoother</strong> with Shivaami — starting at just{" "}
+              <span className="font-bold text-foreground">{formatPrice(heroPhone.price)}</span> <span className="text-xs text-google-green">+ GST</span>
+            </motion.p>
 
-          {/* CTAs */}
-          <motion.div initial={{ opacity: 0, y: 15 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.35 }} className="mt-6 flex flex-col sm:flex-row justify-center gap-3 sm:gap-4 px-4 sm:px-0">
-            <Link to={`/product/${heroPhone.slug}`}>
-              <Button size="lg" className="w-full sm:w-auto gradient-cta border-0 text-primary-foreground gap-2 rounded-full px-8 sm:px-10 py-5 sm:py-6 text-sm sm:text-base font-semibold shadow-lg shadow-primary/25 hover:shadow-xl hover:shadow-primary/35 hover:scale-105 transition-all duration-300">
-                Buy Now <ArrowRight className="h-5 w-5" />
-              </Button>
-            </Link>
-            <Link to={`/product/${heroPhone.slug}`}>
-              <Button size="lg" variant="outline" className="w-full sm:w-auto rounded-full px-8 sm:px-10 py-5 sm:py-6 text-sm sm:text-base font-semibold hover:bg-secondary transition-all duration-300">
-                Explore Features
-              </Button>
-            </Link>
+            {/* CTAs */}
+            <motion.div initial={{ opacity: 0, y: 15 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.35 }} className="mt-5 sm:mt-6 flex flex-col sm:flex-row justify-center md:justify-start gap-3">
+              <Link to={`/product/${heroPhone.slug}`}>
+                <Button size="lg" className="w-full sm:w-auto gradient-cta border-0 text-primary-foreground gap-2 rounded-full px-8 py-5 text-sm sm:text-base font-semibold shadow-lg shadow-primary/25 hover:shadow-xl hover:shadow-primary/35 hover:scale-105 transition-all duration-300">
+                  Buy Now <ArrowRight className="h-5 w-5" />
+                </Button>
+              </Link>
+              <Link to={`/product/${heroPhone.slug}`}>
+                <Button size="lg" variant="outline" className="w-full sm:w-auto rounded-full px-8 py-5 text-sm sm:text-base font-semibold hover:bg-secondary transition-all duration-300">
+                  Explore Features
+                </Button>
+              </Link>
+            </motion.div>
+
+            {/* Stats row */}
+            <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.5 }} className="mt-6 sm:mt-8 grid grid-cols-4 gap-1 max-w-md mx-auto md:mx-0">
+              {[
+                { value: "50MP", label: "Camera" },
+                { value: "30+hrs", label: "Battery" },
+                { value: "Tensor G5", label: "Chip" },
+                { value: "7 Years", label: "Updates" },
+              ].map((s, i) => (
+                <motion.div key={s.label} initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.6 + i * 0.08 }} className="text-center md:text-left">
+                  <p className="text-sm sm:text-base font-bold text-foreground md:text-lg">{s.value}</p>
+                  <p className="text-[10px] sm:text-xs text-muted-foreground">{s.label}</p>
+                </motion.div>
+              ))}
+            </motion.div>
+          </div>
+
+          {/* Right — Phone with 3D effect */}
+          <motion.div
+            initial={{ opacity: 0, x: 80, rotateY: -15 }}
+            animate={{ opacity: 1, x: 0, rotateY: 0 }}
+            transition={{ delay: 0.3, duration: 1.2, ease: [0.22, 1, 0.36, 1] }}
+            className="relative flex-1 flex justify-center order-2 md:order-2 perspective-container"
+          >
+            {/* Vibrant glow behind phone */}
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-[250px] sm:h-[350px] md:h-[450px] w-[250px] sm:w-[350px] md:w-[450px] rounded-full bg-gradient-to-br from-google-blue/25 via-primary/20 to-google-green/15 blur-[60px] sm:blur-[80px] animate-pulse-glow" />
+            <div className="absolute top-1/3 left-1/3 h-[150px] sm:h-[200px] w-[150px] sm:w-[200px] rounded-full bg-google-red/10 blur-[60px] animate-float" style={{ animationDelay: "1s" }} />
+
+            <motion.img
+              src={heroPhoneImg}
+              alt={heroPhone.name}
+              className="relative z-10 h-[280px] sm:h-[360px] md:h-[460px] lg:h-[520px] w-auto object-contain phone-3d-effect"
+              width={1024}
+              height={1024}
+              whileHover={{ rotateY: 8, rotateX: -3, scale: 1.03 }}
+              transition={{ type: "spring", stiffness: 200, damping: 20 }}
+            />
+
+            {/* Floating badges — desktop only */}
+            <motion.div initial={{ opacity: 0, x: -30 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 0.8 }} className="absolute left-0 top-[15%] hidden lg:flex items-center gap-2 rounded-2xl border border-border/50 bg-card/80 backdrop-blur-md px-3 py-2 shadow-lg">
+              <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-google-blue/10">
+                <Camera className="h-4 w-4 text-google-blue" />
+              </div>
+              <div>
+                <p className="text-xs font-bold text-foreground">50MP AI Camera</p>
+                <p className="text-[10px] text-muted-foreground">Magic Eraser</p>
+              </div>
+            </motion.div>
+
+            <motion.div initial={{ opacity: 0, x: 30 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 0.9 }} className="absolute right-0 top-[10%] hidden lg:flex items-center gap-2 rounded-2xl border border-border/50 bg-card/80 backdrop-blur-md px-3 py-2 shadow-lg">
+              <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-google-green/10">
+                <Battery className="h-4 w-4 text-google-green" />
+              </div>
+              <div>
+                <p className="text-xs font-bold text-foreground">30+ Hours</p>
+                <p className="text-[10px] text-muted-foreground">All-day battery</p>
+              </div>
+            </motion.div>
+
+            <motion.div initial={{ opacity: 0, x: -30 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 1.0 }} className="absolute left-[5%] bottom-[20%] hidden lg:flex items-center gap-2 rounded-2xl border border-border/50 bg-card/80 backdrop-blur-md px-3 py-2 shadow-lg">
+              <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-google-red/10">
+                <Cpu className="h-4 w-4 text-google-red" />
+              </div>
+              <div>
+                <p className="text-xs font-bold text-foreground">Tensor G5</p>
+                <p className="text-[10px] text-muted-foreground">Built by Google</p>
+              </div>
+            </motion.div>
+
+            {/* New Launch badge */}
+            <motion.div initial={{ scale: 0 }} animate={{ scale: 1 }} transition={{ delay: 0.7, type: "spring", stiffness: 200 }} className="absolute top-[3%] right-[15%] flex items-center gap-1.5 rounded-full bg-google-red px-3 py-1.5 text-[10px] sm:text-xs font-bold text-primary-foreground shadow-lg shadow-google-red/30 z-20">
+              <Sparkles className="h-3 w-3" /> New Launch
+            </motion.div>
           </motion.div>
         </div>
-
-        {/* Phone image — large, centered, dramatic */}
-        <motion.div initial={{ opacity: 0, y: 60 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.3, duration: 1, ease: [0.22, 1, 0.36, 1] }} className="relative mt-6 sm:mt-10 flex justify-center">
-          {/* Glow behind phone */}
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-[300px] sm:h-[500px] w-[300px] sm:w-[500px] rounded-full bg-gradient-to-br from-google-blue/20 via-google-green/15 to-google-yellow/10 blur-[80px]" />
-
-          <img
-            src={heroPhoneImg}
-            alt={heroPhone.name}
-            className="relative z-10 h-[340px] sm:h-[420px] md:h-[580px] w-auto object-contain drop-shadow-[0_40px_80px_rgba(66,133,244,0.2)] animate-float"
-            width={1024}
-            height={1024}
-          />
-
-          {/* Floating badges around phone */}
-          <motion.div initial={{ opacity: 0, x: -30 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 0.8 }} className="absolute left-[8%] top-[20%] hidden md:flex items-center gap-2 rounded-2xl border border-border/50 bg-card/80 backdrop-blur-md px-4 py-3 shadow-lg">
-            <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-google-blue/10">
-              <Camera className="h-5 w-5 text-google-blue" />
-            </div>
-            <div>
-              <p className="text-sm font-bold text-foreground">50MP AI Camera</p>
-              <p className="text-xs text-muted-foreground">Magic Eraser built-in</p>
-            </div>
-          </motion.div>
-
-          <motion.div initial={{ opacity: 0, x: 30 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 0.9 }} className="absolute right-[8%] top-[15%] hidden md:flex items-center gap-2 rounded-2xl border border-border/50 bg-card/80 backdrop-blur-md px-4 py-3 shadow-lg">
-            <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-google-green/10">
-              <Battery className="h-5 w-5 text-google-green" />
-            </div>
-            <div>
-              <p className="text-sm font-bold text-foreground">30+ Hours</p>
-              <p className="text-xs text-muted-foreground">All-day battery</p>
-            </div>
-          </motion.div>
-
-          <motion.div initial={{ opacity: 0, x: -30 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 1.0 }} className="absolute left-[10%] bottom-[25%] hidden md:flex items-center gap-2 rounded-2xl border border-border/50 bg-card/80 backdrop-blur-md px-4 py-3 shadow-lg">
-            <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-google-red/10">
-              <Cpu className="h-5 w-5 text-google-red" />
-            </div>
-            <div>
-              <p className="text-sm font-bold text-foreground">Tensor G5</p>
-              <p className="text-xs text-muted-foreground">Built by Google</p>
-            </div>
-          </motion.div>
-
-          <motion.div initial={{ opacity: 0, x: 30 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 1.1 }} className="absolute right-[10%] bottom-[30%] hidden md:flex items-center gap-2 rounded-2xl border border-border/50 bg-card/80 backdrop-blur-md px-4 py-3 shadow-lg">
-            <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-google-yellow/10">
-              <Shield className="h-5 w-5 text-google-yellow" />
-            </div>
-            <div>
-              <p className="text-sm font-bold text-foreground">7 Year Updates</p>
-              <p className="text-xs text-muted-foreground">Titan M2 security</p>
-            </div>
-          </motion.div>
-
-          {/* New Launch badge */}
-          <motion.div initial={{ scale: 0 }} animate={{ scale: 1 }} transition={{ delay: 0.7, type: "spring", stiffness: 200 }} className="absolute top-[5%] right-[20%] flex items-center gap-1.5 rounded-full bg-google-red px-4 py-2 text-xs font-bold text-primary-foreground shadow-lg shadow-google-red/30 z-20">
-            <Sparkles className="h-3.5 w-3.5" /> New Launch
-          </motion.div>
-        </motion.div>
-
-        {/* Bottom stats bar */}
-        <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.5 }} className="relative z-10 -mt-4 sm:-mt-8 mb-8 sm:mb-12 mx-4 sm:mx-auto max-w-2xl rounded-2xl border border-border/50 bg-card/70 backdrop-blur-xl p-1 shadow-xl">
-          <div className="grid grid-cols-4 divide-x divide-border/50">
-            {[
-              { value: "50MP", label: "Camera" },
-              { value: "30+hrs", label: "Battery" },
-              { value: "Tensor G5", label: "Chip" },
-              { value: "7 Years", label: "Updates" },
-            ].map((s) => (
-              <div key={s.label} className="px-2 sm:px-4 py-3 sm:py-4 text-center">
-                <p className="text-xs sm:text-base font-bold text-foreground md:text-lg">{s.value}</p>
-                <p className="text-[9px] sm:text-[11px] text-muted-foreground mt-0.5">{s.label}</p>
-              </div>
-            ))}
-          </div>
-        </motion.div>
       </div>
     </section>
 
