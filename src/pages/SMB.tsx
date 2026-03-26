@@ -159,9 +159,11 @@ const SMB = () => {
                 Give every employee a phone that works as hard as they do, with AI built in, security out of the box, and zero setup needed. Starting at <span className="font-bold text-foreground">&#8377;40,627 + GST</span>.
               </motion.p>
               <motion.div initial={{ opacity: 0, y: 15 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.35 }} className="mt-5 sm:mt-6 flex flex-col sm:flex-row justify-center md:justify-start gap-3">
-                <Button size="lg" className="w-full sm:w-auto gradient-cta border-0 text-primary-foreground gap-2 rounded-full px-8 py-5 text-sm sm:text-base font-semibold shadow-lg shadow-primary/25 hover:shadow-xl hover:scale-105 transition-all duration-300">
-                  Get a Bulk Quote <ArrowRight className="h-5 w-5" />
-                </Button>
+                <Link to="/enquire">
+                  <Button size="lg" className="w-full sm:w-auto gradient-cta border-0 text-primary-foreground gap-2 rounded-full px-8 py-5 text-sm sm:text-base font-semibold shadow-lg shadow-primary/25 hover:shadow-xl hover:scale-105 transition-all duration-300">
+                    Get a Bulk Quote <ArrowRight className="h-5 w-5" />
+                  </Button>
+                </Link>
                 <Link to="/products">
                   <Button size="lg" variant="outline" className="w-full sm:w-auto rounded-full px-8 py-5 text-sm sm:text-base font-semibold hover:bg-foreground hover:text-background transition-all duration-300">
                     Explore Pixel Models
