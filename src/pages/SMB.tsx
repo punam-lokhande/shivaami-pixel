@@ -8,6 +8,7 @@ import {
   Camera, Cpu, Battery, Sparkles
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import heroTeamImg from "@/assets/smb-hero-team.jpg";
 import {
   Accordion,
   AccordionContent,
@@ -128,31 +129,41 @@ const SMB = () => {
   return (
     <div className="min-h-screen bg-background">
       {/* SECTION 1 - Hero */}
-      <section className="relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-google-blue/5 via-transparent to-google-green/5" />
-        <div className="container relative px-4 sm:px-6 py-16 sm:py-24 lg:py-32">
-          <motion.div {...fadeUp} className="max-w-3xl mx-auto text-center">
-            <span className="inline-flex items-center gap-2 rounded-full bg-primary/10 px-4 py-1.5 text-xs font-semibold text-primary uppercase tracking-wider mb-6">
-              Authorised Google Pixel Reseller - India
-            </span>
-            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground leading-tight">
-              Your Team is Growing.{" "}
-              <span className="text-primary">Make Sure Their Tools Are Too.</span>
-            </h1>
-            <p className="mt-6 text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-              Give every employee a phone that works as hard as they do, with AI built in, security out of the box, and zero setup needed. Starting at <span className="font-semibold text-foreground">&#8377;40,627 + GST</span>.
-            </p>
-            <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
-              <Button size="lg" className="gradient-cta border-0 text-primary-foreground rounded-full px-8 py-6 text-base font-semibold shadow-lg shadow-primary/25 hover:shadow-xl hover:scale-[1.02] transition-all duration-300 gap-2">
-                Get a Bulk Quote <ArrowRight className="h-4 w-4" />
-              </Button>
-              <Link to="/products">
-                <Button size="lg" variant="outline" className="rounded-full px-8 py-6 text-base font-semibold hover:bg-secondary transition-all duration-300">
-                  Explore Pixel Models
+      <section className="relative overflow-hidden bg-gradient-to-br from-background via-secondary/40 to-background">
+        <div className="absolute inset-0 overflow-hidden">
+          <div className="absolute -top-40 right-0 h-[500px] w-[500px] rounded-full bg-google-blue/20 blur-[100px]" />
+          <div className="absolute bottom-0 -left-40 h-[400px] w-[400px] rounded-full bg-google-green/15 blur-[100px]" />
+        </div>
+        <div className="container relative px-4 sm:px-6">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-6 md:gap-8 py-8 sm:py-12 md:py-16 lg:py-20">
+            {/* Left - Text */}
+            <div className="flex-1 text-center md:text-left order-2 md:order-1">
+              <motion.span {...fadeUp} className="inline-flex items-center gap-2 rounded-full bg-primary/10 px-4 py-1.5 text-xs font-semibold text-primary uppercase tracking-wider mb-4 sm:mb-6">
+                Authorised Google Pixel Reseller - India
+              </motion.span>
+              <motion.h1 initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.1 }} className="text-3xl font-extrabold leading-[1.1] tracking-tight sm:text-4xl md:text-5xl lg:text-6xl text-foreground">
+                Your Team is Growing.{" "}
+                <span className="text-gradient">Make Sure Their Tools Are Too.</span>
+              </motion.h1>
+              <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.25 }} className="mt-4 max-w-lg text-sm text-muted-foreground leading-relaxed sm:text-base md:text-lg mx-auto md:mx-0">
+                Give every employee a phone that works as hard as they do, with AI built in, security out of the box, and zero setup needed. Starting at <span className="font-bold text-foreground">&#8377;40,627 + GST</span>.
+              </motion.p>
+              <motion.div initial={{ opacity: 0, y: 15 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.35 }} className="mt-5 sm:mt-6 flex flex-col sm:flex-row justify-center md:justify-start gap-3">
+                <Button size="lg" className="w-full sm:w-auto gradient-cta border-0 text-primary-foreground gap-2 rounded-full px-8 py-5 text-sm sm:text-base font-semibold shadow-lg shadow-primary/25 hover:shadow-xl hover:scale-105 transition-all duration-300">
+                  Get a Bulk Quote <ArrowRight className="h-5 w-5" />
                 </Button>
-              </Link>
+                <Link to="/products">
+                  <Button size="lg" variant="outline" className="w-full sm:w-auto rounded-full px-8 py-5 text-sm sm:text-base font-semibold hover:bg-secondary transition-all duration-300">
+                    Explore Pixel Models
+                  </Button>
+                </Link>
+              </motion.div>
             </div>
-          </motion.div>
+            {/* Right - Team Image */}
+            <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.8, delay: 0.2 }} className="flex-1 order-1 md:order-2 w-full max-w-lg md:max-w-none">
+              <img src={heroTeamImg} alt="Team working in modern office" width={1920} height={1080} className="w-full h-auto rounded-2xl shadow-hover object-cover" />
+            </motion.div>
+          </div>
         </div>
       </section>
 
