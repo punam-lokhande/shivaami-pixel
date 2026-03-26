@@ -373,10 +373,8 @@ const ProductDetail = () => {
           </div>
         </section>
 
-        {/* Reviews */}
-        <section className="border-t border-border">
-          <div className="container px-4 sm:px-6 py-10 sm:py-14">
-            <h2 className="text-xl font-bold sm:text-2xl text-foreground">Customer Reviews</h2>
+
+
             <div className="mt-2 flex items-center gap-3">
               <div className="flex gap-0.5">
                 {Array.from({ length: 5 }).map((_, i) => (
