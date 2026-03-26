@@ -5,6 +5,7 @@ import pixel10Frost from "@/assets/pixel-10-frost.png";
 import pixel10Indigo from "@/assets/pixel-10-indigo.webp";
 import pixel10Lemongrass from "@/assets/pixel-10-lemongrass.png";
 import pixel10Obsidian from "@/assets/pixel-10-obsidian.png";
+import pixel10ProFoldMoonstone from "@/assets/pixel-10-pro-fold-moonstone.png";
 import pixel10ProFold from "@/assets/pixel-10-pro-fold.png";
 import pixel10ProXl from "@/assets/pixel-10-pro-xl.png";
 import pixel10a from "@/assets/pixel-10a.png";
