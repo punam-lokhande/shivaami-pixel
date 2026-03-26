@@ -247,8 +247,8 @@ const Index = () => (
     </section>
 
     {/* Comparison CTA */}
-    <section className="container py-20 md:py-28">
-      <motion.div initial={{ opacity: 0, scale: 0.98 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} className="relative overflow-hidden rounded-3xl border border-border p-10 md:p-16 text-center">
+    <section className="container py-12 sm:py-20 md:py-28 px-4 sm:px-6">
+      <motion.div initial={{ opacity: 0, scale: 0.98 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} className="relative overflow-hidden rounded-2xl sm:rounded-3xl border border-border p-6 sm:p-10 md:p-16 text-center">
         <div className="absolute inset-0 bg-gradient-to-br from-google-blue/5 via-transparent to-google-green/5" />
         <div className="absolute -top-20 -right-20 h-60 w-60 rounded-full bg-google-yellow/8 blur-3xl" />
         <div className="relative">
