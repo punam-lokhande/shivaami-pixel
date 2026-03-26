@@ -229,13 +229,12 @@ export const phones: Phone[] = [
     shortDesc: "Magic made simple. Stunning photos, all-day battery.",
     description:
       "Google Pixel 9a delivers stunning photos and videos effortlessly. With 30+ hours of battery, up to 256 GB storage, lasting durability, water resistance, and Gemini across your apps — it's magic, made simple.",
-    image: pixel9a,
+    image: pixel9aIris,
     color: "Iris",
     colors: [
-      { name: "Iris", hex: "#8B80C8" },
-      { name: "Porcelain", hex: "#F1EDE6" },
-      { name: "Obsidian", hex: "#1D1D1D" },
-      { name: "Peony", hex: "#E8A0BF" },
+      { name: "Iris", hex: "#8B80C8", image: pixel9aIris },
+      { name: "Porcelain", hex: "#F1EDE6", image: pixel9aPorcelain },
+      { name: "Obsidian", hex: "#3C3C3C", image: pixel9aObsidian },
     ],
     category: "mid-range",
     specs: {
