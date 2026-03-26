@@ -14,6 +14,7 @@ const enquirySchema = z.object({
   company: z.string().trim().min(1, "Company name is required").max(100),
   email: z.string().trim().email("Invalid email address").max(255),
   phone: z.string().trim().min(10, "Valid phone number required").max(15),
+  gstNumber: z.string().trim().max(15).optional(),
   quantity: z.string().min(1, "Select quantity range"),
   model: z.string().min(1, "Select a model"),
   message: z.string().trim().max(1000).optional(),
@@ -54,6 +55,7 @@ const EnquireNow = () => {
     company: "",
     email: "",
     phone: "",
+    gstNumber: "",
     quantity: "",
     model: "",
     message: "",
@@ -180,6 +182,19 @@ const EnquireNow = () => {
                     </div>
                     {errors.phone && <p className="text-xs text-destructive mt-1">{errors.phone}</p>}
                   </div>
+                </div>
+
+                <div>
+                  <label className="text-sm font-medium text-foreground mb-1.5 block">GST Number <span className="text-muted-foreground font-normal">(Optional)</span></label>
+                  <Input
+                    type="text"
+                    placeholder="e.g. 22AAAAA0000A1Z5"
+                    value={form.gstNumber}
+                    onChange={(e) => handleChange("gstNumber", e.target.value.toUpperCase())}
+                    className={`${errors.gstNumber ? "border-destructive" : ""}`}
+                    maxLength={15}
+                  />
+                  {errors.gstNumber && <p className="text-xs text-destructive mt-1">{errors.gstNumber}</p>}
                 </div>
 
                 <div className="grid gap-4 sm:grid-cols-2">
