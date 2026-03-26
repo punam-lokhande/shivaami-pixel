@@ -240,7 +240,7 @@ const SMB = () => {
           <motion.div {...fadeUp} className="text-center mb-10 sm:mb-14">
             <h2 className="text-2xl sm:text-3xl font-bold text-foreground">The Right Pixel for Every Role in Your Team</h2>
           </motion.div>
-          <div className="grid gap-5 sm:gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="grid gap-5 sm:gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-5">
             {roleRecommendations.map((item, i) => (
               <motion.div
                 key={item.model}
