@@ -4,6 +4,10 @@ import pixel10Pro from "@/assets/pixel-10-pro.jpg"; // kept import for potential
 import pixel10ProFold from "@/assets/pixel-10-pro-fold.png";
 import pixel10ProXl from "@/assets/pixel-10-pro-xl.png";
 import pixel10a from "@/assets/pixel-10a.png";
+import pixel10aBerry from "@/assets/pixel-10a-berry.webp";
+import pixel10aFog from "@/assets/pixel-10a-fog.webp";
+import pixel10aLavender from "@/assets/pixel-10a-lavender.webp";
+import pixel10aObsidian from "@/assets/pixel-10a-obsidian.webp";
 
 export interface ColorOption {
   name: string;
