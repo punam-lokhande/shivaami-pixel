@@ -113,7 +113,7 @@ const Navbar = () => {
                       <img src={phone.image} alt={phone.name} className="h-10 w-10 object-contain" />
                       <div>
                         <p className="text-sm font-medium text-foreground">{phone.name}</p>
-                        <p className="text-xs text-muted-foreground">{phone.tagline}</p>
+                        <p className="text-xs text-muted-foreground">{phone.shortDesc}</p>
                       </div>
                     </button>
                   ))}
