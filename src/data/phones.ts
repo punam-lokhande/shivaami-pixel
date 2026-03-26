@@ -1,6 +1,10 @@
 import pixel9a from "@/assets/pixel-9a.png";
 import pixel10 from "@/assets/pixel-10.png";
 import pixel10Pro from "@/assets/pixel-10-pro.jpg"; // kept import for potential future use
+import pixel10Frost from "@/assets/pixel-10-frost.png";
+import pixel10Indigo from "@/assets/pixel-10-indigo.webp";
+import pixel10Lemongrass from "@/assets/pixel-10-lemongrass.png";
+import pixel10Obsidian from "@/assets/pixel-10-obsidian.png";
 import pixel10ProFold from "@/assets/pixel-10-pro-fold.png";
 import pixel10ProXl from "@/assets/pixel-10-pro-xl.png";
 import pixel10a from "@/assets/pixel-10a.png";
@@ -103,13 +107,13 @@ export const phones: Phone[] = [
     shortDesc: "Do spectacular things, every day. All-new telephoto lens.",
     description:
       "Google Pixel 10 brings the most refined Pixel experience yet. With a new 5x telephoto lens, Tensor G5 chip, Gemini AI assistant, and twice the durability of Pixel 8 — it's all the essentials and more of the extras.",
-    image: pixel10,
-    color: "Midnight",
+    image: pixel10Frost,
+    color: "Frost",
     colors: [
-      { name: "Midnight", hex: "#1A1A2E" },
-      { name: "Porcelain", hex: "#F1EDE6" },
-      { name: "Mojave", hex: "#C4A882" },
-      { name: "Indigo", hex: "#4B5D78" },
+      { name: "Frost", hex: "#D6DFEF", image: pixel10Frost },
+      { name: "Indigo", hex: "#3366FF", image: pixel10Indigo },
+      { name: "Lemongrass", hex: "#C8E66B", image: pixel10Lemongrass },
+      { name: "Obsidian", hex: "#4A4A4A", image: pixel10Obsidian },
     ],
     category: "flagship",
     specs: {
