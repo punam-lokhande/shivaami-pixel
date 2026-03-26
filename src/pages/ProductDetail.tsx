@@ -75,14 +75,18 @@ const ProductDetail = () => {
           <div>
             <h3 className="font-semibold text-sm">Available Colors</h3>
             <div className="mt-2 flex items-center gap-3">
-              {phone.colors.map((c) => (
-                <div key={c.name} className="flex flex-col items-center gap-1">
+              {phone.colors.map((c, i) => (
+                <button
+                  key={c.name}
+                  onClick={() => setSelectedColor(i)}
+                  className={`flex flex-col items-center gap-1 transition-all duration-200 ${selectedColor === i ? "scale-110" : "opacity-70 hover:opacity-100"}`}
+                >
                   <span
-                    className="h-8 w-8 rounded-full border-2 border-border/60 shadow-sm"
+                    className={`h-8 w-8 rounded-full shadow-sm transition-all duration-200 ${selectedColor === i ? "border-[3px] border-primary ring-2 ring-primary/20" : "border-2 border-border/60"}`}
                     style={{ backgroundColor: c.hex }}
                   />
-                  <span className="text-[10px] text-muted-foreground">{c.name}</span>
-                </div>
+                  <span className={`text-[10px] ${selectedColor === i ? "text-foreground font-semibold" : "text-muted-foreground"}`}>{c.name}</span>
+                </button>
               ))}
             </div>
           </div>
