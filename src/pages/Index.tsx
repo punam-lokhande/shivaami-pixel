@@ -74,17 +74,19 @@ const Index = () => (
               </Link>
             </motion.div>
 
-            {/* Stats row */}
-            <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.5 }} className="mt-6 sm:mt-8 grid grid-cols-4 gap-1 max-w-md mx-auto md:mx-0">
+            {/* Feature icons row */}
+            <motion.div initial={{ opacity: 0, y: 15 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.45 }} className="mt-5 sm:mt-6 flex flex-wrap justify-center md:justify-start gap-3 sm:gap-4">
               {[
-                { value: "50MP", label: "Camera" },
-                { value: "30+hrs", label: "Battery" },
-                { value: "Tensor G5", label: "Chip" },
-                { value: "7 Years", label: "Updates" },
-              ].map((s, i) => (
-                <motion.div key={s.label} initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.6 + i * 0.08 }} className="text-center md:text-left">
-                  <p className="text-sm sm:text-base font-bold text-foreground md:text-lg">{s.value}</p>
-                  <p className="text-[10px] sm:text-xs text-muted-foreground">{s.label}</p>
+                { icon: Camera, label: "50MP Camera", color: "text-google-blue", bg: "bg-google-blue/10" },
+                { icon: Battery, label: "30+ Hrs Battery", color: "text-google-green", bg: "bg-google-green/10" },
+                { icon: Cpu, label: "Tensor G5", color: "text-google-red", bg: "bg-google-red/10" },
+                { icon: Shield, label: "7 Yrs Updates", color: "text-google-yellow", bg: "bg-google-yellow/10" },
+              ].map((f, i) => (
+                <motion.div key={f.label} initial={{ opacity: 0, scale: 0.8 }} animate={{ opacity: 1, scale: 1 }} transition={{ delay: 0.55 + i * 0.08 }} className="flex items-center gap-1.5">
+                  <div className={`flex h-7 w-7 items-center justify-center rounded-lg ${f.bg}`}>
+                    <f.icon className={`h-3.5 w-3.5 ${f.color}`} />
+                  </div>
+                  <span className="text-xs font-medium text-foreground">{f.label}</span>
                 </motion.div>
               ))}
             </motion.div>
@@ -111,36 +113,6 @@ const Index = () => (
               transition={{ type: "spring", stiffness: 200, damping: 20 }}
             />
 
-            {/* Floating badges — desktop only */}
-            <motion.div initial={{ opacity: 0, x: -30 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 0.8 }} className="absolute left-0 top-[15%] hidden lg:flex items-center gap-2 rounded-2xl border border-border/50 bg-card/80 backdrop-blur-md px-3 py-2 shadow-lg z-20">
-              <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-google-blue/10">
-                <Camera className="h-4 w-4 text-google-blue" />
-              </div>
-              <div>
-                <p className="text-xs font-bold text-foreground">50MP AI Camera</p>
-                <p className="text-[10px] text-muted-foreground">Magic Eraser</p>
-              </div>
-            </motion.div>
-
-            <motion.div initial={{ opacity: 0, x: 30 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 0.9 }} className="absolute right-0 top-[10%] hidden lg:flex items-center gap-2 rounded-2xl border border-border/50 bg-card/80 backdrop-blur-md px-3 py-2 shadow-lg z-20">
-              <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-google-green/10">
-                <Battery className="h-4 w-4 text-google-green" />
-              </div>
-              <div>
-                <p className="text-xs font-bold text-foreground">30+ Hours</p>
-                <p className="text-[10px] text-muted-foreground">All-day battery</p>
-              </div>
-            </motion.div>
-
-            <motion.div initial={{ opacity: 0, x: -30 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 1.0 }} className="absolute left-[5%] bottom-[20%] hidden lg:flex items-center gap-2 rounded-2xl border border-border/50 bg-card/80 backdrop-blur-md px-3 py-2 shadow-lg z-20">
-              <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-google-red/10">
-                <Cpu className="h-4 w-4 text-google-red" />
-              </div>
-              <div>
-                <p className="text-xs font-bold text-foreground">Tensor G5</p>
-                <p className="text-[10px] text-muted-foreground">Built by Google</p>
-              </div>
-            </motion.div>
 
             {/* New Launch badge */}
             <motion.div initial={{ scale: 0 }} animate={{ scale: 1 }} transition={{ delay: 0.7, type: "spring", stiffness: 200 }} className="absolute top-[3%] right-[15%] flex items-center gap-1.5 rounded-full bg-google-red px-3 py-1.5 text-[10px] sm:text-xs font-bold text-primary-foreground shadow-lg shadow-google-red/30 z-20">
