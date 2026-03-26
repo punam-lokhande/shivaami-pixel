@@ -157,9 +157,7 @@ const ProductDetail = () => {
                   transition={{ duration: 0.3 }}
                   src={phone.colors[selectedColor]?.image || phone.image}
                   alt={`${phone.name} in ${phone.colors[selectedColor]?.name}`}
-                  className="relative z-10 max-h-[440px] sm:max-h-[560px] object-contain drop-shadow-2xl"
-                  width={500}
-                  height={500}
+                  className="relative z-10 h-[440px] sm:h-[560px] w-auto object-contain drop-shadow-2xl"
                 />
               </AnimatePresence>
 
