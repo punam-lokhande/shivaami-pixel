@@ -342,7 +342,7 @@ const ProductDetail = () => {
         </section>
 
         {/* All Shivaami Advantages */}
-        <section className="border-t border-border bg-secondary/20">
+        <section id="shivaami-advantage" className="border-t border-border bg-secondary/20 scroll-mt-20">
           <div className="container px-4 sm:px-6 py-10 sm:py-14">
             <div className="flex items-center gap-3 mb-6">
               <span className="inline-flex items-center gap-1.5 rounded-full bg-primary px-4 py-1.5 text-xs font-bold text-primary-foreground uppercase tracking-wider">
