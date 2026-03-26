@@ -43,7 +43,7 @@ const PhoneCard = ({ phone, index = 0 }: { phone: Phone; index?: number }) => {
         </div>
         <div className="flex flex-col gap-0.5">
           <span className="text-sm font-bold text-primary">{formatPrice(phone.price)}</span>
-          <span className="text-[10px] text-google-green font-medium">+ GST @ {phone.gstRate}% ({formatPrice(gstAmount)})</span>
+          <span className="text-[10px] text-google-green font-medium">Exclusive of GST</span>
         </div>
         <p className="text-xs text-muted-foreground line-clamp-2">{phone.shortDesc}</p>
         <div className="flex items-center gap-2 pt-2">

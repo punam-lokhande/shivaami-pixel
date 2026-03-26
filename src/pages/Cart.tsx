@@ -43,7 +43,7 @@ const Cart = () => {
                   </div>
                   <div className="flex flex-col items-end gap-0.5">
                     <span className="font-semibold text-foreground">{formatPrice(item.phone.price * item.quantity)}</span>
-                    <span className="text-[10px] text-google-green font-medium">+ GST {formatPrice(Math.round(item.phone.price * item.phone.gstRate / 100 * item.quantity))}</span>
+                    <span className="text-[10px] text-google-green font-medium">Exclusive of GST</span>
                   </div>
                     <button onClick={() => removeFromCart(item.phone.id)} className="rounded-full p-1 text-destructive hover:bg-destructive/10"><Trash2 className="h-4 w-4" /></button>
                 </div>
