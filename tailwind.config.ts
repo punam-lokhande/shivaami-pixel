@@ -71,6 +71,7 @@ export default {
         "hero-particle": "hero-particle 6s ease-in-out infinite",
         "spin-slow": "spin-slow 30s linear infinite",
         "spin-slow-reverse": "spin-slow-reverse 40s linear infinite",
+        "pulse-glow": "pulse-glow 4s ease-in-out infinite",
       },
     },
   },
