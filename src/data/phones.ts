@@ -1,6 +1,6 @@
 import pixel9a from "@/assets/pixel-9a.png";
 import pixel10 from "@/assets/pixel-10.png";
-import pixel10Pro from "@/assets/pixel-10-pro.jpg";
+import pixel10Pro from "@/assets/pixel-10-pro.jpg"; // kept import for potential future use
 import pixel10ProFold from "@/assets/pixel-10-pro-fold.png";
 import pixel10ProXl from "@/assets/pixel-10-pro-xl.png";
 import pixel10a from "@/assets/pixel-10a.png";
