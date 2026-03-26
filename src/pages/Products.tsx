@@ -29,7 +29,7 @@ const Products = () => {
       <h1 className="text-2xl sm:text-3xl font-bold">Google Pixel Phones</h1>
       <p className="mt-1 text-muted-foreground">Browse our complete collection</p>
 
-      <div className="mt-6 flex flex-wrap items-center gap-3">
+      <div className="mt-4 sm:mt-6 flex flex-col sm:flex-row flex-wrap items-start sm:items-center gap-3">
         <div className="flex gap-2">
           {categories.map((c) => (
             <button key={c.value} onClick={() => setCategory(c.value)} className={`rounded-full px-4 py-1.5 text-xs font-medium transition-colors ${category === c.value ? "bg-primary text-primary-foreground" : "bg-secondary text-secondary-foreground hover:bg-surface-hover"}`}>
