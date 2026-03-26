@@ -63,12 +63,13 @@ export const phones: Phone[] = [
     shortDesc: "The real deal. Built for real life — powered by Google AI.",
     description:
       "Pixel 10a delivers the core Pixel experience at an accessible price. With Google's advanced AI camera, 30+ hours of battery life, durable design, and Gemini built in — it's everything you need, for less.",
-    image: pixel10a,
-    color: "Chalk",
+    image: pixel10aBerry,
+    color: "Berry",
     colors: [
-      { name: "Chalk", hex: "#E8E5E1" },
-      { name: "Charcoal", hex: "#3C4043" },
-      { name: "River", hex: "#7BAFD4" },
+      { name: "Berry", hex: "#FF6B6B", image: pixel10aBerry },
+      { name: "Fog", hex: "#D4E4D0", image: pixel10aFog },
+      { name: "Lavender", hex: "#7B8CDE", image: pixel10aLavender },
+      { name: "Obsidian", hex: "#3C4043", image: pixel10aObsidian },
     ],
     category: "mid-range",
     tag: "New Launch",
