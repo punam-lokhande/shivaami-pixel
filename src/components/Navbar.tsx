@@ -34,8 +34,8 @@ const Navbar = () => {
     const results = phones.filter(
       (p) =>
         p.name.toLowerCase().includes(q) ||
-        p.tagline.toLowerCase().includes(q) ||
-        p.highlights.some((h) => h.toLowerCase().includes(q))
+        p.shortDesc.toLowerCase().includes(q) ||
+        p.features.some((f) => f.toLowerCase().includes(q))
     );
     setSearchResults(results);
   }, []);
