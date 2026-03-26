@@ -55,11 +55,18 @@ const Cart = () => {
         <div className="space-y-6">
           <div className="rounded-2xl border border-border bg-card p-6 shadow-soft">
             <h3 className="font-semibold text-foreground">Order Summary</h3>
-            <div className="mt-4 space-y-2">
-              <div className="flex justify-between text-sm"><span className="text-muted-foreground">Subtotal</span><span className="text-foreground">{formatPrice(totalPrice)}</span></div>
-              <div className="flex justify-between text-sm"><span className="text-muted-foreground">Shipping</span><span className="text-google-green font-medium">Free</span></div>
-              <div className="border-t border-border pt-2 flex justify-between font-semibold"><span>Total</span><span>{formatPrice(totalPrice)}</span></div>
-            </div>
+            {(() => {
+              const gstTotal = items.reduce((sum, i) => sum + Math.round(i.phone.price * i.phone.gstRate / 100) * i.quantity, 0);
+              const grandTotal = totalPrice + gstTotal;
+              return (
+                <div className="mt-4 space-y-2">
+                  <div className="flex justify-between text-sm"><span className="text-muted-foreground">Subtotal</span><span className="text-foreground">{formatPrice(totalPrice)}</span></div>
+                  <div className="flex justify-between text-sm"><span className="text-muted-foreground">GST (18%)</span><span className="text-foreground">{formatPrice(gstTotal)}</span></div>
+                  <div className="flex justify-between text-sm"><span className="text-muted-foreground">Shipping</span><span className="text-google-green font-medium">Free</span></div>
+                  <div className="border-t border-border pt-2 flex justify-between font-semibold"><span>Total (incl. GST)</span><span>{formatPrice(grandTotal)}</span></div>
+                </div>
+              );
+            })()}
             <Button className="mt-6 w-full gradient-cta border-0 text-primary-foreground" onClick={() => setShowCheckout(true)}>Checkout</Button>
           </div>
 
