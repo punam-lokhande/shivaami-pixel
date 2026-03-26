@@ -25,8 +25,8 @@ const Products = () => {
   ];
 
   return (
-    <div className="container py-10">
-      <h1 className="text-3xl font-bold">Google Pixel Phones</h1>
+    <div className="container py-6 sm:py-10 px-4 sm:px-6">
+      <h1 className="text-2xl sm:text-3xl font-bold">Google Pixel Phones</h1>
       <p className="mt-1 text-muted-foreground">Browse our complete collection</p>
 
       <div className="mt-6 flex flex-wrap items-center gap-3">
