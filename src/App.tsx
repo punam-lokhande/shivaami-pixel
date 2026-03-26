@@ -13,6 +13,7 @@ import ProductDetail from "./pages/ProductDetail";
 import Compare from "./pages/Compare";
 import Cart from "./pages/Cart";
 import SMB from "./pages/SMB";
+import EnquireNow from "./pages/EnquireNow";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
