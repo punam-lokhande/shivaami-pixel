@@ -41,10 +41,11 @@ const Cart = () => {
                     <span className="text-sm font-medium w-6 text-center">{item.quantity}</span>
                     <button onClick={() => updateQuantity(item.phone.id, item.quantity + 1)} className="rounded-full p-1 hover:bg-secondary"><Plus className="h-4 w-4" /></button>
                   </div>
-                  <div className="flex items-center gap-3">
+                  <div className="flex flex-col items-end gap-0.5">
                     <span className="font-semibold text-foreground">{formatPrice(item.phone.price * item.quantity)}</span>
-                    <button onClick={() => removeFromCart(item.phone.id)} className="rounded-full p-1 text-destructive hover:bg-destructive/10"><Trash2 className="h-4 w-4" /></button>
+                    <span className="text-[10px] text-google-green font-medium">+ GST {formatPrice(Math.round(item.phone.price * item.phone.gstRate / 100 * item.quantity))}</span>
                   </div>
+                    <button onClick={() => removeFromCart(item.phone.id)} className="rounded-full p-1 text-destructive hover:bg-destructive/10"><Trash2 className="h-4 w-4" /></button>
                 </div>
               </div>
             </motion.div>
