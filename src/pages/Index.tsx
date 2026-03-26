@@ -45,7 +45,7 @@ const Index = () => (
 
           <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.25 }} className="mt-4 mx-auto max-w-2xl text-sm text-muted-foreground leading-relaxed sm:text-base md:text-xl px-4 sm:px-0">
             Make it <strong className="text-foreground">Smarter</strong>, <strong className="text-foreground">Safer</strong>, <strong className="text-foreground">Smoother</strong> with Shivaami — starting at just{" "}
-            <span className="font-bold text-foreground">{formatPrice(heroPhone.price)}</span>
+            <span className="font-bold text-foreground">{formatPrice(heroPhone.price)}</span> <span className="text-xs text-google-green">+ GST</span>
           </motion.p>
 
           {/* CTAs */}

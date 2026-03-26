@@ -47,12 +47,33 @@ const ProductDetail = () => {
             </div>
           </div>
 
-          <div className="flex items-center gap-3">
-            <p className="text-2xl font-bold text-foreground">{formatPrice(phone.price)}</p>
-            {phone.originalPrice && (
-              <p className="text-lg text-muted-foreground line-through">{formatPrice(phone.originalPrice)}</p>
-            )}
+          <div>
+            <div className="flex items-center gap-3">
+              <p className="text-2xl font-bold text-foreground">{formatPrice(phone.price)}</p>
+              {phone.originalPrice && (
+                <p className="text-lg text-muted-foreground line-through">{formatPrice(phone.originalPrice)}</p>
+              )}
+            </div>
+            <p className="mt-1 text-sm text-google-green font-medium">+ GST @ {phone.gstRate}% ({formatPrice(Math.round(phone.price * phone.gstRate / 100))})</p>
+            <p className="text-xs text-muted-foreground mt-0.5">Total incl. GST: <span className="font-semibold text-foreground">{formatPrice(Math.round(phone.price * (1 + phone.gstRate / 100)))}</span></p>
           </div>
+
+          {/* Color options */}
+          <div>
+            <h3 className="font-semibold text-sm">Available Colors</h3>
+            <div className="mt-2 flex items-center gap-3">
+              {phone.colors.map((c) => (
+                <div key={c.name} className="flex flex-col items-center gap-1">
+                  <span
+                    className="h-8 w-8 rounded-full border-2 border-border/60 shadow-sm"
+                    style={{ backgroundColor: c.hex }}
+                  />
+                  <span className="text-[10px] text-muted-foreground">{c.name}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+
           <p className="text-muted-foreground">{phone.description}</p>
 
           <div>
