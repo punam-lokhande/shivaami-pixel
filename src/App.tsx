@@ -5,6 +5,7 @@ import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { CartProvider } from "@/context/CartContext";
 import Navbar from "@/components/Navbar";
+import ScrollToTop from "@/components/ScrollToTop";
 import Footer from "@/components/Footer";
 import Index from "./pages/Index";
 import Products from "./pages/Products";
@@ -22,6 +23,7 @@ const App = () => (
       <Sonner />
       <BrowserRouter>
         <CartProvider>
+          <ScrollToTop />
           <Navbar />
           <Routes>
             <Route path="/" element={<Index />} />

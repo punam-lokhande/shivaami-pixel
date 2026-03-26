@@ -249,7 +249,7 @@ const Index = () => (
     </section>
 
     {/* Feature Highlights (Why Pixel) */}
-    <section className="container py-12 sm:py-20 md:py-28 px-4 sm:px-6">
+    <section className="container py-10 sm:py-14 md:py-20 px-4 sm:px-6">
       <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center">
         <span className="text-xs font-semibold uppercase tracking-widest text-primary">Why Pixel</span>
         <h2 className="mt-2 text-2xl font-bold sm:text-3xl md:text-4xl text-foreground">Built Different. Built Better.</h2>
