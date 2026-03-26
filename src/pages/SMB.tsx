@@ -300,9 +300,11 @@ const SMB = () => {
             ))}
           </div>
           <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
-            <Button size="lg" className="gradient-cta border-0 text-primary-foreground rounded-full px-8 py-6 text-base font-semibold shadow-lg shadow-primary/25 hover:shadow-xl hover:scale-[1.02] transition-all duration-300 gap-2">
-              Get a Bulk Quote Today <ArrowRight className="h-4 w-4" />
-            </Button>
+            <Link to="/enquire">
+              <Button size="lg" className="gradient-cta border-0 text-primary-foreground rounded-full px-8 py-6 text-base font-semibold shadow-lg shadow-primary/25 hover:shadow-xl hover:scale-[1.02] transition-all duration-300 gap-2">
+                Get a Bulk Quote Today <ArrowRight className="h-4 w-4" />
+              </Button>
+            </Link>
           </div>
         </div>
       </section>
