@@ -143,7 +143,7 @@ const Index = () => (
     </section>
 
     {/* The Shivaami Advantage */}
-    <section className="relative py-20 md:py-28 overflow-hidden">
+    <section className="relative py-12 sm:py-20 md:py-28 overflow-hidden">
       {/* Animated background accents */}
       <div className="absolute inset-0 bg-gradient-to-b from-secondary/40 via-background to-secondary/30" />
       <div className="absolute top-0 left-1/4 h-[400px] w-[400px] rounded-full bg-google-blue/5 blur-[100px] animate-float" />
