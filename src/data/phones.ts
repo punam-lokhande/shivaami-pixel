@@ -42,6 +42,12 @@ export interface Phone {
 export const formatPrice = (price: number) =>
   "₹" + price.toLocaleString("en-IN");
 
+export const formatGst = (price: number, rate: number) =>
+  formatPrice(Math.round(price * rate / 100));
+
+export const formatPriceWithGst = (price: number, rate: number) =>
+  formatPrice(Math.round(price * (1 + rate / 100)));
+
 export const phones: Phone[] = [
   {
     id: "pixel-10a",
