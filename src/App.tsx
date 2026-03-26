@@ -12,6 +12,7 @@ import Products from "./pages/Products";
 import ProductDetail from "./pages/ProductDetail";
 import Compare from "./pages/Compare";
 import Cart from "./pages/Cart";
+import SMB from "./pages/SMB";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -31,6 +32,7 @@ const App = () => (
             <Route path="/product/:slug" element={<ProductDetail />} />
             <Route path="/compare" element={<Compare />} />
             <Route path="/cart" element={<Cart />} />
+            <Route path="/smb" element={<SMB />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
           <Footer />

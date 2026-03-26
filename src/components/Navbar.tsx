@@ -10,6 +10,7 @@ const navLinks = [
   { to: "/", label: "Home" },
   { to: "/products", label: "Phones" },
   { to: "/compare", label: "Compare" },
+  { to: "/smb", label: "SMB" },
 ];
 
 const Navbar = () => {
