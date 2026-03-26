@@ -373,45 +373,6 @@ const ProductDetail = () => {
           </div>
         </section>
 
-
-
-            <div className="mt-2 flex items-center gap-3">
-              <div className="flex gap-0.5">
-                {Array.from({ length: 5 }).map((_, i) => (
-                  <Star key={i} className={`h-5 w-5 ${i < Math.floor(phone.rating) ? "fill-google-yellow text-google-yellow" : "text-border"}`} />
-                ))}
-              </div>
-              <span className="text-lg font-bold text-foreground">{phone.rating}</span>
-              <span className="text-sm text-muted-foreground">({phone.reviews.toLocaleString()} reviews)</span>
-            </div>
-            <div className="mt-6 grid gap-4 sm:grid-cols-2">
-              {[
-                { name: "Alex T.", text: `Absolutely love the ${phone.name}. Best purchase this year!`, rating: 5 },
-                { name: "Maria L.", text: "Camera quality is incredible. The AI features actually make a difference.", rating: 4 },
-                { name: "Rahul S.", text: "Battery life is outstanding. Lasts me through the entire workday and more.", rating: 5 },
-                { name: "Priya M.", text: "The Shivaami advantage benefits are a great bonus. Zero touch deployment saved us hours.", rating: 5 },
-              ].map((r) => (
-                <div key={r.name} className="rounded-xl border border-border bg-card p-5">
-                  <div className="flex items-center gap-2 mb-3">
-                    <div className="flex h-8 w-8 items-center justify-center rounded-full bg-primary/10 text-xs font-bold text-primary">
-                      {r.name.charAt(0)}
-                    </div>
-                    <div>
-                      <p className="text-sm font-semibold text-foreground">{r.name}</p>
-                      <div className="flex gap-0.5">
-                        {Array.from({ length: r.rating }).map((_, i) => (
-                          <Star key={i} className="h-3 w-3 fill-google-yellow text-google-yellow" />
-                        ))}
-                      </div>
-                    </div>
-                  </div>
-                  <p className="text-sm text-muted-foreground leading-relaxed">"{r.text}"</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
         {/* You May Also Like */}
         <section className="border-t border-border bg-secondary/20">
           <div className="container px-4 sm:px-6 py-10 sm:py-14">
