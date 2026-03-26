@@ -12,7 +12,7 @@
     --card-foreground: 220 15% 15%;
     --popover: 0 0% 100%;
     --popover-foreground: 220 15% 15%;
-    --primary: 217 89% 61%;
+    --primary: 199 100% 50%;
     --primary-foreground: 0 0% 100%;
     --secondary: 210 40% 96%;
     --secondary-foreground: 220 15% 15%;
@@ -24,10 +24,10 @@
     --destructive-foreground: 0 0% 100%;
     --border: 220 13% 91%;
     --input: 220 13% 91%;
-    --ring: 217 89% 61%;
+    --ring: 199 100% 50%;
     --radius: 0.75rem;
 
-    --google-blue: 217 89% 61%;
+    --google-blue: 199 100% 50%;
     --google-red: 4 90% 58%;
     --google-yellow: 43 96% 56%;
     --google-green: 142 71% 45%;
@@ -41,7 +41,7 @@
     --sidebar-accent: 240 4.8% 95.9%;
     --sidebar-accent-foreground: 240 5.9% 10%;
     --sidebar-border: 220 13% 91%;
-    --sidebar-ring: 217 89% 61%;
+    --sidebar-ring: 199 100% 50%;
   }
 }
 
@@ -61,10 +61,10 @@
 
 @layer utilities {
   .gradient-hero {
-    background: linear-gradient(135deg, hsl(217 89% 61% / 0.06), hsl(142 71% 45% / 0.04), hsl(43 96% 56% / 0.04));
+    background: linear-gradient(135deg, hsl(199 100% 50% / 0.06), hsl(142 71% 45% / 0.04), hsl(43 96% 56% / 0.04));
   }
   .gradient-cta {
-    background: linear-gradient(135deg, hsl(var(--primary)), hsl(217 89% 70%));
+    background: linear-gradient(135deg, hsl(var(--primary)), hsl(199 100% 60%));
   }
   .gradient-card {
     background: linear-gradient(180deg, hsl(var(--surface)) 0%, hsl(var(--background)) 100%);
