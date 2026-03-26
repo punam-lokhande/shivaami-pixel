@@ -8,6 +8,7 @@ import {
   Camera, Cpu, Battery, Sparkles
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import heroTeamImg from "@/assets/smb-hero-team.jpg";
 import {
   Accordion,
   AccordionContent,
