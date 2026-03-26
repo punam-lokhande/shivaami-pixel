@@ -58,10 +58,15 @@ const Index = () => (
               <span className="text-gradient">The Future in Your Pocket</span>
             </motion.h1>
 
-            <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.25 }} className="mt-3 sm:mt-4 max-w-lg text-sm text-muted-foreground leading-relaxed sm:text-base md:text-lg mx-auto md:mx-0">
-              <strong className="text-foreground">Smarter AI</strong>, <strong className="text-foreground">Safer Devices</strong>, <strong className="text-foreground">Smoother Workflows</strong>. India's first authorised Google Pixel reseller, starting at just{" "}
-              <span className="font-bold text-foreground">{formatPrice(heroPhone.price)}</span> <span className="text-xs text-google-green">+ GST</span>
-            </motion.p>
+            <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.25 }} className="mt-3 sm:mt-4 max-w-lg text-sm text-muted-foreground leading-relaxed sm:text-base md:text-lg mx-auto md:mx-0">
+              <h2 className="text-lg sm:text-xl font-bold text-foreground mb-2">AI That Works While You Talk</h2>
+              <ul className="space-y-1 text-sm sm:text-base">
+                <li>• Auto Note-Taking</li>
+                <li>• Call Summaries in Seconds</li>
+                <li>• Live Translation (Indian Languages)</li>
+                <li>• Built for an AI-First World.</li>
+              </ul>
+            </motion.div>
 
             {/* CTAs */}
             <motion.div initial={{ opacity: 0, y: 15 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.35 }} className="mt-5 sm:mt-6 flex flex-col sm:flex-row justify-center md:justify-start gap-3">
