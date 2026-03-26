@@ -64,14 +64,14 @@ const Index = () => (
         </div>
 
         {/* Phone image — large, centered, dramatic */}
-        <motion.div initial={{ opacity: 0, y: 60 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.3, duration: 1, ease: [0.22, 1, 0.36, 1] }} className="relative mt-10 flex justify-center">
+        <motion.div initial={{ opacity: 0, y: 60 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.3, duration: 1, ease: [0.22, 1, 0.36, 1] }} className="relative mt-6 sm:mt-10 flex justify-center">
           {/* Glow behind phone */}
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-[500px] w-[500px] rounded-full bg-gradient-to-br from-google-blue/20 via-google-green/15 to-google-yellow/10 blur-[80px]" />
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-[300px] sm:h-[500px] w-[300px] sm:w-[500px] rounded-full bg-gradient-to-br from-google-blue/20 via-google-green/15 to-google-yellow/10 blur-[80px]" />
 
           <img
             src={heroPhoneImg}
             alt={heroPhone.name}
-            className="relative z-10 h-[420px] md:h-[500px] w-auto object-contain drop-shadow-[0_40px_80px_rgba(66,133,244,0.2)] animate-float"
+            className="relative z-10 h-[280px] sm:h-[350px] md:h-[500px] w-auto object-contain drop-shadow-[0_40px_80px_rgba(66,133,244,0.2)] animate-float"
             width={1024}
             height={1024}
           />
