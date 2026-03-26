@@ -127,7 +127,7 @@ const Index = () => (
     </section>
 
     {/* The Shivaami Advantage */}
-    <section className="relative py-12 sm:py-20 md:py-28 overflow-hidden">
+    <section className="relative py-10 sm:py-14 md:py-20 overflow-hidden">
       {/* Animated background accents */}
       <div className="absolute inset-0 bg-gradient-to-b from-secondary/40 via-background to-secondary/30" />
       <div className="absolute top-0 left-1/4 h-[400px] w-[400px] rounded-full bg-google-blue/5 blur-[100px] animate-float" />
@@ -209,7 +209,7 @@ const Index = () => (
     </section>
 
     {/* Product Showcase Grid */}
-    <section className="relative py-12 sm:py-20 md:py-28">
+    <section className="relative py-10 sm:py-14 md:py-20">
       <div className="absolute inset-0 bg-secondary/30" />
       <div className="container relative px-4 sm:px-6">
         <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center">
@@ -231,8 +231,8 @@ const Index = () => (
     </section>
 
     {/* Comparison CTA */}
-    <section className="container py-12 sm:py-20 md:py-28 px-4 sm:px-6">
-      <motion.div initial={{ opacity: 0, scale: 0.98 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} className="relative overflow-hidden rounded-2xl sm:rounded-3xl border border-border p-6 sm:p-10 md:p-16 text-center">
+    <section className="container py-10 sm:py-14 md:py-20 px-4 sm:px-6">
+      <motion.div initial={{ opacity: 0, scale: 0.98 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} className="relative overflow-hidden rounded-2xl sm:rounded-3xl border border-border p-6 sm:p-10 md:p-14 text-center">
         <div className="absolute inset-0 bg-gradient-to-br from-google-blue/5 via-transparent to-google-green/5" />
         <div className="absolute -top-20 -right-20 h-60 w-60 rounded-full bg-google-yellow/8 blur-3xl" />
         <div className="relative">
@@ -249,7 +249,7 @@ const Index = () => (
     </section>
 
     {/* Feature Highlights (Why Pixel) */}
-    <section className="container py-12 sm:py-20 md:py-28 px-4 sm:px-6">
+    <section className="container py-10 sm:py-14 md:py-20 px-4 sm:px-6">
       <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center">
         <span className="text-xs font-semibold uppercase tracking-widest text-primary">Why Pixel</span>
         <h2 className="mt-2 text-2xl font-bold sm:text-3xl md:text-4xl text-foreground">Built Different. Built Better.</h2>
@@ -269,7 +269,7 @@ const Index = () => (
     </section>
 
     {/* Newsletter */}
-    <section className="container py-12 sm:py-20 px-4 sm:px-6">
+    <section className="container py-10 sm:py-14 px-4 sm:px-6">
       <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="rounded-2xl sm:rounded-3xl gradient-hero border border-border p-6 sm:p-10 md:p-14 text-center">
         <h2 className="text-xl font-bold sm:text-2xl md:text-3xl text-foreground">Stay in the Loop</h2>
         <p className="mt-2 text-sm sm:text-base text-muted-foreground">Get notified about new Pixel drops and exclusive offers</p>
