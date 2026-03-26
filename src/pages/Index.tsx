@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { lazy, Suspense } from "react";
 import { motion } from "framer-motion";
 import { Camera, Cpu, Battery, Shield, ArrowRight, Sparkles, Zap, ChevronRight, ShieldCheck, GraduationCap, Cloud, Receipt, Settings, Bot, Truck } from "lucide-react";
 import { phones, formatPrice } from "@/data/phones";
@@ -6,6 +7,8 @@ import PhoneCard from "@/components/PhoneCard";
 import { Button } from "@/components/ui/button";
 import pixelLogo from "@/assets/pixel-logo.svg";
 import heroPhoneImg from "@/assets/pixel-10a-hero.png";
+
+const Phone3DViewer = lazy(() => import("@/components/Phone3DViewer"));
 
 const features = [
   { icon: Camera, title: "AI Camera", desc: "Camera Coach, Add Me, Magic Eraser — every photo is stunning", color: "text-google-blue", bg: "bg-google-blue/10" },
