@@ -71,7 +71,7 @@ const Index = () => (
           <img
             src={heroPhoneImg}
             alt={heroPhone.name}
-            className="relative z-10 h-[280px] sm:h-[350px] md:h-[500px] w-auto object-contain drop-shadow-[0_40px_80px_rgba(66,133,244,0.2)] animate-float"
+            className="relative z-10 h-[340px] sm:h-[420px] md:h-[580px] w-auto object-contain drop-shadow-[0_40px_80px_rgba(66,133,244,0.2)] animate-float"
             width={1024}
             height={1024}
           />
