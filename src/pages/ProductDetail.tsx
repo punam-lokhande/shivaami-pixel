@@ -17,13 +17,13 @@ const ProductDetail = () => {
   const specs = Object.entries(phone.specs);
 
   return (
-    <div className="container py-10">
-      <div className="grid gap-10 lg:grid-cols-2">
-        <motion.div initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }} className="relative gradient-card rounded-2xl border border-border p-8 flex items-center justify-center">
+    <div className="container py-6 sm:py-10 px-4 sm:px-6">
+      <div className="grid gap-6 sm:gap-10 lg:grid-cols-2">
+        <motion.div initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }} className="relative gradient-card rounded-2xl border border-border p-4 sm:p-8 flex items-center justify-center">
           {phone.tag && (
             <span className="absolute top-4 left-4 rounded-full bg-google-red px-3 py-1 text-xs font-bold text-primary-foreground shadow">{phone.tag}</span>
           )}
-          <img src={phone.image} alt={phone.name} className="max-h-[500px] object-contain" width={500} height={500} />
+          <img src={phone.image} alt={phone.name} className="max-h-[300px] sm:max-h-[500px] object-contain" width={500} height={500} />
         </motion.div>
 
         <motion.div initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} className="space-y-6">
@@ -48,19 +48,19 @@ const ProductDetail = () => {
             <h3 className="font-semibold">Key Features</h3>
             <div className="mt-2 grid grid-cols-2 gap-2">
               {phone.features.map((f) => (
-                <div key={f} className="flex items-center gap-2 text-sm text-muted-foreground">
+                <div key={f} className="flex items-start gap-2 text-sm text-muted-foreground">
                   <Check className="h-4 w-4 text-google-green shrink-0" /> {f}
                 </div>
               ))}
             </div>
           </div>
 
-          <div className="flex gap-3">
+          <div className="flex flex-col sm:flex-row gap-3">
             <Button size="lg" className="flex-1 gradient-cta border-0 text-primary-foreground gap-2" onClick={() => addToCart(phone)}>
               <ShoppingCart className="h-4 w-4" /> Add to Cart
             </Button>
-            <Link to="/cart">
-              <Button size="lg" variant="outline" onClick={() => addToCart(phone)}>Buy Now</Button>
+            <Link to="/cart" className="sm:flex-none">
+              <Button size="lg" variant="outline" className="w-full" onClick={() => addToCart(phone)}>Buy Now</Button>
             </Link>
           </div>
         </motion.div>

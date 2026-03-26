@@ -4,8 +4,8 @@ import pixelLogo from "@/assets/pixel-logo.svg";
 
 const Footer = () => (
   <footer className="border-t border-border bg-secondary/50">
-    <div className="container py-12">
-      <div className="grid gap-8 md:grid-cols-4">
+    <div className="container py-8 sm:py-12 px-4 sm:px-6">
+      <div className="grid gap-8 grid-cols-1 sm:grid-cols-2 md:grid-cols-4">
         <div>
           <div className="flex items-center gap-3">
             <img src={shivaamiLogo} alt="Shivaami" className="h-7 w-auto" />

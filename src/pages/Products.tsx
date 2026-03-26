@@ -25,11 +25,11 @@ const Products = () => {
   ];
 
   return (
-    <div className="container py-10">
-      <h1 className="text-3xl font-bold">Google Pixel Phones</h1>
+    <div className="container py-6 sm:py-10 px-4 sm:px-6">
+      <h1 className="text-2xl sm:text-3xl font-bold">Google Pixel Phones</h1>
       <p className="mt-1 text-muted-foreground">Browse our complete collection</p>
 
-      <div className="mt-6 flex flex-wrap items-center gap-3">
+      <div className="mt-4 sm:mt-6 flex flex-col sm:flex-row flex-wrap items-start sm:items-center gap-3">
         <div className="flex gap-2">
           {categories.map((c) => (
             <button key={c.value} onClick={() => setCategory(c.value)} className={`rounded-full px-4 py-1.5 text-xs font-medium transition-colors ${category === c.value ? "bg-primary text-primary-foreground" : "bg-secondary text-secondary-foreground hover:bg-surface-hover"}`}>
@@ -37,14 +37,14 @@ const Products = () => {
             </button>
           ))}
         </div>
-        <select value={sort} onChange={(e) => setSort(e.target.value as SortKey)} className="ml-auto rounded-lg border border-border bg-card px-3 py-1.5 text-xs outline-none">
+        <select value={sort} onChange={(e) => setSort(e.target.value as SortKey)} className="sm:ml-auto rounded-lg border border-border bg-card px-3 py-1.5 text-xs outline-none w-full sm:w-auto">
           <option value="price-asc">Price: Low to High</option>
           <option value="price-desc">Price: High to Low</option>
           <option value="rating">Top Rated</option>
         </select>
       </div>
 
-      <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+      <div className="mt-6 sm:mt-8 grid gap-4 sm:gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
         {filtered.map((phone, i) => <PhoneCard key={phone.id} phone={phone} index={i} />)}
       </div>
     </div>

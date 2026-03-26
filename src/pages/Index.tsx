@@ -39,24 +39,24 @@ const Index = () => (
             Just Launched — Pixel 10a
           </motion.div>
 
-          <motion.h1 initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.1 }} className="mt-6 text-4xl font-extrabold leading-[1.1] tracking-tight md:text-5xl lg:text-6xl text-foreground">
+          <motion.h1 initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.1 }} className="mt-6 text-2xl font-extrabold leading-[1.1] tracking-tight sm:text-3xl md:text-5xl lg:text-6xl text-foreground whitespace-nowrap">
             The Future of <span className="text-gradient">Work is Here</span>
           </motion.h1>
 
-          <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.25 }} className="mt-5 mx-auto max-w-2xl text-lg text-muted-foreground leading-relaxed md:text-xl">
+          <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.25 }} className="mt-4 mx-auto max-w-2xl text-sm text-muted-foreground leading-relaxed sm:text-base md:text-xl px-4 sm:px-0">
             Make it <strong className="text-foreground">Smarter</strong>, <strong className="text-foreground">Safer</strong>, <strong className="text-foreground">Smoother</strong> with Shivaami — starting at just{" "}
             <span className="font-bold text-foreground">{formatPrice(heroPhone.price)}</span>
           </motion.p>
 
           {/* CTAs */}
-          <motion.div initial={{ opacity: 0, y: 15 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.35 }} className="mt-8 flex justify-center gap-4">
+          <motion.div initial={{ opacity: 0, y: 15 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.35 }} className="mt-6 flex flex-col sm:flex-row justify-center gap-3 sm:gap-4 px-4 sm:px-0">
             <Link to={`/product/${heroPhone.slug}`}>
-              <Button size="lg" className="gradient-cta border-0 text-primary-foreground gap-2 rounded-full px-10 py-6 text-base font-semibold shadow-lg shadow-primary/25 hover:shadow-xl hover:shadow-primary/35 hover:scale-105 transition-all duration-300">
+              <Button size="lg" className="w-full sm:w-auto gradient-cta border-0 text-primary-foreground gap-2 rounded-full px-8 sm:px-10 py-5 sm:py-6 text-sm sm:text-base font-semibold shadow-lg shadow-primary/25 hover:shadow-xl hover:shadow-primary/35 hover:scale-105 transition-all duration-300">
                 Buy Now <ArrowRight className="h-5 w-5" />
               </Button>
             </Link>
             <Link to={`/product/${heroPhone.slug}`}>
-              <Button size="lg" variant="outline" className="rounded-full px-10 py-6 text-base font-semibold hover:bg-secondary transition-all duration-300">
+              <Button size="lg" variant="outline" className="w-full sm:w-auto rounded-full px-8 sm:px-10 py-5 sm:py-6 text-sm sm:text-base font-semibold hover:bg-secondary transition-all duration-300">
                 Explore Features
               </Button>
             </Link>
@@ -64,14 +64,14 @@ const Index = () => (
         </div>
 
         {/* Phone image — large, centered, dramatic */}
-        <motion.div initial={{ opacity: 0, y: 60 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.3, duration: 1, ease: [0.22, 1, 0.36, 1] }} className="relative mt-10 flex justify-center">
+        <motion.div initial={{ opacity: 0, y: 60 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.3, duration: 1, ease: [0.22, 1, 0.36, 1] }} className="relative mt-6 sm:mt-10 flex justify-center">
           {/* Glow behind phone */}
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-[500px] w-[500px] rounded-full bg-gradient-to-br from-google-blue/20 via-google-green/15 to-google-yellow/10 blur-[80px]" />
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-[300px] sm:h-[500px] w-[300px] sm:w-[500px] rounded-full bg-gradient-to-br from-google-blue/20 via-google-green/15 to-google-yellow/10 blur-[80px]" />
 
           <img
             src={heroPhoneImg}
             alt={heroPhone.name}
-            className="relative z-10 h-[420px] md:h-[500px] w-auto object-contain drop-shadow-[0_40px_80px_rgba(66,133,244,0.2)] animate-float"
+            className="relative z-10 h-[280px] sm:h-[350px] md:h-[500px] w-auto object-contain drop-shadow-[0_40px_80px_rgba(66,133,244,0.2)] animate-float"
             width={1024}
             height={1024}
           />
@@ -124,7 +124,7 @@ const Index = () => (
         </motion.div>
 
         {/* Bottom stats bar */}
-        <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.5 }} className="relative z-10 -mt-8 mb-12 mx-auto max-w-2xl rounded-2xl border border-border/50 bg-card/70 backdrop-blur-xl p-1 shadow-xl">
+        <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.5 }} className="relative z-10 -mt-4 sm:-mt-8 mb-8 sm:mb-12 mx-4 sm:mx-auto max-w-2xl rounded-2xl border border-border/50 bg-card/70 backdrop-blur-xl p-1 shadow-xl">
           <div className="grid grid-cols-4 divide-x divide-border/50">
             {[
               { value: "50MP", label: "Camera" },
@@ -132,9 +132,9 @@ const Index = () => (
               { value: "Tensor G5", label: "Chip" },
               { value: "7 Years", label: "Updates" },
             ].map((s) => (
-              <div key={s.label} className="px-4 py-4 text-center">
-                <p className="text-base font-bold text-foreground md:text-lg">{s.value}</p>
-                <p className="text-[11px] text-muted-foreground mt-0.5">{s.label}</p>
+              <div key={s.label} className="px-2 sm:px-4 py-3 sm:py-4 text-center">
+                <p className="text-xs sm:text-base font-bold text-foreground md:text-lg">{s.value}</p>
+                <p className="text-[9px] sm:text-[11px] text-muted-foreground mt-0.5">{s.label}</p>
               </div>
             ))}
           </div>
@@ -143,7 +143,7 @@ const Index = () => (
     </section>
 
     {/* The Shivaami Advantage */}
-    <section className="relative py-20 md:py-28 overflow-hidden">
+    <section className="relative py-12 sm:py-20 md:py-28 overflow-hidden">
       {/* Animated background accents */}
       <div className="absolute inset-0 bg-gradient-to-b from-secondary/40 via-background to-secondary/30" />
       <div className="absolute top-0 left-1/4 h-[400px] w-[400px] rounded-full bg-google-blue/5 blur-[100px] animate-float" />
@@ -163,7 +163,7 @@ const Index = () => (
           </motion.p>
         </motion.div>
 
-        <div className="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="mt-10 sm:mt-14 grid gap-4 sm:gap-5 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 px-2 sm:px-0">
           {[
             { icon: ShieldCheck, title: "2-Year Device Protection", desc: "Accidental & liquid damage covered by OneAssist — at no extra cost", color: "text-google-blue", bg: "bg-google-blue/10", border: "border-google-blue/20", highlight: true },
             { icon: Bot, title: "1 Year Google Gemini AI Free", desc: "Your team starts using AI from day one — included with every device", color: "text-google-red", bg: "bg-google-red/10", border: "border-google-red/20", highlight: true },
@@ -225,15 +225,15 @@ const Index = () => (
     </section>
 
     {/* Product Showcase Grid */}
-    <section className="relative py-20 md:py-28">
+    <section className="relative py-12 sm:py-20 md:py-28">
       <div className="absolute inset-0 bg-secondary/30" />
-      <div className="container relative">
+      <div className="container relative px-4 sm:px-6">
         <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center">
           <span className="text-xs font-semibold uppercase tracking-widest text-primary">The Lineup</span>
-          <h2 className="mt-2 text-3xl font-bold md:text-4xl text-foreground">Explore the Collection</h2>
-          <p className="mt-3 text-muted-foreground">Find the perfect Pixel for your lifestyle</p>
+          <h2 className="mt-2 text-2xl font-bold sm:text-3xl md:text-4xl text-foreground">Explore the Collection</h2>
+          <p className="mt-3 text-sm sm:text-base text-muted-foreground">Find the perfect Pixel for your lifestyle</p>
         </motion.div>
-        <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-8 sm:mt-14 grid gap-4 sm:gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
           {phones.map((phone, i) => <PhoneCard key={phone.id} phone={phone} index={i} />)}
         </div>
         <div className="mt-10 text-center">
@@ -247,14 +247,14 @@ const Index = () => (
     </section>
 
     {/* Comparison CTA */}
-    <section className="container py-20 md:py-28">
-      <motion.div initial={{ opacity: 0, scale: 0.98 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} className="relative overflow-hidden rounded-3xl border border-border p-10 md:p-16 text-center">
+    <section className="container py-12 sm:py-20 md:py-28 px-4 sm:px-6">
+      <motion.div initial={{ opacity: 0, scale: 0.98 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} className="relative overflow-hidden rounded-2xl sm:rounded-3xl border border-border p-6 sm:p-10 md:p-16 text-center">
         <div className="absolute inset-0 bg-gradient-to-br from-google-blue/5 via-transparent to-google-green/5" />
         <div className="absolute -top-20 -right-20 h-60 w-60 rounded-full bg-google-yellow/8 blur-3xl" />
         <div className="relative">
           <Zap className="mx-auto h-10 w-10 text-google-yellow mb-4" />
-          <h2 className="text-3xl font-bold md:text-4xl text-foreground">Not Sure Which to Pick?</h2>
-          <p className="mt-3 text-muted-foreground max-w-md mx-auto">Compare all 6 Pixel models side by side and find your perfect match</p>
+          <h2 className="text-2xl font-bold sm:text-3xl md:text-4xl text-foreground">Not Sure Which to Pick?</h2>
+          <p className="mt-3 text-sm sm:text-base text-muted-foreground max-w-md mx-auto">Compare all 6 Pixel models side by side and find your perfect match</p>
           <Link to="/compare">
             <Button size="lg" className="mt-8 gradient-cta border-0 text-primary-foreground gap-2 rounded-full px-10 shadow-lg shadow-primary/25">
               Compare All Models <ArrowRight className="h-4 w-4" />
@@ -265,13 +265,13 @@ const Index = () => (
     </section>
 
     {/* Feature Highlights (Why Pixel) */}
-    <section className="container py-20 md:py-28">
+    <section className="container py-12 sm:py-20 md:py-28 px-4 sm:px-6">
       <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center">
         <span className="text-xs font-semibold uppercase tracking-widest text-primary">Why Pixel</span>
-        <h2 className="mt-2 text-3xl font-bold md:text-4xl text-foreground">Built Different. Built Better.</h2>
-        <p className="mt-3 text-muted-foreground max-w-lg mx-auto">Every Pixel phone is designed with cutting-edge AI, premium materials, and Google's best software.</p>
+        <h2 className="mt-2 text-2xl font-bold sm:text-3xl md:text-4xl text-foreground">Built Different. Built Better.</h2>
+        <p className="mt-3 text-sm sm:text-base text-muted-foreground max-w-lg mx-auto">Every Pixel phone is designed with cutting-edge AI, premium materials, and Google's best software.</p>
       </motion.div>
-      <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+      <div className="mt-8 sm:mt-14 grid gap-4 sm:gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
         {features.map((f, i) => (
           <motion.div key={f.title} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.1 }} className="group rounded-2xl border border-border bg-card p-6 shadow-soft text-center transition-all duration-300 hover:shadow-hover hover:-translate-y-1">
             <div className={`mx-auto flex h-14 w-14 items-center justify-center rounded-2xl ${f.bg} transition-transform duration-300 group-hover:scale-110`}>
@@ -285,11 +285,11 @@ const Index = () => (
     </section>
 
     {/* Newsletter */}
-    <section className="container py-20">
-      <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="rounded-3xl gradient-hero border border-border p-10 md:p-14 text-center">
-        <h2 className="text-2xl font-bold md:text-3xl text-foreground">Stay in the Loop</h2>
-        <p className="mt-2 text-muted-foreground">Get notified about new Pixel drops and exclusive offers</p>
-        <div className="mt-6 flex max-w-md mx-auto gap-3">
+    <section className="container py-12 sm:py-20 px-4 sm:px-6">
+      <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="rounded-2xl sm:rounded-3xl gradient-hero border border-border p-6 sm:p-10 md:p-14 text-center">
+        <h2 className="text-xl font-bold sm:text-2xl md:text-3xl text-foreground">Stay in the Loop</h2>
+        <p className="mt-2 text-sm sm:text-base text-muted-foreground">Get notified about new Pixel drops and exclusive offers</p>
+        <div className="mt-6 flex flex-col sm:flex-row max-w-md mx-auto gap-3">
           <input type="email" placeholder="Enter your email" className="flex-1 rounded-full border border-border bg-background px-5 py-2.5 text-sm outline-none focus:ring-2 focus:ring-primary" />
           <Button className="gradient-cta border-0 text-primary-foreground rounded-full px-6">Subscribe</Button>
         </div>
