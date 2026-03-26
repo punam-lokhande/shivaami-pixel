@@ -94,24 +94,35 @@ const Index = () => (
 
           {/* Right — Phone with 3D effect */}
           <motion.div
-            initial={{ opacity: 0, x: 80, rotateY: -15 }}
-            animate={{ opacity: 1, x: 0, rotateY: 0 }}
-            transition={{ delay: 0.3, duration: 1.2, ease: [0.22, 1, 0.36, 1] }}
+            initial={{ opacity: 0, y: 60, scale: 0.9 }}
+            animate={{ opacity: 1, y: 0, scale: 1 }}
+            transition={{ delay: 0.3, duration: 1.4, ease: [0.22, 1, 0.36, 1] }}
             className="relative flex-1 flex justify-center order-2 md:order-2 perspective-container"
           >
             {/* Vibrant glow behind phone */}
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-[250px] sm:h-[350px] md:h-[450px] w-[250px] sm:w-[350px] md:w-[450px] rounded-full bg-gradient-to-br from-google-blue/25 via-primary/20 to-google-green/15 blur-[60px] sm:blur-[80px] animate-pulse-glow" />
             <div className="absolute top-1/3 left-1/3 h-[150px] sm:h-[200px] w-[150px] sm:w-[200px] rounded-full bg-google-red/10 blur-[60px] animate-float" style={{ animationDelay: "1s" }} />
 
-            <motion.img
-              src={heroPhoneImg}
-              alt={heroPhone.name}
-              className="relative z-10 h-[280px] sm:h-[360px] md:h-[460px] lg:h-[520px] w-auto object-contain phone-3d-effect"
-              width={1024}
-              height={1024}
-              whileHover={{ rotateY: 8, rotateX: -3, scale: 1.03 }}
-              transition={{ type: "spring", stiffness: 200, damping: 20 }}
-            />
+            {/* Phone with levitate + 3D */}
+            <motion.div
+              animate={{ y: [0, -12, 0] }}
+              transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+              className="relative z-10"
+            >
+              <motion.img
+                src={heroPhoneImg}
+                alt={heroPhone.name}
+                className="h-[280px] sm:h-[360px] md:h-[460px] lg:h-[520px] w-auto object-contain drop-shadow-[0_20px_40px_rgba(0,0,0,0.25)] phone-3d-effect"
+                width={1024}
+                height={1024}
+                initial={{ rotateY: -20, rotateX: 5 }}
+                animate={{ rotateY: 0, rotateX: 0 }}
+                transition={{ delay: 0.5, duration: 1.6, ease: [0.22, 1, 0.36, 1] }}
+                whileHover={{ rotateY: 10, rotateX: -5, scale: 1.05 }}
+              />
+              {/* Reflection/shadow beneath */}
+              <div className="absolute -bottom-4 left-1/2 -translate-x-1/2 w-[60%] h-6 rounded-full bg-foreground/10 blur-xl" />
+            </motion.div>
 
 
             {/* New Launch badge */}
