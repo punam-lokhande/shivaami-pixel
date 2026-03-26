@@ -1,8 +1,9 @@
-import { useState } from "react";
-import { Link, useLocation } from "react-router-dom";
+import { useState, useCallback } from "react";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { ShoppingCart, Search, Menu, X } from "lucide-react";
 import { useCart } from "@/context/CartContext";
 import { motion, AnimatePresence } from "framer-motion";
+import { phones } from "@/data/phones";
 import shivaamiLogo from "@/assets/shivaami-logo.png";
 import pixelLogo from "@/assets/pixel-logo.png";
 
@@ -17,8 +18,34 @@ const navLinks = [
 const Navbar = () => {
   const { totalItems } = useCart();
   const location = useLocation();
+  const navigate = useNavigate();
   const [mobileOpen, setMobileOpen] = useState(false);
   const [searchOpen, setSearchOpen] = useState(false);
+  const [searchQuery, setSearchQuery] = useState("");
+  const [searchResults, setSearchResults] = useState<typeof phones>([]);
+
+  const handleSearch = useCallback((query: string) => {
+    setSearchQuery(query);
+    if (query.trim().length === 0) {
+      setSearchResults([]);
+      return;
+    }
+    const q = query.toLowerCase();
+    const results = phones.filter(
+      (p) =>
+        p.name.toLowerCase().includes(q) ||
+        p.shortDesc.toLowerCase().includes(q) ||
+        p.features.some((f) => f.toLowerCase().includes(q))
+    );
+    setSearchResults(results);
+  }, []);
+
+  const handleResultClick = (slug: string) => {
+    setSearchOpen(false);
+    setSearchQuery("");
+    setSearchResults([]);
+    navigate(`/product/${slug}`);
+  };
 
   return (
     <nav className="sticky top-0 z-50 border-b border-border bg-background/80 backdrop-blur-xl">
@@ -45,7 +72,7 @@ const Navbar = () => {
         </div>
 
         <div className="flex items-center gap-3">
-          <button onClick={() => setSearchOpen(!searchOpen)} className="rounded-full p-2 transition-colors hover:bg-secondary">
+          <button onClick={() => { setSearchOpen(!searchOpen); setSearchQuery(""); setSearchResults([]); }} className="rounded-full p-2 transition-colors hover:bg-secondary">
             <Search className="h-5 w-5 text-muted-foreground" />
           </button>
           <Link to="/cart" className="relative rounded-full p-2 transition-colors hover:bg-secondary">
@@ -66,8 +93,37 @@ const Navbar = () => {
       <AnimatePresence>
         {searchOpen && (
           <motion.div initial={{ height: 0, opacity: 0 }} animate={{ height: "auto", opacity: 1 }} exit={{ height: 0, opacity: 0 }} className="border-t border-border">
-            <div className="container py-3">
-              <input type="text" placeholder="Search Pixel phones..." className="w-full rounded-lg border border-border bg-secondary px-4 py-2.5 text-sm outline-none focus:ring-2 focus:ring-primary" />
+            <div className="container py-3 relative">
+              <input
+                type="text"
+                value={searchQuery}
+                onChange={(e) => handleSearch(e.target.value)}
+                placeholder="Search Pixel phones..."
+                className="w-full rounded-lg border border-border bg-secondary px-4 py-2.5 text-sm outline-none focus:ring-2 focus:ring-primary"
+                autoFocus
+              />
+              {searchResults.length > 0 && (
+                <div className="absolute left-0 right-0 top-full mt-1 mx-4 sm:mx-6 rounded-lg border border-border bg-background shadow-lg z-50 max-h-64 overflow-y-auto">
+                  {searchResults.map((phone) => (
+                    <button
+                      key={phone.id}
+                      onClick={() => handleResultClick(phone.slug)}
+                      className="flex items-center gap-3 w-full px-4 py-3 text-left hover:bg-secondary transition-colors border-b border-border last:border-0"
+                    >
+                      <img src={phone.image} alt={phone.name} className="h-10 w-10 object-contain" />
+                      <div>
+                        <p className="text-sm font-medium text-foreground">{phone.name}</p>
+                        <p className="text-xs text-muted-foreground">{phone.shortDesc}</p>
+                      </div>
+                    </button>
+                  ))}
+                </div>
+              )}
+              {searchQuery.trim().length > 0 && searchResults.length === 0 && (
+                <div className="absolute left-0 right-0 top-full mt-1 mx-4 sm:mx-6 rounded-lg border border-border bg-background shadow-lg z-50 px-4 py-3">
+                  <p className="text-sm text-muted-foreground">No phones found for "{searchQuery}"</p>
+                </div>
+              )}
             </div>
           </motion.div>
         )}
