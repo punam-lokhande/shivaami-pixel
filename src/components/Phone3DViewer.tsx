@@ -1,88 +1,90 @@
-import { Suspense, useRef, useState } from "react";
-import { Canvas, useFrame, useLoader } from "@react-three/fiber";
-import { OrbitControls, Environment } from "@react-three/drei";
-import * as THREE from "three";
+import { useEffect, useRef } from "react";
+import "@google/model-viewer";
 
-interface PhonePlaneProps {
-  imageUrl: string;
-  autoRotate: boolean;
-}
-
-const PhonePlane = ({ imageUrl, autoRotate }: PhonePlaneProps) => {
-  const meshRef = useRef<THREE.Mesh>(null);
-  const texture = useLoader(THREE.TextureLoader, imageUrl);
-  const [hovered, setHovered] = useState(false);
-
-  // Calculate aspect ratio from texture
-  const aspect = texture.image
-    ? texture.image.width / texture.image.height
-    : 0.5;
-  const height = 4.2;
-  const width = height * aspect;
-
-  useFrame((_, delta) => {
-    if (meshRef.current && autoRotate && !hovered) {
-      meshRef.current.rotation.y += delta * 0.3;
+declare global {
+  namespace JSX {
+    interface IntrinsicElements {
+      "model-viewer": React.DetailedHTMLProps<
+        React.HTMLAttributes<HTMLElement> & {
+          src?: string;
+          alt?: string;
+          "camera-controls"?: boolean | string;
+          "auto-rotate"?: boolean | string;
+          "auto-rotate-delay"?: string;
+          "rotation-per-second"?: string;
+          "disable-tap"?: boolean | string;
+          "disable-pan"?: boolean | string;
+          "disable-zoom"?: boolean | string;
+          "interaction-prompt"?: string;
+          "camera-orbit"?: string;
+          "min-camera-orbit"?: string;
+          "max-camera-orbit"?: string;
+          "field-of-view"?: string;
+          "tone-mapping"?: string;
+          "shadow-intensity"?: string;
+          "shadow-softness"?: string;
+          "exposure"?: string;
+          "interpolation-decay"?: string;
+          "environment-image"?: string;
+          loading?: string;
+          poster?: string;
+        },
+        HTMLElement
+      >;
     }
-  });
-
-  return (
-    <mesh
-      ref={meshRef}
-      onPointerOver={() => setHovered(true)}
-      onPointerOut={() => setHovered(false)}
-    >
-      {/* Front face */}
-      <planeGeometry args={[width, height]} />
-      <meshStandardMaterial
-        map={texture}
-        transparent
-        side={THREE.DoubleSide}
-        roughness={0.3}
-        metalness={0.1}
-      />
-    </mesh>
-  );
-};
-
-const LoadingFallback = () => (
-  <div className="flex items-center justify-center h-full">
-    <div className="h-8 w-8 rounded-full border-2 border-primary border-t-transparent animate-spin" />
-  </div>
-);
+  }
+}
 
 interface Phone3DViewerProps {
-  imageUrl: string;
+  modelSrc: string;
+  alt?: string;
   className?: string;
+  poster?: string;
 }
 
-const Phone3DViewer = ({ imageUrl, className = "" }: Phone3DViewerProps) => {
+const Phone3DViewer = ({ modelSrc, alt = "3D Phone", className = "", poster }: Phone3DViewerProps) => {
+  const viewerRef = useRef<HTMLElement>(null);
+
+  useEffect(() => {
+    // Ensure model-viewer is loaded
+    if (viewerRef.current) {
+      viewerRef.current.setAttribute("src", modelSrc);
+    }
+  }, [modelSrc]);
+
   return (
-    <div className={`w-full h-full cursor-grab active:cursor-grabbing ${className}`}>
-      <Canvas
-        camera={{ position: [0, 0, 5], fov: 45 }}
-        style={{ background: "transparent" }}
-        gl={{ alpha: true, antialias: true }}
-      >
-        <ambientLight intensity={1.2} />
-        <directionalLight position={[5, 5, 5]} intensity={0.8} />
-        <directionalLight position={[-5, 3, -5]} intensity={0.4} />
-        <pointLight position={[0, -3, 3]} intensity={0.3} color="#4285f4" />
-
-        <Suspense fallback={null}>
-          <PhonePlane imageUrl={imageUrl} autoRotate />
-          <Environment preset="city" />
-        </Suspense>
-
-        <OrbitControls
-          enableZoom={false}
-          enablePan={false}
-          minPolarAngle={Math.PI / 3}
-          maxPolarAngle={(2 * Math.PI) / 3}
-          rotateSpeed={0.5}
-          autoRotate={false}
-        />
-      </Canvas>
+    <div className={`w-full h-full ${className}`}>
+      <model-viewer
+        ref={viewerRef}
+        src={modelSrc}
+        alt={alt}
+        camera-controls=""
+        auto-rotate=""
+        auto-rotate-delay="0"
+        rotation-per-second="30deg"
+        disable-tap=""
+        disable-pan=""
+        disable-zoom=""
+        interaction-prompt="auto"
+        camera-orbit="0deg 75deg 105%"
+        min-camera-orbit="auto auto 80%"
+        max-camera-orbit="auto auto 150%"
+        tone-mapping="neutral"
+        shadow-intensity="1"
+        shadow-softness="0.8"
+        exposure="1"
+        interpolation-decay="125"
+        loading="eager"
+        poster={poster}
+        style={{
+          width: "100%",
+          height: "100%",
+          backgroundColor: "transparent",
+          outline: "none",
+          // @ts-ignore
+          "--poster-color": "transparent",
+        }}
+      />
     </div>
   );
 };
