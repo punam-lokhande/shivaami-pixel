@@ -1,6 +1,6 @@
 import pixel9a from "@/assets/pixel-9a.png";
 import pixel10 from "@/assets/pixel-10.png";
-import pixel10Pro from "@/assets/pixel-10-pro.jpg";
+import pixel10Pro from "@/assets/pixel-10-pro.jpg"; // kept import for potential future use
 import pixel10ProFold from "@/assets/pixel-10-pro-fold.png";
 import pixel10ProXl from "@/assets/pixel-10-pro-xl.png";
 import pixel10a from "@/assets/pixel-10a.png";
@@ -126,44 +126,6 @@ export const phones: Phone[] = [
     ],
     rating: 4.8,
     reviews: 2156,
-  },
-  {
-    id: "pixel-10-pro",
-    name: "Google Pixel 10 Pro",
-    slug: "pixel-10-pro",
-    price: 109999,
-    gstRate: 18,
-    shortDesc: "Unbelievable camera. Unprecedented AI. The new status pro.",
-    description:
-      "Pixel 10 Pro features our highest quality photos and videos with a pro triple camera, 100x Pro Zoom, 8K video, and the most advanced AI on Pixel. Powered by the next-gen Tensor G5 chip for peak performance.",
-    image: pixel10Pro,
-    color: "Hazel",
-    colors: [
-      { name: "Hazel", hex: "#8B7D6B" },
-      { name: "Porcelain", hex: "#F1EDE6" },
-      { name: "Obsidian", hex: "#1D1D1D" },
-    ],
-    category: "flagship",
-    specs: {
-      display: '6.3" Super Actua OLED, 120Hz',
-      camera: "50MP wide + 48MP ultrawide + 48MP 5x telephoto",
-      battery: "24+ hours, fast + wireless charging",
-      processor: "Google Tensor G5",
-      ram: "16 GB",
-      storage: "256 GB",
-      os: "Android 16",
-      ai: "Gemini Advanced + Google AI Pro",
-    },
-    features: [
-      "Pro Zoom up to 100x",
-      "8K Video recording",
-      "Night Sight Video",
-      "Video Boost",
-      "Magic Cue AI",
-      "7 years of updates",
-    ],
-    rating: 4.9,
-    reviews: 1870,
   },
   {
     id: "pixel-10-pro-fold",
