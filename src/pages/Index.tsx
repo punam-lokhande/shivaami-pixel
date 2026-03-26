@@ -119,15 +119,12 @@ const Index = () => (
               }>
                 <Phone3DViewer modelSrc="/pixel-10a.glb" alt={heroPhone.name} poster={heroPhoneImg} />
               </Suspense>
-              <div className="absolute bottom-6 left-1/2 -translate-x-1/2 text-center">
-                <p className="text-sm sm:text-base font-bold text-foreground">Pixel 10a</p>
-                <p className="text-[10px] text-muted-foreground/60 select-none">Drag to rotate</p>
-              </div>
+              <p className="absolute bottom-0 left-1/2 -translate-x-1/2 text-[10px] text-muted-foreground/60 select-none">Drag to rotate</p>
             </div>
 
             {/* New Launch badge */}
             <motion.div initial={{ scale: 0 }} animate={{ scale: 1 }} transition={{ delay: 0.7, type: "spring", stiffness: 200 }} className="absolute top-[3%] right-[15%] flex items-center gap-1.5 rounded-full bg-google-red px-3 py-1.5 text-[10px] sm:text-xs font-bold text-primary-foreground shadow-lg shadow-google-red/30 z-20">
-              <Sparkles className="h-3 w-3" /> New Launch
+              <Sparkles className="h-3 w-3" /> New Launch — Pixel 10a
             </motion.div>
           </motion.div>
         </div>
