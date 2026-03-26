@@ -59,7 +59,7 @@ const Index = () => (
             </motion.h1>
 
             <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.25 }} className="mt-3 sm:mt-4 max-w-lg text-sm text-muted-foreground leading-relaxed sm:text-base md:text-lg mx-auto md:mx-0">
-              Make it <strong className="text-foreground">Smarter</strong>, <strong className="text-foreground">Safer</strong>, <strong className="text-foreground">Smoother</strong> with Shivaami — starting at just{" "}
+              <strong className="text-foreground">Smarter AI</strong>, <strong className="text-foreground">Safer Devices</strong>, <strong className="text-foreground">Smoother Workflows</strong>. India's first authorised Google Pixel reseller, starting at just{" "}
               <span className="font-bold text-foreground">{formatPrice(heroPhone.price)}</span> <span className="text-xs text-google-green">+ GST</span>
             </motion.p>
 
