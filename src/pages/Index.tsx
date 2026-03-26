@@ -112,7 +112,7 @@ const Index = () => (
                   <img src={heroPhoneImg} alt={heroPhone.name} className="h-[280px] sm:h-[360px] md:h-[460px] lg:h-[520px] w-auto object-contain animate-pulse" />
                 </div>
               }>
-                <Phone3DViewer imageUrl={heroPhoneImg} />
+                <Phone3DViewer modelSrc="/pixel-10a.glb" alt={heroPhone.name} poster={heroPhoneImg} />
               </Suspense>
               <p className="absolute bottom-0 left-1/2 -translate-x-1/2 text-[10px] text-muted-foreground/60 select-none">Drag to rotate</p>
             </div>
