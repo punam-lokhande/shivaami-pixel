@@ -153,7 +153,7 @@ const SMB = () => {
                   Get a Bulk Quote <ArrowRight className="h-5 w-5" />
                 </Button>
                 <Link to="/products">
-                  <Button size="lg" variant="outline" className="w-full sm:w-auto rounded-full px-8 py-5 text-sm sm:text-base font-semibold hover:bg-secondary transition-all duration-300">
+                  <Button size="lg" variant="outline" className="w-full sm:w-auto rounded-full px-8 py-5 text-sm sm:text-base font-semibold hover:bg-foreground hover:text-background transition-all duration-300">
                     Explore Pixel Models
                   </Button>
                 </Link>
