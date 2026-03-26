@@ -28,9 +28,9 @@ const Cart = () => {
       <div className="mt-8 grid gap-8 lg:grid-cols-3">
         <div className="lg:col-span-2 space-y-4">
           {items.map((item) => (
-            <motion.div key={item.phone.id} layout className="flex gap-4 rounded-2xl border border-border bg-card p-4 shadow-soft">
-              <img src={item.phone.image} alt={item.phone.name} className="h-24 w-24 rounded-xl object-contain bg-secondary" loading="lazy" width={96} height={96} />
-              <div className="flex flex-1 flex-col justify-between">
+            <motion.div key={item.phone.id} layout className="flex flex-col sm:flex-row gap-4 rounded-2xl border border-border bg-card p-4 shadow-soft">
+              <img src={item.phone.image} alt={item.phone.name} className="h-24 w-24 mx-auto sm:mx-0 rounded-xl object-contain bg-secondary" loading="lazy" width={96} height={96} />
+              <div className="flex flex-1 flex-col justify-between gap-3">
                 <div>
                   <h3 className="font-semibold text-foreground">{item.phone.name}</h3>
                   <p className="text-sm text-muted-foreground">{item.phone.color}</p>

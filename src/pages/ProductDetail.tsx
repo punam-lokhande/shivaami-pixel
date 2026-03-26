@@ -55,12 +55,12 @@ const ProductDetail = () => {
             </div>
           </div>
 
-          <div className="flex gap-3">
+          <div className="flex flex-col sm:flex-row gap-3">
             <Button size="lg" className="flex-1 gradient-cta border-0 text-primary-foreground gap-2" onClick={() => addToCart(phone)}>
               <ShoppingCart className="h-4 w-4" /> Add to Cart
             </Button>
-            <Link to="/cart">
-              <Button size="lg" variant="outline" onClick={() => addToCart(phone)}>Buy Now</Button>
+            <Link to="/cart" className="sm:flex-none">
+              <Button size="lg" variant="outline" className="w-full" onClick={() => addToCart(phone)}>Buy Now</Button>
             </Link>
           </div>
         </motion.div>
