@@ -23,19 +23,19 @@ const Index = () => (
     <section className="relative overflow-hidden bg-gradient-to-br from-background via-secondary/40 to-background hero-section">
       {/* Animated gradient mesh */}
       <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute -top-40 right-0 h-[500px] w-[500px] rounded-full bg-google-blue/15 blur-[100px] animate-float" />
-        <div className="absolute bottom-0 -left-40 h-[400px] w-[400px] rounded-full bg-google-green/12 blur-[100px] animate-float" style={{ animationDelay: "1.5s" }} />
-        <div className="absolute top-1/3 left-1/3 h-[350px] w-[350px] rounded-full bg-google-yellow/10 blur-[80px] animate-float" style={{ animationDelay: "3s" }} />
-        <div className="absolute top-1/2 right-1/4 h-[300px] w-[300px] rounded-full bg-google-red/8 blur-[90px] animate-float" style={{ animationDelay: "2s" }} />
+        <div className="absolute -top-40 right-0 h-[500px] w-[500px] rounded-full bg-google-blue/30 blur-[100px] animate-float" />
+        <div className="absolute bottom-0 -left-40 h-[400px] w-[400px] rounded-full bg-google-green/25 blur-[100px] animate-float" style={{ animationDelay: "1.5s" }} />
+        <div className="absolute top-1/3 left-1/3 h-[350px] w-[350px] rounded-full bg-google-yellow/20 blur-[80px] animate-float" style={{ animationDelay: "3s" }} />
+        <div className="absolute top-1/2 right-1/4 h-[300px] w-[300px] rounded-full bg-google-red/15 blur-[90px] animate-float" style={{ animationDelay: "2s" }} />
         {/* Moving particles */}
-        <div className="absolute top-[10%] left-[15%] h-2 w-2 rounded-full bg-google-blue/30 animate-hero-particle" />
-        <div className="absolute top-[30%] right-[20%] h-1.5 w-1.5 rounded-full bg-google-red/25 animate-hero-particle" style={{ animationDelay: "1s" }} />
-        <div className="absolute top-[60%] left-[10%] h-1 w-1 rounded-full bg-google-green/30 animate-hero-particle" style={{ animationDelay: "2s" }} />
-        <div className="absolute top-[20%] right-[35%] h-2.5 w-2.5 rounded-full bg-google-yellow/20 animate-hero-particle" style={{ animationDelay: "3s" }} />
-        <div className="absolute bottom-[20%] right-[10%] h-1.5 w-1.5 rounded-full bg-google-blue/20 animate-hero-particle" style={{ animationDelay: "4s" }} />
+        <div className="absolute top-[10%] left-[15%] h-3 w-3 rounded-full bg-google-blue/50 animate-hero-particle" />
+        <div className="absolute top-[30%] right-[20%] h-2.5 w-2.5 rounded-full bg-google-red/40 animate-hero-particle" style={{ animationDelay: "1s" }} />
+        <div className="absolute top-[60%] left-[10%] h-2 w-2 rounded-full bg-google-green/50 animate-hero-particle" style={{ animationDelay: "2s" }} />
+        <div className="absolute top-[20%] right-[35%] h-3 w-3 rounded-full bg-google-yellow/40 animate-hero-particle" style={{ animationDelay: "3s" }} />
+        <div className="absolute bottom-[20%] right-[10%] h-2.5 w-2.5 rounded-full bg-google-blue/40 animate-hero-particle" style={{ animationDelay: "4s" }} />
         {/* Rotating rings */}
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-[500px] w-[500px] rounded-full border border-google-blue/5 animate-spin-slow" />
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-[700px] w-[700px] rounded-full border border-dashed border-google-green/5 animate-spin-slow-reverse" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-[500px] w-[500px] rounded-full border-2 border-google-blue/15 animate-spin-slow" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-[700px] w-[700px] rounded-full border-2 border-dashed border-google-green/12 animate-spin-slow-reverse" />
       </div>
 
       <div className="container relative">
