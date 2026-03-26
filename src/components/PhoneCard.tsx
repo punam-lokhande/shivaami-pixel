@@ -35,7 +35,7 @@ const PhoneCard = ({ phone, index = 0 }: { phone: Phone; index?: number }) => {
               style={{ backgroundColor: phone.colors[selectedColor]?.hex }}
             />
           </AnimatePresence>
-          <img src={phone.image} alt={phone.name} className="relative z-10 max-h-full max-w-full object-contain transition-transform duration-500 group-hover:scale-105" loading="lazy" width={400} height={400} />
+          <img src={phone.colors[selectedColor]?.image || phone.image} alt={`${phone.name} in ${phone.colors[selectedColor]?.name}`} className="relative z-10 max-h-full max-w-full object-contain transition-transform duration-500 group-hover:scale-105" loading="lazy" width={400} height={400} />
         </div>
       </Link>
       <div className="mt-4 space-y-2">
