@@ -50,7 +50,7 @@ const Index = () => (
                 <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-google-red opacity-75" />
                 <span className="relative inline-flex h-2.5 w-2.5 rounded-full bg-google-red" />
               </span>
-              🚀 Just Launched — Pixel 10a
+              Just Launched — Pixel 10a
             </motion.div>
 
             <motion.h1 initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.1 }} className="mt-4 sm:mt-5 text-3xl font-extrabold leading-[1.1] tracking-tight sm:text-4xl md:text-5xl lg:text-6xl text-foreground">
