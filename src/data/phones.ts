@@ -126,6 +126,7 @@ export const phones: Phone[] = [
     ],
     rating: 4.8,
     reviews: 2156,
+  },
   {
     id: "pixel-10-pro-fold",
     name: "Google Pixel 10 Pro Fold",
