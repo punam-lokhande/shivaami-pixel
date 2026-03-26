@@ -26,6 +26,15 @@ const Index = () => (
         <div className="absolute -top-40 right-0 h-[700px] w-[700px] rounded-full bg-google-blue/12 blur-[120px] animate-float" />
         <div className="absolute bottom-0 -left-40 h-[500px] w-[500px] rounded-full bg-google-green/10 blur-[120px] animate-float" style={{ animationDelay: "1.5s" }} />
         <div className="absolute top-1/3 left-1/3 h-[400px] w-[400px] rounded-full bg-google-yellow/8 blur-[100px] animate-float" style={{ animationDelay: "3s" }} />
+        {/* Moving particles */}
+        <div className="absolute top-[10%] left-[15%] h-2 w-2 rounded-full bg-google-blue/30 animate-hero-particle" />
+        <div className="absolute top-[30%] right-[20%] h-1.5 w-1.5 rounded-full bg-google-red/25 animate-hero-particle" style={{ animationDelay: "1s" }} />
+        <div className="absolute top-[60%] left-[10%] h-1 w-1 rounded-full bg-google-green/30 animate-hero-particle" style={{ animationDelay: "2s" }} />
+        <div className="absolute top-[20%] right-[35%] h-2.5 w-2.5 rounded-full bg-google-yellow/20 animate-hero-particle" style={{ animationDelay: "3s" }} />
+        <div className="absolute bottom-[20%] right-[10%] h-1.5 w-1.5 rounded-full bg-google-blue/20 animate-hero-particle" style={{ animationDelay: "4s" }} />
+        {/* Rotating ring */}
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-[600px] w-[600px] rounded-full border border-google-blue/5 animate-spin-slow" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-[800px] w-[800px] rounded-full border border-dashed border-google-green/5 animate-spin-slow-reverse" />
       </div>
 
       <div className="container relative">
