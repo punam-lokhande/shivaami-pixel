@@ -50,7 +50,7 @@ const Index = () => (
                 <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-google-red opacity-75" />
                 <span className="relative inline-flex h-2.5 w-2.5 rounded-full bg-google-red" />
               </span>
-              Just Launched - Pixel 10a
+              New Launch — Pixel 10a
             </motion.div>
 
             <motion.h1 initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.1 }} className="mt-4 sm:mt-5 text-3xl font-extrabold leading-[1.1] tracking-tight sm:text-4xl md:text-5xl lg:text-6xl text-foreground">
@@ -58,10 +58,15 @@ const Index = () => (
               <span className="text-gradient">The Future in Your Pocket</span>
             </motion.h1>
 
-            <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.25 }} className="mt-3 sm:mt-4 max-w-lg text-sm text-muted-foreground leading-relaxed sm:text-base md:text-lg mx-auto md:mx-0">
-              <strong className="text-foreground">Smarter AI</strong>, <strong className="text-foreground">Safer Devices</strong>, <strong className="text-foreground">Smoother Workflows</strong>. India's first authorised Google Pixel reseller, starting at just{" "}
-              <span className="font-bold text-foreground">{formatPrice(heroPhone.price)}</span> <span className="text-xs text-google-green">+ GST</span>
-            </motion.p>
+            <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.25 }} className="mt-3 sm:mt-4 max-w-lg text-sm text-muted-foreground leading-relaxed sm:text-base md:text-lg mx-auto md:mx-0">
+              <h2 className="text-lg sm:text-xl font-bold text-foreground mb-2">AI That Works While You Talk</h2>
+              <ul className="space-y-1 text-sm sm:text-base">
+                <li>• Auto Note-Taking</li>
+                <li>• Call Summaries in Seconds</li>
+                <li>• Live Translation (Indian Languages)</li>
+                <li>• Built for an AI-First World.</li>
+              </ul>
+            </motion.div>
 
             {/* CTAs */}
             <motion.div initial={{ opacity: 0, y: 15 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.35 }} className="mt-5 sm:mt-6 flex flex-col sm:flex-row justify-center md:justify-start gap-3">
@@ -152,9 +157,9 @@ const Index = () => (
             { icon: ShieldCheck, title: "2-Year Device Protection", desc: "Drop it, spill on it, crack it, your Pixel is covered. Every bulk order includes free accidental and liquid damage protection, at zero extra cost.", color: "text-google-blue", bg: "bg-google-blue/10", accentBg: "bg-google-blue", border: "border-google-blue/20", highlight: true },
             { icon: Truck, title: "Free Pan-India Pickup & Drop - First Year", desc: "Any return, replacement, or service request in the first year? We handle the full pickup and drop across all pincodes. Your team doesn't lift a finger.", color: "text-google-green", bg: "bg-google-green/10", accentBg: "bg-google-green", border: "border-google-green/20" },
             { icon: Bot, title: "Google Gemini AI - Free with Every Device", desc: "Get 6 to 12 months of Google Gemini AI included, depending on your Pixel model. Your team starts working smarter from day one, and no extra purchase is needed.", color: "text-google-red", bg: "bg-google-red/10", accentBg: "bg-google-red", border: "border-google-red/20", highlight: true },
-            { icon: Shield, title: "1 Extra Year of Warranty - Only at Shivaami", desc: "Every Pixel comes with Google's standard 1-year warranty. Shivaami adds one more year on top, so your devices stay covered, and your investment stays protected.", color: "text-google-yellow", bg: "bg-google-yellow/10", accentBg: "bg-google-yellow", border: "border-google-yellow/20", highlight: true },
+            { icon: Shield, title: "1+1 Warranty Advantage — Only at Shivaami", desc: "Get 2 years of total protection on every Pixel. More coverage. More confidence. More value.", color: "text-google-yellow", bg: "bg-google-yellow/10", accentBg: "bg-google-yellow", border: "border-google-yellow/20", highlight: true },
             { icon: Cloud, title: "Free Google Cloud Storage", desc: "Never lose a contact, photo, or file again. Get up to 12 months of free Google Cloud Storage with every device. Choose 3, 6, or 12 months based on your plan.", color: "text-google-green", bg: "bg-google-green/10", accentBg: "bg-google-green", border: "border-google-green/20" },
-            { icon: Receipt, title: "Corporate Pricing + GST Benefits", desc: "Bulk orders deserve better pricing. Get exclusive corporate rates, proper GST invoicing, and input tax credit on every purchase. Real savings that show up on your balance sheet.", color: "text-google-blue", bg: "bg-google-blue/10", accentBg: "bg-google-blue", border: "border-google-blue/20" },
+            { icon: Receipt, title: "Corporate Pricing + GST Savings", desc: "Better prices. Full GST benefits. More value on every order.", color: "text-google-blue", bg: "bg-google-blue/10", accentBg: "bg-google-blue", border: "border-google-blue/20" },
             { icon: Settings, title: "Zero Touch Deployment", desc: "No IT headaches. Devices arrive fully configured and ready to use straight out of the box. Your team just switches on and gets to work.", color: "text-google-red", bg: "bg-google-red/10", accentBg: "bg-google-red", border: "border-google-red/20" },
             { icon: GraduationCap, title: "AI Workshops by Google & Shivaami", desc: "Buying devices is only half the job. We run hands-on AI workshops, so your team actually knows how to use what they have and gets real value from day one.", color: "text-google-yellow", bg: "bg-google-yellow/10", accentBg: "bg-google-yellow", border: "border-google-yellow/20" },
           ].map((item, i) => (
