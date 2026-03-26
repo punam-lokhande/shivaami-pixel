@@ -301,9 +301,6 @@ const SMB = () => {
             <Button size="lg" className="gradient-cta border-0 text-primary-foreground rounded-full px-8 py-6 text-base font-semibold shadow-lg shadow-primary/25 hover:shadow-xl hover:scale-[1.02] transition-all duration-300 gap-2">
               Get a Bulk Quote Today <ArrowRight className="h-4 w-4" />
             </Button>
-            <Button size="lg" variant="outline" className="rounded-full px-8 py-6 text-base font-semibold hover:bg-secondary transition-all duration-300 gap-2">
-              <MessageCircle className="h-4 w-4" /> Talk to Our Team
-            </Button>
           </div>
         </div>
       </section>
