@@ -285,11 +285,11 @@ const Index = () => (
     </section>
 
     {/* Newsletter */}
-    <section className="container py-20">
-      <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="rounded-3xl gradient-hero border border-border p-10 md:p-14 text-center">
-        <h2 className="text-2xl font-bold md:text-3xl text-foreground">Stay in the Loop</h2>
-        <p className="mt-2 text-muted-foreground">Get notified about new Pixel drops and exclusive offers</p>
-        <div className="mt-6 flex max-w-md mx-auto gap-3">
+    <section className="container py-12 sm:py-20 px-4 sm:px-6">
+      <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="rounded-2xl sm:rounded-3xl gradient-hero border border-border p-6 sm:p-10 md:p-14 text-center">
+        <h2 className="text-xl font-bold sm:text-2xl md:text-3xl text-foreground">Stay in the Loop</h2>
+        <p className="mt-2 text-sm sm:text-base text-muted-foreground">Get notified about new Pixel drops and exclusive offers</p>
+        <div className="mt-6 flex flex-col sm:flex-row max-w-md mx-auto gap-3">
           <input type="email" placeholder="Enter your email" className="flex-1 rounded-full border border-border bg-background px-5 py-2.5 text-sm outline-none focus:ring-2 focus:ring-primary" />
           <Button className="gradient-cta border-0 text-primary-foreground rounded-full px-6">Subscribe</Button>
         </div>
