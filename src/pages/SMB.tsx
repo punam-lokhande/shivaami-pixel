@@ -75,6 +75,16 @@ const roleRecommendations = [
     slug: "pixel-9a",
   },
   {
+    role: "Smart & Budget-Friendly?",
+    team: "Growing Teams & New Hires",
+    model: "Pixel 10a",
+    color: "border-google-blue/30",
+    accent: "text-google-blue",
+    bg: "bg-google-blue/5",
+    icon: Zap,
+    slug: "pixel-10a",
+  },
+  {
     role: "Running the Day-to-Day?",
     team: "Operations & Management",
     model: "Pixel 10",
