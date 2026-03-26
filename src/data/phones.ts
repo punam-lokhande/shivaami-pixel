@@ -12,6 +12,7 @@ import pixel10aObsidian from "@/assets/pixel-10a-obsidian.webp";
 export interface ColorOption {
   name: string;
   hex: string;
+  image?: string;
 }
 
 export interface Phone {
