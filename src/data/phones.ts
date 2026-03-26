@@ -187,12 +187,13 @@ export const phones: Phone[] = [
     shortDesc: "Maximum screen, maximum power — the ultimate Pro experience.",
     description:
       "Pixel 10 Pro XL is the ultimate Pixel smartphone with a massive 6.8\" Super Actua display. Featuring the same pro-grade triple camera, 100x Pro Zoom, 8K video, and Tensor G5 — in a larger, more immersive form.",
-    image: pixel10ProXl,
-    color: "Porcelain",
+    image: pixel10ProXlMoonstone,
+    color: "Moonstone",
     colors: [
-      { name: "Porcelain", hex: "#F1EDE6" },
-      { name: "Hazel", hex: "#8B7D6B" },
-      { name: "Obsidian", hex: "#1D1D1D" },
+      { name: "Moonstone", hex: "#8E9AAB", image: pixel10ProXlMoonstone },
+      { name: "Jade", hex: "#A8C5A0", image: pixel10ProXlJade },
+      { name: "Obsidian", hex: "#2D2D2D", image: pixel10ProXlObsidian },
+      { name: "Porcelain", hex: "#F1EDE6", image: pixel10ProXlPorcelain },
     ],
     category: "flagship",
     specs: {
