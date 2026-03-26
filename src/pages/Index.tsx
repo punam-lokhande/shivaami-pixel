@@ -209,7 +209,7 @@ const Index = () => (
     </section>
 
     {/* Product Showcase Grid */}
-    <section className="relative py-12 sm:py-20 md:py-28">
+    <section className="relative py-10 sm:py-14 md:py-20">
       <div className="absolute inset-0 bg-secondary/30" />
       <div className="container relative px-4 sm:px-6">
         <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center">
