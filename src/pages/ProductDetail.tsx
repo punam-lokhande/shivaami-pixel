@@ -48,7 +48,7 @@ const ProductDetail = () => {
             <h3 className="font-semibold">Key Features</h3>
             <div className="mt-2 grid grid-cols-2 gap-2">
               {phone.features.map((f) => (
-                <div key={f} className="flex items-center gap-2 text-sm text-muted-foreground">
+                <div key={f} className="flex items-start gap-2 text-sm text-muted-foreground">
                   <Check className="h-4 w-4 text-google-green shrink-0" /> {f}
                 </div>
               ))}
