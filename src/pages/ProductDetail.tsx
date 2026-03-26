@@ -95,7 +95,7 @@ const ProductDetail = () => {
                   {phone.originalPrice && (
                     <span className="text-xs text-muted-foreground line-through">{formatPrice(phone.originalPrice)}</span>
                   )}
-                  <span className="text-xs text-google-green font-medium">+ GST</span>
+                  <span className="text-xs text-google-green font-medium">Exclusive of GST</span>
                 </div>
                 <Button size="sm" className="gradient-cta border-0 text-primary-foreground rounded-full px-6 text-xs font-semibold" onClick={() => addToCart(phone)}>
                   Buy now
@@ -218,9 +218,7 @@ const ProductDetail = () => {
                   <p className="text-base text-muted-foreground line-through">{formatPrice(phone.originalPrice)}</p>
                 )}
               </div>
-              <p className="mt-1 text-xs text-muted-foreground">
-                MRP: {formatPrice(Math.round(phone.price * 1.18))} <span className="text-muted-foreground/70">(Incl. of all taxes)</span>
-              </p>
+              <p className="mt-1 text-xs font-medium text-google-green">Exclusive of GST</p>
               {phone.originalPrice && (
                 <p className="mt-1.5 text-xs font-semibold text-google-green">
                   Save {formatPrice(phone.originalPrice - phone.price)} on this purchase
