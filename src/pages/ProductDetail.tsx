@@ -291,7 +291,7 @@ const ProductDetail = () => {
               </Link>
             </div>
 
-            {/* Shivaami Advantage — compact */}
+            {/* Shivaami Advantage — icons only, link to full section */}
             <div className="rounded-2xl border-2 border-primary/20 bg-gradient-to-br from-primary/5 via-transparent to-google-green/5 p-5">
               <div className="flex items-center gap-2 mb-4">
                 <span className="inline-flex items-center gap-1.5 rounded-full bg-primary px-3 py-1 text-[10px] font-bold text-primary-foreground uppercase tracking-wider">
@@ -299,19 +299,19 @@ const ProductDetail = () => {
                 </span>
                 <h3 className="text-sm font-bold text-foreground">The Shivaami Advantage</h3>
               </div>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
+              <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
                 {shivaamiAdvantages.map((item) => (
-                  <div key={item.title} className="flex items-start gap-2.5 rounded-lg bg-card/80 border border-border/50 p-3">
-                    <div className={`flex h-8 w-8 shrink-0 items-center justify-center rounded-lg ${item.bg}`}>
-                      <item.icon className={`h-4 w-4 ${item.color}`} />
+                  <div key={item.title} className="flex flex-col items-center gap-1.5 text-center">
+                    <div className={`flex h-9 w-9 items-center justify-center rounded-lg ${item.bg}`}>
+                      <item.icon className={`h-4.5 w-4.5 ${item.color}`} />
                     </div>
-                    <div>
-                      <p className="text-xs font-bold text-foreground leading-tight">{item.title}</p>
-                      <p className="mt-0.5 text-[10px] text-muted-foreground leading-snug">{item.desc}</p>
-                    </div>
+                    <span className="text-[10px] font-semibold text-foreground leading-tight">{item.title}</span>
                   </div>
                 ))}
               </div>
+              <a href="#shivaami-advantage" className="mt-4 flex items-center justify-center gap-1 text-xs font-semibold text-primary hover:underline">
+                View all benefits <ChevronRight className="h-3 w-3" />
+              </a>
             </div>
           </motion.div>
         </div>
@@ -342,7 +342,7 @@ const ProductDetail = () => {
         </section>
 
         {/* All Shivaami Advantages */}
-        <section className="border-t border-border bg-secondary/20">
+        <section id="shivaami-advantage" className="border-t border-border bg-secondary/20 scroll-mt-20">
           <div className="container px-4 sm:px-6 py-10 sm:py-14">
             <div className="flex items-center gap-3 mb-6">
               <span className="inline-flex items-center gap-1.5 rounded-full bg-primary px-4 py-1.5 text-xs font-bold text-primary-foreground uppercase tracking-wider">
