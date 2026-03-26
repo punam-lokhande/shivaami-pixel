@@ -184,6 +184,19 @@ const EnquireNow = () => {
                   </div>
                 </div>
 
+                <div>
+                  <label className="text-sm font-medium text-foreground mb-1.5 block">GST Number <span className="text-muted-foreground font-normal">(Optional)</span></label>
+                  <Input
+                    type="text"
+                    placeholder="e.g. 22AAAAA0000A1Z5"
+                    value={form.gstNumber}
+                    onChange={(e) => handleChange("gstNumber", e.target.value.toUpperCase())}
+                    className={`${errors.gstNumber ? "border-destructive" : ""}`}
+                    maxLength={15}
+                  />
+                  {errors.gstNumber && <p className="text-xs text-destructive mt-1">{errors.gstNumber}</p>}
+                </div>
+
                 <div className="grid gap-4 sm:grid-cols-2">
                   <div>
                     <label className="text-sm font-medium text-foreground mb-1.5 block">Quantity *</label>
