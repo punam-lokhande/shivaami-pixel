@@ -11,7 +11,7 @@ import heroPhoneImg from "@/assets/pixel-10a-hero.png";
 const Phone3DViewer = lazy(() => import("@/components/Phone3DViewer"));
 
 const features = [
-  { icon: Camera, title: "AI Camera", desc: "Camera Coach, Add Me, Magic Eraser — every photo is stunning", color: "text-google-blue", bg: "bg-google-blue/10" },
+  { icon: Camera, title: "AI Camera", desc: "Camera Coach, Add Me, Magic Eraser - every photo is stunning", color: "text-google-blue", bg: "bg-google-blue/10" },
   { icon: Battery, title: "30+ Hours Battery", desc: "All-day power with fast charging and wireless charging", color: "text-google-green", bg: "bg-google-green/10" },
   { icon: Cpu, title: "Tensor G5 Chip", desc: "Next-gen chip built by Google for peak AI performance", color: "text-google-red", bg: "bg-google-red/10" },
   { icon: Shield, title: "Titan M2 Security", desc: "7 years of updates, IP68 water resistance, built to last", color: "text-google-yellow", bg: "bg-google-yellow/10" },
@@ -22,7 +22,7 @@ const heroPhone = phones.find((p) => p.id === "pixel-10a")!;
 
 const Index = () => (
   <div className="min-h-screen">
-    {/* Hero — Pixel 10a */}
+    {/* Hero - Pixel 10a */}
     <section className="relative overflow-hidden bg-gradient-to-br from-background via-secondary/40 to-background hero-section">
       {/* Animated gradient mesh */}
       <div className="absolute inset-0 overflow-hidden">
@@ -43,14 +43,14 @@ const Index = () => (
 
       <div className="container relative">
         <div className="flex flex-col md:flex-row items-center justify-between gap-4 md:gap-8 py-4 sm:py-6 md:py-10 lg:py-14 min-h-[calc(100vh-80px)] md:min-h-0 md:h-auto">
-          {/* Left — Text content */}
+          {/* Left - Text content */}
           <div className="flex-1 text-center md:text-left order-1 md:order-1 pt-2 sm:pt-0">
             <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} className="inline-flex items-center gap-2 rounded-full border-2 border-google-red/40 bg-gradient-to-r from-google-red/15 via-google-yellow/10 to-google-blue/10 px-5 py-2 text-xs sm:text-sm font-bold text-google-red backdrop-blur-sm shadow-md shadow-google-red/10">
               <span className="relative flex h-2.5 w-2.5">
                 <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-google-red opacity-75" />
                 <span className="relative inline-flex h-2.5 w-2.5 rounded-full bg-google-red" />
               </span>
-              Just Launched — Pixel 10a
+              Just Launched - Pixel 10a
             </motion.div>
 
             <motion.h1 initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.1 }} className="mt-4 sm:mt-5 text-3xl font-extrabold leading-[1.1] tracking-tight sm:text-4xl md:text-5xl lg:text-6xl text-foreground">
@@ -95,7 +95,7 @@ const Index = () => (
             </motion.div>
           </div>
 
-          {/* Right — Phone with 3D effect */}
+          {/* Right - Phone with 3D effect */}
           <motion.div
             initial={{ opacity: 0, y: 60, scale: 0.9 }}
             animate={{ opacity: 1, y: 0, scale: 1 }}
@@ -150,9 +150,9 @@ const Index = () => (
         <div className="mt-10 sm:mt-14 grid gap-4 sm:gap-5 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 px-2 sm:px-0">
           {[
             { icon: ShieldCheck, title: "2-Year Device Protection", desc: "Drop it, spill on it, crack it, your Pixel is covered. Every bulk order includes free accidental and liquid damage protection, at zero extra cost.", color: "text-google-blue", bg: "bg-google-blue/10", accentBg: "bg-google-blue", border: "border-google-blue/20", highlight: true },
-            { icon: Truck, title: "Free Pan-India Pickup & Drop — First Year", desc: "Any return, replacement, or service request in the first year? We handle the full pickup and drop across all pincodes. Your team doesn't lift a finger.", color: "text-google-green", bg: "bg-google-green/10", accentBg: "bg-google-green", border: "border-google-green/20" },
-            { icon: Bot, title: "Google Gemini AI — Free with Every Device", desc: "Get 6 to 12 months of Google Gemini AI included, depending on your Pixel model. Your team starts working smarter from day one, and no extra purchase is needed.", color: "text-google-red", bg: "bg-google-red/10", accentBg: "bg-google-red", border: "border-google-red/20", highlight: true },
-            { icon: Shield, title: "1 Extra Year of Warranty — Only at Shivaami", desc: "Every Pixel comes with Google’s standard 1-year warranty. Shivaami adds one more year on top, so your devices stay covered, and your investment stays protected.", color: "text-google-yellow", bg: "bg-google-yellow/10", accentBg: "bg-google-yellow", border: "border-google-yellow/20", highlight: true },
+            { icon: Truck, title: "Free Pan-India Pickup & Drop - First Year", desc: "Any return, replacement, or service request in the first year? We handle the full pickup and drop across all pincodes. Your team doesn't lift a finger.", color: "text-google-green", bg: "bg-google-green/10", accentBg: "bg-google-green", border: "border-google-green/20" },
+            { icon: Bot, title: "Google Gemini AI - Free with Every Device", desc: "Get 6 to 12 months of Google Gemini AI included, depending on your Pixel model. Your team starts working smarter from day one, and no extra purchase is needed.", color: "text-google-red", bg: "bg-google-red/10", accentBg: "bg-google-red", border: "border-google-red/20", highlight: true },
+            { icon: Shield, title: "1 Extra Year of Warranty - Only at Shivaami", desc: "Every Pixel comes with Google's standard 1-year warranty. Shivaami adds one more year on top, so your devices stay covered, and your investment stays protected.", color: "text-google-yellow", bg: "bg-google-yellow/10", accentBg: "bg-google-yellow", border: "border-google-yellow/20", highlight: true },
             { icon: Cloud, title: "Free Google Cloud Storage", desc: "Never lose a contact, photo, or file again. Get up to 12 months of free Google Cloud Storage with every device. Choose 3, 6, or 12 months based on your plan.", color: "text-google-green", bg: "bg-google-green/10", accentBg: "bg-google-green", border: "border-google-green/20" },
             { icon: Receipt, title: "Corporate Pricing + GST Benefits", desc: "Bulk orders deserve better pricing. Get exclusive corporate rates, proper GST invoicing, and input tax credit on every purchase. Real savings that show up on your balance sheet.", color: "text-google-blue", bg: "bg-google-blue/10", accentBg: "bg-google-blue", border: "border-google-blue/20" },
             { icon: Settings, title: "Zero Touch Deployment", desc: "No IT headaches. Devices arrive fully configured and ready to use straight out of the box. Your team just switches on and gets to work.", color: "text-google-red", bg: "bg-google-red/10", accentBg: "bg-google-red", border: "border-google-red/20" },

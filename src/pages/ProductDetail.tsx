@@ -26,9 +26,9 @@ const specIconMap: Record<string, React.ElementType> = {
 
 const shivaamiAdvantages = [
   { icon: ShieldCheck, title: "2-Year Device Protection", desc: "Drop it, spill on it, crack it, your Pixel is covered. Every bulk order includes free accidental and liquid damage protection, at zero extra cost.", color: "text-google-blue", bg: "bg-google-blue/10" },
-  { icon: Truck, title: "Free Pan-India Pickup & Drop — First Year", desc: "Any return, replacement, or service request in the first year? We handle the full pickup and drop across all pincodes. Your team doesn't lift a finger.", color: "text-google-green", bg: "bg-google-green/10" },
-  { icon: Bot, title: "Google Gemini AI — Free with Every Device", desc: "Get 6 to 12 months of Google Gemini AI included, depending on your Pixel model. Your team starts working smarter from day one, and no extra purchase is needed.", color: "text-google-red", bg: "bg-google-red/10" },
-  { icon: Shield, title: "1 Extra Year of Warranty — Only at Shivaami", desc: "Every Pixel comes with Google’s standard 1-year warranty. Shivaami adds one more year on top, so your devices stay covered, and your investment stays protected.", color: "text-google-yellow", bg: "bg-google-yellow/10" },
+  { icon: Truck, title: "Free Pan-India Pickup & Drop - First Year", desc: "Any return, replacement, or service request in the first year? We handle the full pickup and drop across all pincodes. Your team doesn't lift a finger.", color: "text-google-green", bg: "bg-google-green/10" },
+  { icon: Bot, title: "Google Gemini AI - Free with Every Device", desc: "Get 6 to 12 months of Google Gemini AI included, depending on your Pixel model. Your team starts working smarter from day one, and no extra purchase is needed.", color: "text-google-red", bg: "bg-google-red/10" },
+  { icon: Shield, title: "1 Extra Year of Warranty - Only at Shivaami", desc: "Every Pixel comes with Google's standard 1-year warranty. Shivaami adds one more year on top, so your devices stay covered, and your investment stays protected.", color: "text-google-yellow", bg: "bg-google-yellow/10" },
   { icon: Cloud, title: "Free Google Cloud Storage", desc: "Never lose a contact, photo, or file again. Get up to 12 months of free Google Cloud Storage with every device. Choose 3, 6, or 12 months based on your plan.", color: "text-google-green", bg: "bg-google-green/10" },
   { icon: Receipt, title: "Corporate Pricing + GST Benefits", desc: "Bulk orders deserve better pricing. Get exclusive corporate rates, proper GST invoicing, and input tax credit on every purchase. Real savings that show up on your balance sheet.", color: "text-google-blue", bg: "bg-google-blue/10" },
   { icon: Settings, title: "Zero Touch Deployment", desc: "No IT headaches. Devices arrive fully configured and ready to use straight out of the box. Your team just switches on and gets to work.", color: "text-google-red", bg: "bg-google-red/10" },
@@ -74,7 +74,7 @@ const ProductDetail = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      {/* Sticky top bar — Samsung style */}
+      {/* Sticky top bar - Samsung style */}
       <AnimatePresence>
         {showStickyBar && (
           <motion.div
@@ -117,11 +117,11 @@ const ProductDetail = () => {
         </nav>
       </div>
 
-      {/* Main content — two column */}
+      {/* Main content - two column */}
       <div className="container px-4 sm:px-6 pb-6">
         <div className="grid gap-8 lg:grid-cols-[1fr_420px] xl:grid-cols-[1fr_460px]">
 
-          {/* LEFT — Phone image area */}
+          {/* LEFT - Phone image area */}
           <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="relative">
             {/* Phone image container */}
             <div className="sticky top-24 rounded-2xl border border-border bg-secondary/30 p-6 sm:p-10 flex flex-col items-center justify-center min-h-[500px] sm:min-h-[650px] overflow-hidden">
@@ -172,7 +172,7 @@ const ProductDetail = () => {
               </motion.p>
             </div>
 
-            {/* Feature highlight icons — below image like Samsung */}
+            {/* Feature highlight icons - below image like Samsung */}
             <div className="mt-6 flex items-center justify-center gap-6 sm:gap-10">
               {highlights.map((h) => (
                 <div key={h.label} className="flex flex-col items-center gap-2 text-center">
@@ -185,7 +185,7 @@ const ProductDetail = () => {
             </div>
           </motion.div>
 
-          {/* RIGHT — Configuration panel */}
+          {/* RIGHT - Configuration panel */}
           <motion.div initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 0.1 }} className="space-y-6">
 
             {/* Product title & rating */}
@@ -229,7 +229,7 @@ const ProductDetail = () => {
             {/* Description */}
             <p className="text-sm text-muted-foreground leading-relaxed">{phone.description}</p>
 
-            {/* Colour section — Samsung style */}
+            {/* Colour section - Samsung style */}
             <div>
               <h3 className="text-base font-bold text-foreground mb-1">Colour</h3>
               <p className="text-xs text-muted-foreground mb-3">Select your favorite colour.</p>
@@ -287,7 +287,7 @@ const ProductDetail = () => {
               </Link>
             </div>
 
-            {/* Shivaami Advantage — icons only, link to full section */}
+            {/* Shivaami Advantage - icons only, link to full section */}
             <div className="rounded-2xl border-2 border-primary/20 bg-gradient-to-br from-primary/5 via-transparent to-google-green/5 p-5">
               <div className="flex items-center gap-2 mb-4">
                 <span className="inline-flex items-center gap-1.5 rounded-full bg-primary px-3 py-1 text-[10px] font-bold text-primary-foreground uppercase tracking-wider">
