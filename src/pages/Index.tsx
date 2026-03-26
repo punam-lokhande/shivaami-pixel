@@ -39,24 +39,24 @@ const Index = () => (
             Just Launched — Pixel 10a
           </motion.div>
 
-          <motion.h1 initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.1 }} className="mt-6 text-4xl font-extrabold leading-[1.1] tracking-tight md:text-5xl lg:text-6xl text-foreground">
+          <motion.h1 initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.1 }} className="mt-6 text-2xl font-extrabold leading-[1.1] tracking-tight sm:text-3xl md:text-5xl lg:text-6xl text-foreground whitespace-nowrap">
             The Future of <span className="text-gradient">Work is Here</span>
           </motion.h1>
 
-          <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.25 }} className="mt-5 mx-auto max-w-2xl text-lg text-muted-foreground leading-relaxed md:text-xl">
+          <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.25 }} className="mt-4 mx-auto max-w-2xl text-sm text-muted-foreground leading-relaxed sm:text-base md:text-xl px-4 sm:px-0">
             Make it <strong className="text-foreground">Smarter</strong>, <strong className="text-foreground">Safer</strong>, <strong className="text-foreground">Smoother</strong> with Shivaami — starting at just{" "}
             <span className="font-bold text-foreground">{formatPrice(heroPhone.price)}</span>
           </motion.p>
 
           {/* CTAs */}
-          <motion.div initial={{ opacity: 0, y: 15 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.35 }} className="mt-8 flex justify-center gap-4">
+          <motion.div initial={{ opacity: 0, y: 15 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.35 }} className="mt-6 flex flex-col sm:flex-row justify-center gap-3 sm:gap-4 px-4 sm:px-0">
             <Link to={`/product/${heroPhone.slug}`}>
-              <Button size="lg" className="gradient-cta border-0 text-primary-foreground gap-2 rounded-full px-10 py-6 text-base font-semibold shadow-lg shadow-primary/25 hover:shadow-xl hover:shadow-primary/35 hover:scale-105 transition-all duration-300">
+              <Button size="lg" className="w-full sm:w-auto gradient-cta border-0 text-primary-foreground gap-2 rounded-full px-8 sm:px-10 py-5 sm:py-6 text-sm sm:text-base font-semibold shadow-lg shadow-primary/25 hover:shadow-xl hover:shadow-primary/35 hover:scale-105 transition-all duration-300">
                 Buy Now <ArrowRight className="h-5 w-5" />
               </Button>
             </Link>
             <Link to={`/product/${heroPhone.slug}`}>
-              <Button size="lg" variant="outline" className="rounded-full px-10 py-6 text-base font-semibold hover:bg-secondary transition-all duration-300">
+              <Button size="lg" variant="outline" className="w-full sm:w-auto rounded-full px-8 sm:px-10 py-5 sm:py-6 text-sm sm:text-base font-semibold hover:bg-secondary transition-all duration-300">
                 Explore Features
               </Button>
             </Link>
