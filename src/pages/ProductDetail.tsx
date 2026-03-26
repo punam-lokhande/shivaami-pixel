@@ -1,5 +1,6 @@
+import { useState } from "react";
 import { useParams, Link } from "react-router-dom";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import { ShoppingCart, Star, Check, ShieldCheck, Bot, GraduationCap, Cloud, Receipt, Settings, Sparkles, Truck } from "lucide-react";
 import { getPhoneBySlug, phones, formatPrice } from "@/data/phones";
 import { useCart } from "@/context/CartContext";
@@ -21,6 +22,7 @@ const ProductDetail = () => {
   const { slug } = useParams();
   const phone = getPhoneBySlug(slug || "");
   const { addToCart } = useCart();
+  const [selectedColor, setSelectedColor] = useState(0);
 
   if (!phone) return <div className="container py-20 text-center text-muted-foreground">Phone not found</div>;
 
@@ -30,11 +32,23 @@ const ProductDetail = () => {
   return (
     <div className="container py-6 sm:py-10 px-4 sm:px-6">
       <div className="grid gap-6 sm:gap-10 lg:grid-cols-2">
-        <motion.div initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }} className="relative gradient-card rounded-2xl border border-border p-4 sm:p-8 flex items-center justify-center">
+        <motion.div initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }} className="relative gradient-card rounded-2xl border border-border p-4 sm:p-8 flex items-center justify-center overflow-hidden">
           {phone.tag && (
-            <span className="absolute top-4 left-4 rounded-full bg-google-red px-3 py-1 text-xs font-bold text-primary-foreground shadow">{phone.tag}</span>
+            <span className="absolute top-4 left-4 z-20 rounded-full bg-google-red px-3 py-1 text-xs font-bold text-primary-foreground shadow">{phone.tag}</span>
           )}
-          <img src={phone.image} alt={phone.name} className="max-h-[300px] sm:max-h-[500px] object-contain" width={500} height={500} />
+          {/* Color tint overlay */}
+          <AnimatePresence mode="wait">
+            <motion.div
+              key={phone.colors[selectedColor]?.hex}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 0.12 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.4 }}
+              className="absolute inset-0 z-0 rounded-2xl"
+              style={{ backgroundColor: phone.colors[selectedColor]?.hex }}
+            />
+          </AnimatePresence>
+          <img src={phone.image} alt={phone.name} className="relative z-10 max-h-[300px] sm:max-h-[500px] object-contain" width={500} height={500} />
         </motion.div>
 
         <motion.div initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} className="space-y-6">
@@ -61,14 +75,18 @@ const ProductDetail = () => {
           <div>
             <h3 className="font-semibold text-sm">Available Colors</h3>
             <div className="mt-2 flex items-center gap-3">
-              {phone.colors.map((c) => (
-                <div key={c.name} className="flex flex-col items-center gap-1">
+              {phone.colors.map((c, i) => (
+                <button
+                  key={c.name}
+                  onClick={() => setSelectedColor(i)}
+                  className={`flex flex-col items-center gap-1 transition-all duration-200 ${selectedColor === i ? "scale-110" : "opacity-70 hover:opacity-100"}`}
+                >
                   <span
-                    className="h-8 w-8 rounded-full border-2 border-border/60 shadow-sm"
+                    className={`h-8 w-8 rounded-full shadow-sm transition-all duration-200 ${selectedColor === i ? "border-[3px] border-primary ring-2 ring-primary/20" : "border-2 border-border/60"}`}
                     style={{ backgroundColor: c.hex }}
                   />
-                  <span className="text-[10px] text-muted-foreground">{c.name}</span>
-                </div>
+                  <span className={`text-[10px] ${selectedColor === i ? "text-foreground font-semibold" : "text-muted-foreground"}`}>{c.name}</span>
+                </button>
               ))}
             </div>
           </div>
