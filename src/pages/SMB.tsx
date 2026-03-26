@@ -75,6 +75,16 @@ const roleRecommendations = [
     slug: "pixel-9a",
   },
   {
+    role: "Smart & Budget-Friendly?",
+    team: "Growing Teams & New Hires",
+    model: "Pixel 10a",
+    color: "border-google-blue/30",
+    accent: "text-google-blue",
+    bg: "bg-google-blue/5",
+    icon: Zap,
+    slug: "pixel-10a",
+  },
+  {
     role: "Running the Day-to-Day?",
     team: "Operations & Management",
     model: "Pixel 10",
@@ -153,7 +163,7 @@ const SMB = () => {
                   Get a Bulk Quote <ArrowRight className="h-5 w-5" />
                 </Button>
                 <Link to="/products">
-                  <Button size="lg" variant="outline" className="w-full sm:w-auto rounded-full px-8 py-5 text-sm sm:text-base font-semibold hover:bg-secondary transition-all duration-300">
+                  <Button size="lg" variant="outline" className="w-full sm:w-auto rounded-full px-8 py-5 text-sm sm:text-base font-semibold hover:bg-foreground hover:text-background transition-all duration-300">
                     Explore Pixel Models
                   </Button>
                 </Link>
@@ -230,7 +240,7 @@ const SMB = () => {
           <motion.div {...fadeUp} className="text-center mb-10 sm:mb-14">
             <h2 className="text-2xl sm:text-3xl font-bold text-foreground">The Right Pixel for Every Role in Your Team</h2>
           </motion.div>
-          <div className="grid gap-5 sm:gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="grid gap-5 sm:gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-5">
             {roleRecommendations.map((item, i) => (
               <motion.div
                 key={item.model}
@@ -291,9 +301,6 @@ const SMB = () => {
             <Button size="lg" className="gradient-cta border-0 text-primary-foreground rounded-full px-8 py-6 text-base font-semibold shadow-lg shadow-primary/25 hover:shadow-xl hover:scale-[1.02] transition-all duration-300 gap-2">
               Get a Bulk Quote Today <ArrowRight className="h-4 w-4" />
             </Button>
-            <Button size="lg" variant="outline" className="rounded-full px-8 py-6 text-base font-semibold hover:bg-secondary transition-all duration-300 gap-2">
-              <MessageCircle className="h-4 w-4" /> Talk to Our Team
-            </Button>
           </div>
         </div>
       </section>
@@ -335,9 +342,6 @@ const SMB = () => {
             <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
               <Button size="lg" className="gradient-cta border-0 text-primary-foreground rounded-full px-8 py-6 text-base font-semibold shadow-lg shadow-primary/25 hover:shadow-xl hover:scale-[1.02] transition-all duration-300 gap-2">
                 Get a Bulk Quote Today <ArrowRight className="h-4 w-4" />
-              </Button>
-              <Button size="lg" variant="outline" className="rounded-full px-8 py-6 text-base font-semibold hover:bg-secondary transition-all duration-300 gap-2">
-                <MessageCircle className="h-4 w-4" /> Talk to Our Team
               </Button>
             </div>
           </motion.div>
