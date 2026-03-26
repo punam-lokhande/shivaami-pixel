@@ -253,8 +253,8 @@ const Index = () => (
         <div className="absolute -top-20 -right-20 h-60 w-60 rounded-full bg-google-yellow/8 blur-3xl" />
         <div className="relative">
           <Zap className="mx-auto h-10 w-10 text-google-yellow mb-4" />
-          <h2 className="text-3xl font-bold md:text-4xl text-foreground">Not Sure Which to Pick?</h2>
-          <p className="mt-3 text-muted-foreground max-w-md mx-auto">Compare all 6 Pixel models side by side and find your perfect match</p>
+          <h2 className="text-2xl font-bold sm:text-3xl md:text-4xl text-foreground">Not Sure Which to Pick?</h2>
+          <p className="mt-3 text-sm sm:text-base text-muted-foreground max-w-md mx-auto">Compare all 6 Pixel models side by side and find your perfect match</p>
           <Link to="/compare">
             <Button size="lg" className="mt-8 gradient-cta border-0 text-primary-foreground gap-2 rounded-full px-10 shadow-lg shadow-primary/25">
               Compare All Models <ArrowRight className="h-4 w-4" />
