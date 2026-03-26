@@ -5,16 +5,23 @@ import pixel10ProFold from "@/assets/pixel-10-pro-fold.png";
 import pixel10ProXl from "@/assets/pixel-10-pro-xl.png";
 import pixel10a from "@/assets/pixel-10a.png";
 
+export interface ColorOption {
+  name: string;
+  hex: string;
+}
+
 export interface Phone {
   id: string;
   name: string;
   slug: string;
   price: number;
   originalPrice?: number;
+  gstRate: number;
   shortDesc: string;
   description: string;
   image: string;
   color: string;
+  colors: ColorOption[];
   category: "flagship" | "mid-range" | "foldable";
   tag?: string;
   specs: {
