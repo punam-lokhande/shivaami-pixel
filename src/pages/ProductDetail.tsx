@@ -32,11 +32,23 @@ const ProductDetail = () => {
   return (
     <div className="container py-6 sm:py-10 px-4 sm:px-6">
       <div className="grid gap-6 sm:gap-10 lg:grid-cols-2">
-        <motion.div initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }} className="relative gradient-card rounded-2xl border border-border p-4 sm:p-8 flex items-center justify-center">
+        <motion.div initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }} className="relative gradient-card rounded-2xl border border-border p-4 sm:p-8 flex items-center justify-center overflow-hidden">
           {phone.tag && (
-            <span className="absolute top-4 left-4 rounded-full bg-google-red px-3 py-1 text-xs font-bold text-primary-foreground shadow">{phone.tag}</span>
+            <span className="absolute top-4 left-4 z-20 rounded-full bg-google-red px-3 py-1 text-xs font-bold text-primary-foreground shadow">{phone.tag}</span>
           )}
-          <img src={phone.image} alt={phone.name} className="max-h-[300px] sm:max-h-[500px] object-contain" width={500} height={500} />
+          {/* Color tint overlay */}
+          <AnimatePresence mode="wait">
+            <motion.div
+              key={phone.colors[selectedColor]?.hex}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 0.12 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.4 }}
+              className="absolute inset-0 z-0 rounded-2xl"
+              style={{ backgroundColor: phone.colors[selectedColor]?.hex }}
+            />
+          </AnimatePresence>
+          <img src={phone.image} alt={phone.name} className="relative z-10 max-h-[300px] sm:max-h-[500px] object-contain" width={500} height={500} />
         </motion.div>
 
         <motion.div initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} className="space-y-6">
