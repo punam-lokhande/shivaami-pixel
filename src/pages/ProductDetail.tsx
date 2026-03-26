@@ -218,9 +218,7 @@ const ProductDetail = () => {
                   <p className="text-base text-muted-foreground line-through">{formatPrice(phone.originalPrice)}</p>
                 )}
               </div>
-              <p className="mt-1 text-xs text-muted-foreground">
-                MRP: {formatPrice(Math.round(phone.price * 1.18))} <span className="text-muted-foreground/70">(Incl. of all taxes)</span>
-              </p>
+              <p className="mt-1 text-xs font-medium text-google-green">Exclusive of GST</p>
               {phone.originalPrice && (
                 <p className="mt-1.5 text-xs font-semibold text-google-green">
                   Save {formatPrice(phone.originalPrice - phone.price)} on this purchase
