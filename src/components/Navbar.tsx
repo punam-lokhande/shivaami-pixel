@@ -11,6 +11,7 @@ const navLinks = [
   { to: "/products", label: "Phones" },
   { to: "/compare", label: "Compare" },
   { to: "/smb", label: "SMB" },
+  { to: "/enquire", label: "Enquire Now" },
 ];
 
 const Navbar = () => {

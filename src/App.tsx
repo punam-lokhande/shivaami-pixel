@@ -34,6 +34,7 @@ const App = () => (
             <Route path="/compare" element={<Compare />} />
             <Route path="/cart" element={<Cart />} />
             <Route path="/smb" element={<SMB />} />
+            <Route path="/enquire" element={<EnquireNow />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
           <Footer />
