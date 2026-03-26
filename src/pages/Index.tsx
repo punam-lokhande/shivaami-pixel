@@ -225,15 +225,15 @@ const Index = () => (
     </section>
 
     {/* Product Showcase Grid */}
-    <section className="relative py-20 md:py-28">
+    <section className="relative py-12 sm:py-20 md:py-28">
       <div className="absolute inset-0 bg-secondary/30" />
-      <div className="container relative">
+      <div className="container relative px-4 sm:px-6">
         <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center">
           <span className="text-xs font-semibold uppercase tracking-widest text-primary">The Lineup</span>
-          <h2 className="mt-2 text-3xl font-bold md:text-4xl text-foreground">Explore the Collection</h2>
-          <p className="mt-3 text-muted-foreground">Find the perfect Pixel for your lifestyle</p>
+          <h2 className="mt-2 text-2xl font-bold sm:text-3xl md:text-4xl text-foreground">Explore the Collection</h2>
+          <p className="mt-3 text-sm sm:text-base text-muted-foreground">Find the perfect Pixel for your lifestyle</p>
         </motion.div>
-        <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-8 sm:mt-14 grid gap-4 sm:gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
           {phones.map((phone, i) => <PhoneCard key={phone.id} phone={phone} index={i} />)}
         </div>
         <div className="mt-10 text-center">
