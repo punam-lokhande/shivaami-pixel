@@ -300,7 +300,7 @@ const ProductDetail = () => {
                 <h3 className="text-sm font-bold text-foreground">The Shivaami Advantage</h3>
               </div>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
-                {shivaamiAdvantages.slice(0, 4).map((item) => (
+                {shivaamiAdvantages.map((item) => (
                   <div key={item.title} className="flex items-start gap-2.5 rounded-lg bg-card/80 border border-border/50 p-3">
                     <div className={`flex h-8 w-8 shrink-0 items-center justify-center rounded-lg ${item.bg}`}>
                       <item.icon className={`h-4 w-4 ${item.color}`} />
