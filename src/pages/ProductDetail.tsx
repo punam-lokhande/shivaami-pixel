@@ -17,13 +17,13 @@ const ProductDetail = () => {
   const specs = Object.entries(phone.specs);
 
   return (
-    <div className="container py-10">
-      <div className="grid gap-10 lg:grid-cols-2">
-        <motion.div initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }} className="relative gradient-card rounded-2xl border border-border p-8 flex items-center justify-center">
+    <div className="container py-6 sm:py-10 px-4 sm:px-6">
+      <div className="grid gap-6 sm:gap-10 lg:grid-cols-2">
+        <motion.div initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }} className="relative gradient-card rounded-2xl border border-border p-4 sm:p-8 flex items-center justify-center">
           {phone.tag && (
             <span className="absolute top-4 left-4 rounded-full bg-google-red px-3 py-1 text-xs font-bold text-primary-foreground shadow">{phone.tag}</span>
           )}
-          <img src={phone.image} alt={phone.name} className="max-h-[500px] object-contain" width={500} height={500} />
+          <img src={phone.image} alt={phone.name} className="max-h-[300px] sm:max-h-[500px] object-contain" width={500} height={500} />
         </motion.div>
 
         <motion.div initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} className="space-y-6">
