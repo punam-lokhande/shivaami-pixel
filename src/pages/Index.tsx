@@ -124,7 +124,7 @@ const Index = () => (
 
             {/* New Launch badge */}
             <motion.div initial={{ scale: 0 }} animate={{ scale: 1 }} transition={{ delay: 0.7, type: "spring", stiffness: 200 }} className="absolute top-[3%] right-[15%] flex items-center gap-1.5 rounded-full bg-google-red px-3 py-1.5 text-[10px] sm:text-xs font-bold text-primary-foreground shadow-lg shadow-google-red/30 z-20">
-              <Sparkles className="h-3 w-3" /> New Launch
+              <Sparkles className="h-3 w-3" /> New Launch — Pixel 10a
             </motion.div>
           </motion.div>
         </div>
