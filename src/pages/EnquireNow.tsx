@@ -55,6 +55,7 @@ const EnquireNow = () => {
     company: "",
     email: "",
     phone: "",
+    gstNumber: "",
     quantity: "",
     model: "",
     message: "",
