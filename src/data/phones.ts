@@ -1,6 +1,10 @@
 import pixel9a from "@/assets/pixel-9a.png";
 import pixel10 from "@/assets/pixel-10.png";
 import pixel10Pro from "@/assets/pixel-10-pro.jpg"; // kept import for potential future use
+import pixel10Frost from "@/assets/pixel-10-frost.png";
+import pixel10Indigo from "@/assets/pixel-10-indigo.webp";
+import pixel10Lemongrass from "@/assets/pixel-10-lemongrass.png";
+import pixel10Obsidian from "@/assets/pixel-10-obsidian.png";
 import pixel10ProFold from "@/assets/pixel-10-pro-fold.png";
 import pixel10ProXl from "@/assets/pixel-10-pro-xl.png";
 import pixel10a from "@/assets/pixel-10a.png";
