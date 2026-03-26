@@ -25,7 +25,7 @@ const specIconMap: Record<string, React.ElementType> = {
 };
 
 const shivaamiAdvantages = [
-  { icon: ShieldCheck, title: "2-Year Device Protection", desc: "Drop it, spill on it, crack it, your Pixel is covered. Every bulk order includes free accidental and liquid damage protection, at zero extra cost.", color: "text-google-blue", bg: "bg-google-blue/10" },
+  { icon: ShieldCheck, title: "2-Year Device Protection", desc: "Drop it, spill on it, crack it, your Pixel is covered. Every bulk order includes free accidental and liquid damage protection by OneAssist, at zero extra cost.", color: "text-google-blue", bg: "bg-google-blue/10" },
   { icon: Truck, title: "Free Pan-India Pickup & Drop - First Year", desc: "Any return, replacement, or service request in the first year? We handle the full pickup and drop across all pincodes. Your team doesn't lift a finger.", color: "text-google-green", bg: "bg-google-green/10" },
   { icon: Bot, title: "Google Gemini AI - Free with Every Device", desc: "Get 6 to 12 months of Google Gemini AI included, depending on your Pixel model. Your team starts working smarter from day one, and no extra purchase is needed.", color: "text-google-red", bg: "bg-google-red/10" },
   { icon: Shield, title: "1 Extra Year of Warranty - Only at Shivaami", desc: "Every Pixel comes with Google's standard 1-year warranty. Shivaami adds one more year on top, so your devices stay covered, and your investment stays protected.", color: "text-google-yellow", bg: "bg-google-yellow/10" },
