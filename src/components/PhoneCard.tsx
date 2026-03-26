@@ -1,5 +1,6 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import { ShoppingCart } from "lucide-react";
 import { Phone, formatPrice } from "@/data/phones";
 import { useCart } from "@/context/CartContext";
@@ -7,7 +8,7 @@ import { Button } from "@/components/ui/button";
 
 const PhoneCard = ({ phone, index = 0 }: { phone: Phone; index?: number }) => {
   const { addToCart } = useCart();
-  const gstAmount = Math.round(phone.price * phone.gstRate / 100);
+  const [selectedColor, setSelectedColor] = useState(0);
 
   return (
     <motion.div
@@ -22,8 +23,19 @@ const PhoneCard = ({ phone, index = 0 }: { phone: Phone; index?: number }) => {
         </span>
       )}
       <Link to={`/product/${phone.slug}`}>
-        <div className="gradient-card overflow-hidden rounded-xl h-64 flex items-center justify-center p-2">
-          <img src={phone.image} alt={phone.name} className="max-h-full max-w-full object-contain transition-transform duration-500 group-hover:scale-105" loading="lazy" width={400} height={400} />
+        <div className="gradient-card overflow-hidden rounded-xl h-64 flex items-center justify-center p-2 relative">
+          <AnimatePresence mode="wait">
+            <motion.div
+              key={phone.colors[selectedColor]?.hex}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 0.12 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.4 }}
+              className="absolute inset-0 z-0 rounded-xl"
+              style={{ backgroundColor: phone.colors[selectedColor]?.hex }}
+            />
+          </AnimatePresence>
+          <img src={phone.image} alt={phone.name} className="relative z-10 max-h-full max-w-full object-contain transition-transform duration-500 group-hover:scale-105" loading="lazy" width={400} height={400} />
         </div>
       </Link>
       <div className="mt-4 space-y-2">
@@ -32,11 +44,12 @@ const PhoneCard = ({ phone, index = 0 }: { phone: Phone; index?: number }) => {
         </div>
         {/* Color options */}
         <div className="flex items-center gap-1.5">
-          {phone.colors.map((c) => (
-            <span
+          {phone.colors.map((c, i) => (
+            <button
               key={c.name}
               title={c.name}
-              className="h-4 w-4 rounded-full border border-border/60 shadow-sm"
+              onClick={(e) => { e.preventDefault(); setSelectedColor(i); }}
+              className={`h-4 w-4 rounded-full shadow-sm transition-all duration-200 ${selectedColor === i ? "border-2 border-primary ring-1 ring-primary/30 scale-110" : "border border-border/60 hover:scale-110"}`}
               style={{ backgroundColor: c.hex }}
             />
           ))}
