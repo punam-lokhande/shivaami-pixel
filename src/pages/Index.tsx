@@ -210,7 +210,6 @@ const Index = () => (
       <div className="container flex flex-col items-center justify-center gap-3 py-6 sm:py-8 text-center">
         <h2 className="text-lg sm:text-xl md:text-2xl font-bold text-foreground">Your Trusted Google Pixel Partner</h2>
         <p className="text-xs sm:text-sm text-muted-foreground max-w-lg">As an official partner, Shivaami delivers authentic devices, priority support, and enterprise-grade reliability for your business needs.</p>
-        <p className="text-xs sm:text-sm text-muted-foreground max-w-lg">As an official partner, Shivaami delivers authentic devices, priority support, and enterprise-grade reliability for your business needs.</p>
       </div>
     </section>
 
