@@ -207,9 +207,10 @@ const Index = () => (
 
     {/* Brand bar */}
     <section className="border-y border-border bg-secondary/30">
-      <div className="container flex items-center justify-center gap-4 py-5">
-        <span className="text-xs font-medium text-muted-foreground uppercase tracking-widest">Official Partner</span>
+      <div className="container flex flex-col items-center justify-center gap-3 py-6 sm:py-8 text-center">
         <img src={pixelLogo} alt="Google Pixel" className="h-5 w-auto opacity-60" />
+        <span className="text-sm sm:text-base font-semibold text-foreground">Your Trusted Google Pixel Partner</span>
+        <p className="text-xs sm:text-sm text-muted-foreground max-w-lg">As an official partner, Shivaami delivers authentic devices, priority support, and enterprise-grade reliability for your business needs.</p>
       </div>
     </section>
 
