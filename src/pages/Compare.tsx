@@ -31,8 +31,9 @@ const Compare = () => (
                   <img src={p.image} alt={p.name} className="mx-auto h-20 w-20 object-contain" loading="lazy" width={80} height={80} />
                 </div>
                 <p className="mt-2 text-xs font-semibold text-foreground">{p.name}</p>
-                <div className="flex items-center justify-center gap-1">
+                <div className="flex flex-col items-center gap-0.5">
                   <p className="text-sm font-bold text-primary">{formatPrice(p.price)}</p>
+                  <p className="text-[9px] text-google-green font-medium">+ GST @ {p.gstRate}%</p>
                   {p.originalPrice && <p className="text-[10px] text-muted-foreground line-through">{formatPrice(p.originalPrice)}</p>}
                 </div>
               </th>
