@@ -7,6 +7,7 @@ import { Button } from "@/components/ui/button";
 
 const PhoneCard = ({ phone, index = 0 }: { phone: Phone; index?: number }) => {
   const { addToCart } = useCart();
+  const gstAmount = Math.round(phone.price * phone.gstRate / 100);
 
   return (
     <motion.div
@@ -29,11 +30,20 @@ const PhoneCard = ({ phone, index = 0 }: { phone: Phone; index?: number }) => {
         <div className="flex items-center justify-between">
           <h3 className="font-semibold text-foreground text-sm">{phone.name}</h3>
         </div>
-        <div className="flex items-center gap-2">
+        {/* Color options */}
+        <div className="flex items-center gap-1.5">
+          {phone.colors.map((c) => (
+            <span
+              key={c.name}
+              title={c.name}
+              className="h-4 w-4 rounded-full border border-border/60 shadow-sm"
+              style={{ backgroundColor: c.hex }}
+            />
+          ))}
+        </div>
+        <div className="flex flex-col gap-0.5">
           <span className="text-sm font-bold text-primary">{formatPrice(phone.price)}</span>
-          {phone.originalPrice && (
-            <span className="text-xs text-muted-foreground line-through">{formatPrice(phone.originalPrice)}</span>
-          )}
+          <span className="text-[10px] text-google-green font-medium">+ GST @ {phone.gstRate}% ({formatPrice(gstAmount)})</span>
         </div>
         <p className="text-xs text-muted-foreground line-clamp-2">{phone.shortDesc}</p>
         <div className="flex items-center gap-2 pt-2">
