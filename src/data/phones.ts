@@ -147,11 +147,10 @@ export const phones: Phone[] = [
     shortDesc: "Unfold extraordinary. Our best phone for multitasking.",
     description:
       "The Pixel 10 Pro Fold features an 8\" Super Actua Flex display — our largest yet. Ultra-thin when folded, it handles 10+ years of folding. With advanced AI, Split Screen multitasking, and the Pixel Camera folded in.",
-    image: pixel10ProFold,
-    color: "Silver Titanium",
+    image: pixel10ProFoldMoonstone,
+    color: "Moonstone",
     colors: [
-      { name: "Silver Titanium", hex: "#C0C0C0" },
-      { name: "Obsidian", hex: "#1D1D1D" },
+      { name: "Moonstone", hex: "#8E9AAB", image: pixel10ProFoldMoonstone },
     ],
     category: "foldable",
     specs: {
