@@ -8,6 +8,10 @@ import pixel10Obsidian from "@/assets/pixel-10-obsidian.png";
 import pixel10ProFoldMoonstone from "@/assets/pixel-10-pro-fold-moonstone.png";
 import pixel10ProFold from "@/assets/pixel-10-pro-fold.png";
 import pixel10ProXl from "@/assets/pixel-10-pro-xl.png";
+import pixel10ProXlJade from "@/assets/pixel-10-pro-xl-jade.png";
+import pixel10ProXlMoonstone from "@/assets/pixel-10-pro-xl-moonstone.png";
+import pixel10ProXlObsidian from "@/assets/pixel-10-pro-xl-obsidian.png";
+import pixel10ProXlPorcelain from "@/assets/pixel-10-pro-xl-porcelain.png";
 import pixel10a from "@/assets/pixel-10a.png";
 import pixel10aBerry from "@/assets/pixel-10a-berry.webp";
 import pixel10aFog from "@/assets/pixel-10a-fog.webp";
@@ -183,12 +187,13 @@ export const phones: Phone[] = [
     shortDesc: "Maximum screen, maximum power — the ultimate Pro experience.",
     description:
       "Pixel 10 Pro XL is the ultimate Pixel smartphone with a massive 6.8\" Super Actua display. Featuring the same pro-grade triple camera, 100x Pro Zoom, 8K video, and Tensor G5 — in a larger, more immersive form.",
-    image: pixel10ProXl,
-    color: "Porcelain",
+    image: pixel10ProXlMoonstone,
+    color: "Moonstone",
     colors: [
-      { name: "Porcelain", hex: "#F1EDE6" },
-      { name: "Hazel", hex: "#8B7D6B" },
-      { name: "Obsidian", hex: "#1D1D1D" },
+      { name: "Moonstone", hex: "#8E9AAB", image: pixel10ProXlMoonstone },
+      { name: "Jade", hex: "#A8C5A0", image: pixel10ProXlJade },
+      { name: "Obsidian", hex: "#2D2D2D", image: pixel10ProXlObsidian },
+      { name: "Porcelain", hex: "#F1EDE6", image: pixel10ProXlPorcelain },
     ],
     category: "flagship",
     specs: {
