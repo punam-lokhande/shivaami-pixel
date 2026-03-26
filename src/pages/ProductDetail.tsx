@@ -155,7 +155,7 @@ const ProductDetail = () => {
                   animate={{ opacity: 1, scale: 1 }}
                   exit={{ opacity: 0, scale: 0.95 }}
                   transition={{ duration: 0.3 }}
-                  src={phone.image}
+                  src={phone.colors[selectedColor]?.image || phone.image}
                   alt={`${phone.name} in ${phone.colors[selectedColor]?.name}`}
                   className="relative z-10 max-h-[320px] sm:max-h-[440px] object-contain drop-shadow-2xl"
                   width={500}
