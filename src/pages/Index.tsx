@@ -124,7 +124,7 @@ const Index = () => (
         </motion.div>
 
         {/* Bottom stats bar */}
-        <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.5 }} className="relative z-10 -mt-8 mb-12 mx-auto max-w-2xl rounded-2xl border border-border/50 bg-card/70 backdrop-blur-xl p-1 shadow-xl">
+        <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.5 }} className="relative z-10 -mt-4 sm:-mt-8 mb-8 sm:mb-12 mx-4 sm:mx-auto max-w-2xl rounded-2xl border border-border/50 bg-card/70 backdrop-blur-xl p-1 shadow-xl">
           <div className="grid grid-cols-4 divide-x divide-border/50">
             {[
               { value: "50MP", label: "Camera" },
@@ -132,9 +132,9 @@ const Index = () => (
               { value: "Tensor G5", label: "Chip" },
               { value: "7 Years", label: "Updates" },
             ].map((s) => (
-              <div key={s.label} className="px-4 py-4 text-center">
-                <p className="text-base font-bold text-foreground md:text-lg">{s.value}</p>
-                <p className="text-[11px] text-muted-foreground mt-0.5">{s.label}</p>
+              <div key={s.label} className="px-2 sm:px-4 py-3 sm:py-4 text-center">
+                <p className="text-xs sm:text-base font-bold text-foreground md:text-lg">{s.value}</p>
+                <p className="text-[9px] sm:text-[11px] text-muted-foreground mt-0.5">{s.label}</p>
               </div>
             ))}
           </div>
