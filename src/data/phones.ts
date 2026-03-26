@@ -67,8 +67,8 @@ export const phones: Phone[] = [
     color: "Lavender",
     colors: [
       { name: "Lavender", hex: "#7B8CDE", image: pixel10aLavender },
+      { name: "Berry", hex: "#FF6B6B", image: pixel10aBerry },
       { name: "Fog", hex: "#D4E4D0", image: pixel10aFog },
-      { name: "Lavender", hex: "#7B8CDE", image: pixel10aLavender },
       { name: "Obsidian", hex: "#3C4043", image: pixel10aObsidian },
     ],
     category: "mid-range",
