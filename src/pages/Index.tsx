@@ -30,7 +30,7 @@ const Index = () => (
 
       <div className="container relative">
         {/* Top section - centered headline */}
-        <div className="pt-16 md:pt-24 text-center">
+        <div className="pt-6 sm:pt-10 md:pt-16 text-center">
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} className="inline-flex items-center gap-2 rounded-full border border-google-blue/20 bg-google-blue/5 px-5 py-2 text-sm font-semibold text-google-blue backdrop-blur-sm">
             <span className="relative flex h-2 w-2">
               <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-google-blue opacity-75" />
@@ -71,7 +71,7 @@ const Index = () => (
           <img
             src={heroPhoneImg}
             alt={heroPhone.name}
-            className="relative z-10 h-[280px] sm:h-[350px] md:h-[500px] w-auto object-contain drop-shadow-[0_40px_80px_rgba(66,133,244,0.2)] animate-float"
+            className="relative z-10 h-[340px] sm:h-[420px] md:h-[580px] w-auto object-contain drop-shadow-[0_40px_80px_rgba(66,133,244,0.2)] animate-float"
             width={1024}
             height={1024}
           />
