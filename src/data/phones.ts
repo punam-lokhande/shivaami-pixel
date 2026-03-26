@@ -1,4 +1,7 @@
 import pixel9a from "@/assets/pixel-9a.png";
+import pixel9aIris from "@/assets/pixel-9a-iris.png";
+import pixel9aObsidian from "@/assets/pixel-9a-obsidian.png";
+import pixel9aPorcelain from "@/assets/pixel-9a-porcelain.png";
 import pixel10 from "@/assets/pixel-10.png";
 import pixel10Pro from "@/assets/pixel-10-pro.jpg"; // kept import for potential future use
 import pixel10Frost from "@/assets/pixel-10-frost.png";
