@@ -198,7 +198,7 @@ const Index = () => (
               <h3 className="mt-4 font-bold text-foreground leading-snug">{item.title}</h3>
               <p className="mt-2 text-sm text-muted-foreground leading-relaxed">{item.desc}</p>
               {/* Animated bottom accent line */}
-              <div className={`mt-4 h-0.5 w-0 rounded-full ${item.bg.replace('/10', '')} group-hover:w-full transition-all duration-500`} />
+              <div className={`mt-4 h-0.5 w-0 rounded-full ${item.accentBg} group-hover:w-full transition-all duration-500`} />
             </motion.div>
           ))}
         </div>
