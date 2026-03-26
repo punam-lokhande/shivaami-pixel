@@ -107,13 +107,13 @@ export const phones: Phone[] = [
     shortDesc: "Do spectacular things, every day. All-new telephoto lens.",
     description:
       "Google Pixel 10 brings the most refined Pixel experience yet. With a new 5x telephoto lens, Tensor G5 chip, Gemini AI assistant, and twice the durability of Pixel 8 — it's all the essentials and more of the extras.",
-    image: pixel10,
-    color: "Midnight",
+    image: pixel10Frost,
+    color: "Frost",
     colors: [
-      { name: "Midnight", hex: "#1A1A2E" },
-      { name: "Porcelain", hex: "#F1EDE6" },
-      { name: "Mojave", hex: "#C4A882" },
-      { name: "Indigo", hex: "#4B5D78" },
+      { name: "Frost", hex: "#D6DFEF", image: pixel10Frost },
+      { name: "Indigo", hex: "#3366FF", image: pixel10Indigo },
+      { name: "Lemongrass", hex: "#C8E66B", image: pixel10Lemongrass },
+      { name: "Obsidian", hex: "#4A4A4A", image: pixel10Obsidian },
     ],
     category: "flagship",
     specs: {
