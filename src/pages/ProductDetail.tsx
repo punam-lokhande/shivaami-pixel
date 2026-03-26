@@ -22,6 +22,7 @@ const ProductDetail = () => {
   const { slug } = useParams();
   const phone = getPhoneBySlug(slug || "");
   const { addToCart } = useCart();
+  const [selectedColor, setSelectedColor] = useState(0);
 
   if (!phone) return <div className="container py-20 text-center text-muted-foreground">Phone not found</div>;
 
