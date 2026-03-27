@@ -45,13 +45,6 @@ const Index = () => (
         <div className="flex flex-col md:flex-row items-center justify-between gap-4 md:gap-8 py-4 sm:py-6 md:py-10 lg:py-14 min-h-[calc(100vh-80px)] md:min-h-0 md:h-auto">
           {/* Left - Text content */}
           <div className="flex-1 text-center md:text-left order-1 md:order-1 pt-2 sm:pt-0">
-            <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} className="inline-flex items-center gap-2 rounded-full border-2 border-google-red/40 bg-gradient-to-r from-google-red/15 via-google-yellow/10 to-google-blue/10 px-5 py-2 text-xs sm:text-sm font-bold text-google-red backdrop-blur-sm shadow-md shadow-google-red/10">
-              <span className="relative flex h-2.5 w-2.5">
-                <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-google-red opacity-75" />
-                <span className="relative inline-flex h-2.5 w-2.5 rounded-full bg-google-red" />
-              </span>
-              New Launch — Pixel 10a
-            </motion.div>
 
             <motion.h1 initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.1 }} className="mt-4 sm:mt-5 text-3xl font-extrabold leading-[1.1] tracking-tight sm:text-4xl md:text-5xl lg:text-6xl text-foreground">
               AI in Your Palm.{" "}
