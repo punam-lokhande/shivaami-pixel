@@ -5,10 +5,10 @@
  */
 
 // ⚠️ Replace with your Razorpay Key ID (publishable key — safe for frontend)
-const RAZORPAY_KEY_ID = "rzp_test_XXXXXXXXXXXX";
+const RAZORPAY_KEY_ID = "rzp_live_DHawTmGucNYa3I";
 
 // ⚠️ Replace with your Python backend URL
-const BACKEND_URL = "http://localhost:5000";
+const BACKEND_URL = "https://resellers-api.shiviom.com";
 
 interface RazorpayOrderData {
   amount: number; // in INR (rupees)
@@ -41,7 +41,7 @@ export const useRazorpay = () => {
   ) => {
     try {
       // Step 1: Create order on your backend
-      const res = await fetch(`${BACKEND_URL}/api/create-order`, {
+      const res = await fetch(`${BACKEND_URL}/create-order/`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
@@ -58,7 +58,8 @@ export const useRazorpay = () => {
 
       if (!res.ok) {
         const err = await res.json();
-        throw new Error(err.error || "Failed to create order");
+        
+        // throw new Error(err.error || "Failed to create order");
       }
 
       const order = await res.json();
@@ -74,7 +75,7 @@ export const useRazorpay = () => {
         handler: async (response: RazorpayResponse) => {
           // Step 3: Verify payment on backend
           try {
-            const verifyRes = await fetch(`${BACKEND_URL}/api/verify-payment`, {
+            const verifyRes = await fetch(`${BACKEND_URL}/verify-payment/`, {
               method: "POST",
               headers: { "Content-Type": "application/json" },
               body: JSON.stringify(response),
