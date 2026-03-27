@@ -111,6 +111,37 @@ const Cart = () => {
         </div>
 
         <div className="space-y-6">
+          {/* Customer Details */}
+          <div className="rounded-2xl border border-border bg-card p-6 shadow-soft space-y-4">
+            <h3 className="font-semibold text-foreground">Customer Details</h3>
+            <div className="space-y-1">
+              <Label htmlFor="fullName">Full Name *</Label>
+              <Input id="fullName" placeholder="Enter your full name" value={customerInfo.fullName} onChange={(e) => setCustomerInfo(p => ({ ...p, fullName: e.target.value }))} />
+              {formErrors.fullName && <p className="text-xs text-destructive">{formErrors.fullName}</p>}
+            </div>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div className="space-y-1">
+                <Label htmlFor="mobile">Mobile Number *</Label>
+                <Input id="mobile" placeholder="10-digit mobile" maxLength={10} value={customerInfo.mobile} onChange={(e) => setCustomerInfo(p => ({ ...p, mobile: e.target.value.replace(/\D/g, '') }))} />
+                {formErrors.mobile && <p className="text-xs text-destructive">{formErrors.mobile}</p>}
+              </div>
+              <div className="space-y-1">
+                <Label htmlFor="email">Email ID *</Label>
+                <Input id="email" type="email" placeholder="you@example.com" value={customerInfo.email} onChange={(e) => setCustomerInfo(p => ({ ...p, email: e.target.value }))} />
+                {formErrors.email && <p className="text-xs text-destructive">{formErrors.email}</p>}
+              </div>
+            </div>
+            <div className="space-y-1">
+              <Label htmlFor="address">Delivery Address *</Label>
+              <Textarea id="address" placeholder="Full delivery address" value={customerInfo.address} onChange={(e) => setCustomerInfo(p => ({ ...p, address: e.target.value }))} />
+              {formErrors.address && <p className="text-xs text-destructive">{formErrors.address}</p>}
+            </div>
+            <div className="space-y-1">
+              <Label htmlFor="pincode">Pincode *</Label>
+              <Input id="pincode" placeholder="6-digit pincode" maxLength={6} value={customerInfo.pincode} onChange={(e) => setCustomerInfo(p => ({ ...p, pincode: e.target.value.replace(/\D/g, '') }))} />
+              {formErrors.pincode && <p className="text-xs text-destructive">{formErrors.pincode}</p>}
+            </div>
+          </div>
           <div className="rounded-2xl border border-border bg-card p-6 shadow-soft">
             <h3 className="font-semibold text-foreground">Order Summary</h3>
             {(() => {
