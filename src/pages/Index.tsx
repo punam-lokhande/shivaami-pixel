@@ -129,8 +129,17 @@ const Index = () => (
 
       <div className="container relative">
         <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.7 }} className="text-center">
-          <motion.span initial={{ opacity: 0, scale: 0.8 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ type: "spring", stiffness: 200, delay: 0.1 }} className="inline-flex items-center gap-2 rounded-full border border-google-green/20 bg-google-green/5 px-5 py-2 text-sm font-semibold text-google-green">
-            <Sparkles className="h-4 w-4 animate-pulse" /> Only at Shivaami
+          <motion.span
+            initial={{ opacity: 0, scale: 0.5, y: -20 }}
+            whileInView={{ opacity: 1, scale: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ type: "spring", stiffness: 200, damping: 12, delay: 0.1 }}
+            className="inline-flex items-center gap-2 rounded-full border-2 border-google-green/40 bg-gradient-to-r from-google-green/15 via-google-blue/10 to-google-yellow/10 px-6 py-2.5 text-sm sm:text-base font-bold text-google-green shadow-lg shadow-google-green/20 backdrop-blur-sm"
+          >
+            <motion.span animate={{ rotate: [0, 15, -15, 0], scale: [1, 1.2, 1] }} transition={{ duration: 2, repeat: Infinity, repeatDelay: 3 }}>
+              <Sparkles className="h-5 w-5" />
+            </motion.span>
+            Only at Shivaami
           </motion.span>
           <motion.h2 initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.2, duration: 0.6 }} className="mt-5 text-3xl font-extrabold md:text-5xl text-foreground">
             The Shivaami Advantage
