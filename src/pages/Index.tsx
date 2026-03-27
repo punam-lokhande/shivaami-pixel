@@ -62,15 +62,10 @@ const Index = () => (
             </motion.div>
 
             {/* CTAs */}
-            <motion.div initial={{ opacity: 0, y: 15 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.35 }} className="mt-5 sm:mt-6 flex flex-col sm:flex-row justify-center md:justify-start gap-3">
+            <motion.div initial={{ opacity: 0, y: 15 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.35 }} className="mt-5 sm:mt-6 flex justify-center md:justify-start">
               <Link to={`/product/${heroPhone.slug}`}>
                 <Button size="lg" className="w-full sm:w-auto gradient-cta border-0 text-primary-foreground gap-2 rounded-full px-8 py-5 text-sm sm:text-base font-semibold shadow-lg shadow-primary/25 hover:shadow-xl hover:shadow-primary/35 hover:scale-105 transition-all duration-300">
                   Buy Now <ArrowRight className="h-5 w-5" />
-                </Button>
-              </Link>
-              <Link to={`/product/${heroPhone.slug}`}>
-                <Button size="lg" variant="outline" className="w-full sm:w-auto rounded-full px-8 py-5 text-sm sm:text-base font-semibold hover:bg-secondary transition-all duration-300">
-                  Explore Features
                 </Button>
               </Link>
             </motion.div>
