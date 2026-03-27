@@ -258,6 +258,33 @@ export const phones: Phone[] = [
     rating: 4.5,
     reviews: 1842,
   },
+  {
+    id: "test-phone",
+    name: "Test Phone (₹1)",
+    slug: "test-phone",
+    price: 1,
+    gstRate: 18,
+    shortDesc: "Dummy phone for payment gateway testing",
+    description: "This is a dummy product priced at ₹1 for testing Razorpay payment integration.",
+    image: pixel9a,
+    color: "Obsidian",
+    colors: [{ name: "Obsidian", hex: "#1a1a1a", image: pixel9a }],
+    category: "mid-range",
+    tag: "Test",
+    specs: {
+      display: "Test",
+      camera: "Test",
+      battery: "Test",
+      processor: "Test",
+      ram: "Test",
+      storage: "Test",
+      os: "Test",
+      ai: "Test",
+    },
+    features: ["Payment Gateway Test"],
+    rating: 5,
+    reviews: 0,
+  },
 ];
 
 export const getPhoneBySlug = (slug: string) =>
