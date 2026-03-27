@@ -45,7 +45,7 @@ export const useRazorpay = () => {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
-          amount: orderData.amount,
+          amount: orderData.amount * 100, // Convert rupees to paise
           currency: "INR",
           receipt: `order_${Date.now()}`,
           notes: {
