@@ -7,14 +7,37 @@ import { motion } from "framer-motion";
 import { useState } from "react";
 import { toast } from "sonner";
 import { useRazorpay } from "@/hooks/useRazorpay";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
+import { Textarea } from "@/components/ui/textarea";
 
 const Cart = () => {
   const { items, removeFromCart, updateQuantity, totalPrice, clearCart } = useCart();
   const [isProcessing, setIsProcessing] = useState(false);
   const { initiatePayment } = useRazorpay();
+  const [customerInfo, setCustomerInfo] = useState({
+    fullName: "",
+    mobile: "",
+    email: "",
+    address: "",
+    pincode: "",
+  });
+  const [formErrors, setFormErrors] = useState<Record<string, string>>({});
+
+  const validateForm = () => {
+    const errors: Record<string, string> = {};
+    if (!customerInfo.fullName.trim()) errors.fullName = "Full name is required";
+    if (!customerInfo.mobile.trim() || !/^[6-9]\d{9}$/.test(customerInfo.mobile.trim())) errors.mobile = "Valid 10-digit mobile number required";
+    if (!customerInfo.email.trim() || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(customerInfo.email.trim())) errors.email = "Valid email is required";
+    if (!customerInfo.address.trim()) errors.address = "Delivery address is required";
+    if (!customerInfo.pincode.trim() || !/^\d{6}$/.test(customerInfo.pincode.trim())) errors.pincode = "Valid 6-digit pincode required";
+    setFormErrors(errors);
+    return Object.keys(errors).length === 0;
+  };
 
   const handleCheckout = () => {
     if (items.length === 0) return;
+    if (!validateForm()) return;
 
     const gstTotal = items.reduce((sum, i) => sum + Math.round(i.phone.price * i.phone.gstRate / 100) * i.quantity, 0);
     const grandTotal = totalPrice + gstTotal;
@@ -26,6 +49,9 @@ const Cart = () => {
       {
         amount: grandTotal,
         productName: productNames,
+        customerName: customerInfo.fullName,
+        customerEmail: customerInfo.email,
+        customerPhone: customerInfo.mobile,
       },
       (response) => {
         setIsProcessing(false);
@@ -85,6 +111,37 @@ const Cart = () => {
         </div>
 
         <div className="space-y-6">
+          {/* Customer Details */}
+          <div className="rounded-2xl border border-border bg-card p-6 shadow-soft space-y-4">
+            <h3 className="font-semibold text-foreground">Customer Details</h3>
+            <div className="space-y-1">
+              <Label htmlFor="fullName">Full Name *</Label>
+              <Input id="fullName" placeholder="Enter your full name" value={customerInfo.fullName} onChange={(e) => setCustomerInfo(p => ({ ...p, fullName: e.target.value }))} />
+              {formErrors.fullName && <p className="text-xs text-destructive">{formErrors.fullName}</p>}
+            </div>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div className="space-y-1">
+                <Label htmlFor="mobile">Mobile Number *</Label>
+                <Input id="mobile" placeholder="10-digit mobile" maxLength={10} value={customerInfo.mobile} onChange={(e) => setCustomerInfo(p => ({ ...p, mobile: e.target.value.replace(/\D/g, '') }))} />
+                {formErrors.mobile && <p className="text-xs text-destructive">{formErrors.mobile}</p>}
+              </div>
+              <div className="space-y-1">
+                <Label htmlFor="email">Email ID *</Label>
+                <Input id="email" type="email" placeholder="you@example.com" value={customerInfo.email} onChange={(e) => setCustomerInfo(p => ({ ...p, email: e.target.value }))} />
+                {formErrors.email && <p className="text-xs text-destructive">{formErrors.email}</p>}
+              </div>
+            </div>
+            <div className="space-y-1">
+              <Label htmlFor="address">Delivery Address *</Label>
+              <Textarea id="address" placeholder="Full delivery address" value={customerInfo.address} onChange={(e) => setCustomerInfo(p => ({ ...p, address: e.target.value }))} />
+              {formErrors.address && <p className="text-xs text-destructive">{formErrors.address}</p>}
+            </div>
+            <div className="space-y-1">
+              <Label htmlFor="pincode">Pincode *</Label>
+              <Input id="pincode" placeholder="6-digit pincode" maxLength={6} value={customerInfo.pincode} onChange={(e) => setCustomerInfo(p => ({ ...p, pincode: e.target.value.replace(/\D/g, '') }))} />
+              {formErrors.pincode && <p className="text-xs text-destructive">{formErrors.pincode}</p>}
+            </div>
+          </div>
           <div className="rounded-2xl border border-border bg-card p-6 shadow-soft">
             <h3 className="font-semibold text-foreground">Order Summary</h3>
             {(() => {
