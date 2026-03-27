@@ -27,6 +27,7 @@ const Footer = () => (
             <span className="text-sm text-muted-foreground">FAQ</span>
             <span className="text-sm text-muted-foreground">Shipping</span>
             <span className="text-sm text-muted-foreground">Returns</span>
+            <Link to="/terms" className="text-sm text-muted-foreground hover:text-primary transition-colors">Terms and Conditions</Link>
           </div>
         </div>
         <div>
