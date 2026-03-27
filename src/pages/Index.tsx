@@ -103,16 +103,23 @@ const Index = () => (
             {/* Vibrant glow behind phone */}
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-[250px] sm:h-[350px] md:h-[450px] w-[250px] sm:w-[350px] md:w-[450px] rounded-full bg-gradient-to-br from-google-blue/25 via-primary/20 to-google-green/15 blur-[60px] sm:blur-[80px] animate-pulse-glow" />
 
-            {/* 3D Phone Viewer */}
+            {/* Static image on mobile, 3D viewer on desktop */}
             <div className="relative z-10 w-full h-full">
-              <Suspense fallback={
-                <div className="flex items-center justify-center h-full">
-                  <img src={heroPhoneImg} alt={heroPhone.name} className="h-[280px] sm:h-[360px] md:h-[460px] lg:h-[520px] w-auto object-contain animate-pulse" />
-                </div>
-              }>
-                <Phone3DViewer modelSrc="/pixel-10a.glb" alt={heroPhone.name} poster={heroPhoneImg} />
-              </Suspense>
-              <p className="absolute bottom-0 left-1/2 -translate-x-1/2 text-[10px] text-muted-foreground/60 select-none">Drag to rotate</p>
+              {/* Mobile: static image for fast loading */}
+              <div className="flex items-center justify-center h-full md:hidden">
+                <img src={heroPhoneImg} alt={heroPhone.name} className="h-[280px] sm:h-[360px] w-auto object-contain drop-shadow-2xl" loading="eager" />
+              </div>
+              {/* Desktop: 3D viewer */}
+              <div className="hidden md:block h-full">
+                <Suspense fallback={
+                  <div className="flex items-center justify-center h-full">
+                    <img src={heroPhoneImg} alt={heroPhone.name} className="h-[460px] lg:h-[520px] w-auto object-contain animate-pulse" />
+                  </div>
+                }>
+                  <Phone3DViewer modelSrc="/pixel-10a.glb" alt={heroPhone.name} poster={heroPhoneImg} />
+                </Suspense>
+                <p className="absolute bottom-0 left-1/2 -translate-x-1/2 text-[10px] text-muted-foreground/60 select-none">Drag to rotate</p>
+              </div>
             </div>
 
             {/* New Launch badge */}
