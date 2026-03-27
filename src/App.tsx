@@ -14,6 +14,7 @@ import Compare from "./pages/Compare";
 import Cart from "./pages/Cart";
 import SMB from "./pages/SMB";
 import EnquireNow from "./pages/EnquireNow";
+import TermsAndConditions from "./pages/TermsAndConditions";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
