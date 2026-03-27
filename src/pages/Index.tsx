@@ -25,7 +25,7 @@ const Index = () => (
     {/* Hero - Pixel 10a */}
     <section className="relative overflow-hidden bg-gradient-to-br from-background via-secondary/40 to-background hero-section">
       {/* Animated gradient mesh */}
-      <div className="absolute inset-0 overflow-hidden">
+      <div className="absolute inset-0 overflow-hidden hidden sm:block">
         <div className="absolute -top-40 right-0 h-[500px] w-[500px] rounded-full bg-google-blue/30 blur-[100px] animate-float" />
         <div className="absolute bottom-0 -left-40 h-[400px] w-[400px] rounded-full bg-google-green/25 blur-[100px] animate-float" style={{ animationDelay: "1.5s" }} />
         <div className="absolute top-1/3 left-1/3 h-[350px] w-[350px] rounded-full bg-google-yellow/20 blur-[80px] animate-float" style={{ animationDelay: "3s" }} />
@@ -39,6 +39,11 @@ const Index = () => (
         {/* Rotating rings */}
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-[500px] w-[500px] rounded-full border-2 border-google-blue/15 animate-spin-slow" />
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-[700px] w-[700px] rounded-full border-2 border-dashed border-google-green/12 animate-spin-slow-reverse" />
+      </div>
+      {/* Simplified mobile background */}
+      <div className="absolute inset-0 overflow-hidden sm:hidden">
+        <div className="absolute -top-20 right-0 h-[250px] w-[250px] rounded-full bg-google-blue/20 blur-[80px]" />
+        <div className="absolute bottom-0 -left-20 h-[200px] w-[200px] rounded-full bg-google-green/15 blur-[80px]" />
       </div>
 
       <div className="container relative">
