@@ -278,6 +278,8 @@ export const phones: Phone[] = [
       processor: "Test",
       ram: "Test",
       storage: "Test",
+      os: "Test",
+      ai: "Test",
     },
     features: ["Payment Gateway Test"],
     rating: 5,
