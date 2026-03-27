@@ -81,7 +81,7 @@ const Index = () => (
                 { icon: Camera, label: "50MP Camera", color: "text-google-blue", bg: "bg-google-blue/10" },
                 { icon: Battery, label: "30+ Hrs Battery", color: "text-google-green", bg: "bg-google-green/10" },
                 { icon: Cpu, label: "Tensor G5", color: "text-google-red", bg: "bg-google-red/10" },
-                { icon: Shield, label: "7 Yrs Updates", color: "text-google-yellow", bg: "bg-google-yellow/10" },
+                { icon: Shield, label: "7 Years Updates", color: "text-google-yellow", bg: "bg-google-yellow/10" },
               ].map((f, i) => (
                 <motion.div key={f.label} initial={{ opacity: 0, scale: 0.8 }} animate={{ opacity: 1, scale: 1 }} transition={{ delay: 0.55 + i * 0.08 }} className="flex items-center gap-1.5">
                   <div className={`flex h-7 w-7 items-center justify-center rounded-lg ${f.bg}`}>
