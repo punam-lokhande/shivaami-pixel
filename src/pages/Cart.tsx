@@ -15,9 +15,29 @@ const Cart = () => {
   const { items, removeFromCart, updateQuantity, totalPrice, clearCart } = useCart();
   const [isProcessing, setIsProcessing] = useState(false);
   const { initiatePayment } = useRazorpay();
+  const [customerInfo, setCustomerInfo] = useState({
+    fullName: "",
+    mobile: "",
+    email: "",
+    address: "",
+    pincode: "",
+  });
+  const [formErrors, setFormErrors] = useState<Record<string, string>>({});
+
+  const validateForm = () => {
+    const errors: Record<string, string> = {};
+    if (!customerInfo.fullName.trim()) errors.fullName = "Full name is required";
+    if (!customerInfo.mobile.trim() || !/^[6-9]\d{9}$/.test(customerInfo.mobile.trim())) errors.mobile = "Valid 10-digit mobile number required";
+    if (!customerInfo.email.trim() || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(customerInfo.email.trim())) errors.email = "Valid email is required";
+    if (!customerInfo.address.trim()) errors.address = "Delivery address is required";
+    if (!customerInfo.pincode.trim() || !/^\d{6}$/.test(customerInfo.pincode.trim())) errors.pincode = "Valid 6-digit pincode required";
+    setFormErrors(errors);
+    return Object.keys(errors).length === 0;
+  };
 
   const handleCheckout = () => {
     if (items.length === 0) return;
+    if (!validateForm()) return;
 
     const gstTotal = items.reduce((sum, i) => sum + Math.round(i.phone.price * i.phone.gstRate / 100) * i.quantity, 0);
     const grandTotal = totalPrice + gstTotal;
@@ -29,6 +49,9 @@ const Cart = () => {
       {
         amount: grandTotal,
         productName: productNames,
+        customerName: customerInfo.fullName,
+        customerEmail: customerInfo.email,
+        customerPhone: customerInfo.mobile,
       },
       (response) => {
         setIsProcessing(false);
