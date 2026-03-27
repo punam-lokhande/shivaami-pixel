@@ -25,7 +25,7 @@ const Index = () => (
     {/* Hero - Pixel 10a */}
     <section className="relative overflow-hidden bg-gradient-to-br from-background via-secondary/40 to-background hero-section">
       {/* Animated gradient mesh */}
-      <div className="absolute inset-0 overflow-hidden">
+      <div className="absolute inset-0 overflow-hidden hidden sm:block">
         <div className="absolute -top-40 right-0 h-[500px] w-[500px] rounded-full bg-google-blue/30 blur-[100px] animate-float" />
         <div className="absolute bottom-0 -left-40 h-[400px] w-[400px] rounded-full bg-google-green/25 blur-[100px] animate-float" style={{ animationDelay: "1.5s" }} />
         <div className="absolute top-1/3 left-1/3 h-[350px] w-[350px] rounded-full bg-google-yellow/20 blur-[80px] animate-float" style={{ animationDelay: "3s" }} />
@@ -39,6 +39,11 @@ const Index = () => (
         {/* Rotating rings */}
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-[500px] w-[500px] rounded-full border-2 border-google-blue/15 animate-spin-slow" />
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-[700px] w-[700px] rounded-full border-2 border-dashed border-google-green/12 animate-spin-slow-reverse" />
+      </div>
+      {/* Simplified mobile background */}
+      <div className="absolute inset-0 overflow-hidden sm:hidden">
+        <div className="absolute -top-20 right-0 h-[250px] w-[250px] rounded-full bg-google-blue/20 blur-[80px]" />
+        <div className="absolute bottom-0 -left-20 h-[200px] w-[200px] rounded-full bg-google-green/15 blur-[80px]" />
       </div>
 
       <div className="container relative">
@@ -62,15 +67,10 @@ const Index = () => (
             </motion.div>
 
             {/* CTAs */}
-            <motion.div initial={{ opacity: 0, y: 15 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.35 }} className="mt-5 sm:mt-6 flex flex-col sm:flex-row justify-center md:justify-start gap-3">
+            <motion.div initial={{ opacity: 0, y: 15 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.35 }} className="mt-5 sm:mt-6 flex justify-center md:justify-start">
               <Link to={`/product/${heroPhone.slug}`}>
                 <Button size="lg" className="w-full sm:w-auto gradient-cta border-0 text-primary-foreground gap-2 rounded-full px-8 py-5 text-sm sm:text-base font-semibold shadow-lg shadow-primary/25 hover:shadow-xl hover:shadow-primary/35 hover:scale-105 transition-all duration-300">
                   Buy Now <ArrowRight className="h-5 w-5" />
-                </Button>
-              </Link>
-              <Link to={`/product/${heroPhone.slug}`}>
-                <Button size="lg" variant="outline" className="w-full sm:w-auto rounded-full px-8 py-5 text-sm sm:text-base font-semibold hover:bg-secondary transition-all duration-300">
-                  Explore Features
                 </Button>
               </Link>
             </motion.div>
@@ -134,8 +134,17 @@ const Index = () => (
 
       <div className="container relative">
         <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.7 }} className="text-center">
-          <motion.span initial={{ opacity: 0, scale: 0.8 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ type: "spring", stiffness: 200, delay: 0.1 }} className="inline-flex items-center gap-2 rounded-full border border-google-green/20 bg-google-green/5 px-5 py-2 text-sm font-semibold text-google-green">
-            <Sparkles className="h-4 w-4 animate-pulse" /> Only at Shivaami
+          <motion.span
+            initial={{ opacity: 0, scale: 0.5, y: -20 }}
+            whileInView={{ opacity: 1, scale: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ type: "spring", stiffness: 200, damping: 12, delay: 0.1 }}
+            className="inline-flex items-center gap-2 rounded-full border-2 border-google-green/40 bg-gradient-to-r from-google-green/15 via-google-blue/10 to-google-yellow/10 px-6 py-2.5 text-sm sm:text-base font-bold text-google-green shadow-lg shadow-google-green/20 backdrop-blur-sm"
+          >
+            <motion.span animate={{ rotate: [0, 15, -15, 0], scale: [1, 1.2, 1] }} transition={{ duration: 2, repeat: Infinity, repeatDelay: 3 }}>
+              <Sparkles className="h-5 w-5" />
+            </motion.span>
+            Only at Shivaami
           </motion.span>
           <motion.h2 initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.2, duration: 0.6 }} className="mt-5 text-3xl font-extrabold md:text-5xl text-foreground">
             The Shivaami Advantage
