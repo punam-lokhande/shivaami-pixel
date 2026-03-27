@@ -6,10 +6,42 @@ import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 import { useState } from "react";
 import { toast } from "sonner";
+import { useRazorpay } from "@/hooks/useRazorpay";
 
 const Cart = () => {
   const { items, removeFromCart, updateQuantity, totalPrice, clearCart } = useCart();
-  const [showCheckout, setShowCheckout] = useState(false);
+  const [isProcessing, setIsProcessing] = useState(false);
+  const { initiatePayment } = useRazorpay();
+
+  const handleCheckout = () => {
+    if (items.length === 0) return;
+
+    const gstTotal = items.reduce((sum, i) => sum + Math.round(i.phone.price * i.phone.gstRate / 100) * i.quantity, 0);
+    const grandTotal = totalPrice + gstTotal;
+    const productNames = items.map(i => i.phone.name).join(", ");
+
+    setIsProcessing(true);
+
+    initiatePayment(
+      {
+        amount: grandTotal,
+        productName: productNames,
+      },
+      (response) => {
+        setIsProcessing(false);
+        clearCart();
+        toast.success("Payment successful!", {
+          description: `Payment ID: ${response.razorpay_payment_id}`,
+        });
+      },
+      (error) => {
+        setIsProcessing(false);
+        if (error !== "Payment cancelled by user") {
+          toast.error("Payment failed", { description: error });
+        }
+      }
+    );
+  };
 
   if (items.length === 0) {
     return (
@@ -67,25 +99,14 @@ const Cart = () => {
                 </div>
               );
             })()}
-            <Button className="mt-6 w-full gradient-cta border-0 text-primary-foreground" onClick={() => setShowCheckout(true)}>Checkout</Button>
+            <Button
+              className="mt-6 w-full gradient-cta border-0 text-primary-foreground"
+              onClick={handleCheckout}
+              disabled={isProcessing}
+            >
+              {isProcessing ? "Processing..." : "Pay with Razorpay"}
+            </Button>
           </div>
-
-          {showCheckout && (
-            <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} className="rounded-2xl border border-border bg-card p-6 shadow-soft space-y-4">
-              <h3 className="font-semibold text-foreground">Checkout</h3>
-              <input placeholder="Full Name" className="w-full rounded-lg border border-border bg-secondary px-3 py-2 text-sm outline-none focus:ring-2 focus:ring-primary" />
-              <input placeholder="Email" className="w-full rounded-lg border border-border bg-secondary px-3 py-2 text-sm outline-none focus:ring-2 focus:ring-primary" />
-              <input placeholder="Shipping Address" className="w-full rounded-lg border border-border bg-secondary px-3 py-2 text-sm outline-none focus:ring-2 focus:ring-primary" />
-              <input placeholder="Card Number" className="w-full rounded-lg border border-border bg-secondary px-3 py-2 text-sm outline-none focus:ring-2 focus:ring-primary" />
-              <div className="grid grid-cols-2 gap-3">
-                <input placeholder="MM/YY" className="rounded-lg border border-border bg-secondary px-3 py-2 text-sm outline-none focus:ring-2 focus:ring-primary" />
-                <input placeholder="CVC" className="rounded-lg border border-border bg-secondary px-3 py-2 text-sm outline-none focus:ring-2 focus:ring-primary" />
-              </div>
-              <Button className="w-full gradient-cta border-0 text-primary-foreground" onClick={() => { clearCart(); setShowCheckout(false); toast.success("Order placed successfully!"); }}>
-                Place Order — {formatPrice(totalPrice)}
-              </Button>
-            </motion.div>
-          )}
         </div>
       </div>
     </div>
