@@ -229,6 +229,7 @@ export const phones: Phone[] = [
     id: "pixel-9a",
     name: "Google Pixel 9a",
     slug: "pixel-9a",
+    externalUrl: "https://www.shivaami.com/shop/product/google-pixel-9a-256gb-ai-smartphone/",
     price: 31982,
     gstRate: 18,
     shortDesc: "Magic made simple. Stunning photos, all-day battery.",
