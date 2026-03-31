@@ -25,21 +25,38 @@ const PhoneCard = ({ phone, index = 0 }: { phone: Phone; index?: number }) => {
       {phone.externalUrl ? (
         <a href={phone.externalUrl} target="_blank" rel="noopener noreferrer">
           <div className="gradient-card overflow-hidden rounded-xl h-72 sm:h-80 flex items-center justify-center p-2 relative">
-
-          <AnimatePresence mode="wait">
-            <motion.div
-              key={phone.colors[selectedColor]?.hex}
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 0.12 }}
-              exit={{ opacity: 0 }}
-              transition={{ duration: 0.4 }}
-              className="absolute inset-0 z-0 rounded-xl"
-              style={{ backgroundColor: phone.colors[selectedColor]?.hex }}
-            />
-          </AnimatePresence>
-          <img src={phone.colors[selectedColor]?.image || phone.image} alt={`${phone.name} in ${phone.colors[selectedColor]?.name}`} className="relative z-10 max-h-full max-w-full object-contain transition-transform duration-500 group-hover:scale-105" loading="lazy" width={400} height={400} />
-        </div>
-      </Link>
+            <AnimatePresence mode="wait">
+              <motion.div
+                key={phone.colors[selectedColor]?.hex}
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 0.12 }}
+                exit={{ opacity: 0 }}
+                transition={{ duration: 0.4 }}
+                className="absolute inset-0 z-0 rounded-xl"
+                style={{ backgroundColor: phone.colors[selectedColor]?.hex }}
+              />
+            </AnimatePresence>
+            <img src={phone.colors[selectedColor]?.image || phone.image} alt={`${phone.name} in ${phone.colors[selectedColor]?.name}`} className="relative z-10 max-h-full max-w-full object-contain transition-transform duration-500 group-hover:scale-105" loading="lazy" width={400} height={400} />
+          </div>
+        </a>
+      ) : (
+        <Link to={`/product/${phone.slug}`}>
+          <div className="gradient-card overflow-hidden rounded-xl h-72 sm:h-80 flex items-center justify-center p-2 relative">
+            <AnimatePresence mode="wait">
+              <motion.div
+                key={phone.colors[selectedColor]?.hex}
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 0.12 }}
+                exit={{ opacity: 0 }}
+                transition={{ duration: 0.4 }}
+                className="absolute inset-0 z-0 rounded-xl"
+                style={{ backgroundColor: phone.colors[selectedColor]?.hex }}
+              />
+            </AnimatePresence>
+            <img src={phone.colors[selectedColor]?.image || phone.image} alt={`${phone.name} in ${phone.colors[selectedColor]?.name}`} className="relative z-10 max-h-full max-w-full object-contain transition-transform duration-500 group-hover:scale-105" loading="lazy" width={400} height={400} />
+          </div>
+        </Link>
+      )}
       <div className="mt-4 space-y-2">
         <div className="flex items-center justify-between">
           <h3 className="font-semibold text-foreground text-sm">{phone.name}</h3>
