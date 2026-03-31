@@ -54,6 +54,7 @@ export interface Phone {
   features: string[];
   rating: number;
   reviews: number;
+  externalUrl?: string;
 }
 
 export const formatPrice = (price: number) =>
