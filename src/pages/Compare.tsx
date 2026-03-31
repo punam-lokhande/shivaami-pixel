@@ -53,9 +53,15 @@ const Compare = () => (
             <td className="p-4 sticky left-0 z-10" />
             {phones.map((p) => (
               <td key={p.id} className="p-4 text-center">
-                <Link to={`/product/${p.slug}`}>
-                  <Button size="sm" variant="outline" className="text-xs">View Details</Button>
-                </Link>
+                {p.externalUrl ? (
+                  <a href={p.externalUrl} target="_blank" rel="noopener noreferrer">
+                    <Button size="sm" variant="outline" className="text-xs">View Details</Button>
+                  </a>
+                ) : (
+                  <Link to={`/product/${p.slug}`}>
+                    <Button size="sm" variant="outline" className="text-xs">View Details</Button>
+                  </Link>
+                )}
               </td>
             ))}
           </tr>
