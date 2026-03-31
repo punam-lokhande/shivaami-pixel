@@ -97,9 +97,6 @@ const ProductDetail = () => {
                   )}
                   <span className="text-xs text-google-green font-medium">Exclusive of GST</span>
                 </div>
-                <Button size="sm" className="gradient-cta border-0 text-primary-foreground rounded-full px-6 text-xs font-semibold" onClick={() => addToCart(phone)}>
-                  Buy now
-                </Button>
               </div>
             </div>
           </motion.div>
