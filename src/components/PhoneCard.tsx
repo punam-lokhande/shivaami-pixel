@@ -22,8 +22,10 @@ const PhoneCard = ({ phone, index = 0 }: { phone: Phone; index?: number }) => {
           {phone.tag}
         </span>
       )}
-      <Link to={`/product/${phone.slug}`}>
-        <div className="gradient-card overflow-hidden rounded-xl h-72 sm:h-80 flex items-center justify-center p-2 relative">
+      {phone.externalUrl ? (
+        <a href={phone.externalUrl} target="_blank" rel="noopener noreferrer">
+          <div className="gradient-card overflow-hidden rounded-xl h-72 sm:h-80 flex items-center justify-center p-2 relative">
+
           <AnimatePresence mode="wait">
             <motion.div
               key={phone.colors[selectedColor]?.hex}
