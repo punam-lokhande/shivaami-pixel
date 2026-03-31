@@ -26,10 +26,10 @@ const Compare = () => (
             <th className="bg-secondary/50 p-4 text-left text-sm font-semibold text-foreground sticky left-0 z-10">Feature</th>
             {phones.map((p) => (
               <th key={p.id} className="p-4 text-center">
-                <div className="relative">
+                <a href={p.externalUrl || `/product/${p.slug}`} target={p.externalUrl ? "_blank" : undefined} rel={p.externalUrl ? "noopener noreferrer" : undefined} className="relative block">
                   {p.tag && <span className="inline-block mb-1 rounded-full bg-google-red px-2 py-0.5 text-[9px] font-bold text-primary-foreground">{p.tag}</span>}
                   <img src={p.image} alt={p.name} className="mx-auto h-20 w-20 object-contain" loading="lazy" width={80} height={80} />
-                </div>
+                </a>
                 <p className="mt-2 text-xs font-semibold text-foreground">{p.name}</p>
                 <div className="flex flex-col items-center gap-0.5">
                   <p className="text-sm font-bold text-primary">{formatPrice(p.price)}</p>
