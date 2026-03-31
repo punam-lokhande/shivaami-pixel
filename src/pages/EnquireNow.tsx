@@ -185,7 +185,7 @@ const EnquireNow = () => {
                 </div>
 
                 <div>
-                  <label className="text-sm font-medium text-foreground mb-1.5 block">GST Number <span className="text-muted-foreground font-normal">(Optional)</span></label>
+                  <label className="text-sm font-medium text-foreground mb-1.5 block">GST Number *</label>
                   <Input
                     type="text"
                     placeholder="e.g. 22AAAAA0000A1Z5"

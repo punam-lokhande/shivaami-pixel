@@ -91,7 +91,7 @@ const TermsAndConditions = () => (
 
         <h2 className="text-xl font-semibold text-foreground mt-8">Contact Information</h2>
         <p>
-          For queries, support, or complaints: <a href="mailto:maaz@shivaami.com" className="text-primary hover:underline">maaz@shivaami.com</a> | <a href="tel:917272072072" className="text-primary hover:underline">+91 72720 72072</a>
+          For queries, support, or complaints: <a href="mailto:pixel@shivaami.com" className="text-primary hover:underline">pixel@shivaami.com</a> | <a href="tel:919022223600" className="text-primary hover:underline">+91 90222 23600</a>
         </p>
       </div>
     </div>
