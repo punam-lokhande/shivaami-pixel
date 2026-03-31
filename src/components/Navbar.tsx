@@ -75,14 +75,6 @@ const Navbar = () => {
           <button onClick={() => { setSearchOpen(!searchOpen); setSearchQuery(""); setSearchResults([]); }} className="rounded-full p-2 transition-colors hover:bg-secondary">
             <Search className="h-5 w-5 text-muted-foreground" />
           </button>
-          <Link to="/cart" className="relative rounded-full p-2 transition-colors hover:bg-secondary">
-            <ShoppingCart className="h-5 w-5 text-muted-foreground" />
-            {totalItems > 0 && (
-              <span className="absolute -right-0.5 -top-0.5 flex h-5 w-5 items-center justify-center rounded-full bg-primary text-[10px] font-bold text-primary-foreground">
-                {totalItems}
-              </span>
-            )}
-          </Link>
           <button onClick={() => setMobileOpen(!mobileOpen)} className="rounded-full p-2 md:hidden hover:bg-secondary">
             {mobileOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
           </button>
