@@ -14,7 +14,7 @@ const enquirySchema = z.object({
   company: z.string().trim().min(1, "Company name is required").max(100),
   email: z.string().trim().email("Invalid email address").max(255),
   phone: z.string().trim().min(10, "Valid phone number required").max(15),
-  gstNumber: z.string().trim().max(15).optional(),
+  gstNumber: z.string().trim().min(15, "Valid 15-character GST number required").max(15, "GST number must be 15 characters"),
   quantity: z.string().min(1, "Select quantity range"),
   model: z.string().min(1, "Select a model"),
   message: z.string().trim().max(1000).optional(),
