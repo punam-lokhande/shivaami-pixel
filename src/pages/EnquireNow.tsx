@@ -8,6 +8,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { useToast } from "@/hooks/use-toast";
 import { phones } from "@/data/phones";
 import { z } from "zod";
+import { API_ENDPOINTS } from "@/utils/api";
 
 const enquirySchema = z.object({
   name: z.string().trim().min(1, "Name is required").max(100),
@@ -49,6 +50,7 @@ const benefits = [
 const EnquireNow = () => {
   const { toast } = useToast();
   const [submitted, setSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const [errors, setErrors] = useState<Partial<Record<keyof EnquiryForm, string>>>({});
   const [form, setForm] = useState<EnquiryForm>({
     name: "",
@@ -66,7 +68,7 @@ const EnquireNow = () => {
     if (errors[field]) setErrors((prev) => ({ ...prev, [field]: undefined }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     const result = enquirySchema.safeParse(form);
     if (!result.success) {
@@ -78,9 +80,35 @@ const EnquireNow = () => {
       setErrors(fieldErrors);
       return;
     }
-    setErrors({});
-    setSubmitted(true);
-    toast({ title: "Enquiry Submitted!", description: "Our team will get back to you within 24 hours." });
+
+    setIsSubmitting(true);
+    try {
+      const response = await fetch(API_ENDPOINTS.INSERT_GOOGLE_PIXEL_ENQUIRY_DETAILS, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(result.data),
+      });
+
+      if (!response.ok) {
+        const errorData = await response.json().catch(() => ({ message: 'An error occurred on the server.' }));
+        throw new Error(errorData.message || `Server responded with status: ${response.status}`);
+      }
+
+      setErrors({});
+      setSubmitted(true);
+      toast({ title: "Enquiry Submitted!", description: "Our team will get back to you within 24 hours." });
+    } catch (error) {
+      console.error("Failed to submit enquiry:", error);
+      toast({
+        title: "Submission Failed",
+        description: error instanceof Error ? error.message : "An unexpected error occurred. Please try again.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   if (submitted) {
@@ -247,8 +275,12 @@ const EnquireNow = () => {
                   </div>
                 </div>
 
-                <Button type="submit" size="lg" className="w-full sm:w-auto gradient-cta border-0 text-primary-foreground rounded-full px-10 py-5 text-base font-semibold shadow-lg shadow-primary/25 hover:shadow-xl hover:scale-[1.02] transition-all duration-300 gap-2">
-                  Submit Enquiry <ArrowRight className="h-5 w-5" />
+                <Button type="submit" size="lg" className="w-full sm:w-auto gradient-cta border-0 text-primary-foreground rounded-full px-10 py-5 text-base font-semibold shadow-lg shadow-primary/25 hover:shadow-xl hover:scale-[1.02] transition-all duration-300 gap-2" disabled={isSubmitting}>
+                  {isSubmitting ? "Submitting..." : (
+                    <>
+                      Submit Enquiry <ArrowRight className="h-5 w-5" />
+                    </>
+                  )}
                 </Button>
               </form>
             </motion.div>
