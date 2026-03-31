@@ -277,11 +277,6 @@ const ProductDetail = () => {
               >
                 <ShoppingCart className="h-5 w-5" /> Add to Cart
               </Button>
-              <Link to="/cart" onClick={() => addToCart(phone)}>
-                <Button size="lg" variant="outline" className="w-full rounded-full py-6 text-base font-semibold hover:bg-secondary transition-all duration-300">
-                  Buy Now
-                </Button>
-              </Link>
             </div>
 
             {/* Shivaami Advantage - icons only, link to full section */}

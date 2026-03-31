@@ -63,9 +63,6 @@ const PhoneCard = ({ phone, index = 0 }: { phone: Phone; index?: number }) => {
           <Link to={`/product/${phone.slug}`} className="flex-1">
             <Button variant="outline" size="sm" className="w-full text-xs hover:bg-[#00a9ff] hover:text-white hover:border-[#00a9ff] transition-colors">View Details</Button>
           </Link>
-          <Button size="sm" className="flex-1 gap-1 text-xs gradient-cta border-0 text-primary-foreground" onClick={() => addToCart(phone)}>
-            <ShoppingCart className="h-3 w-3" /> Buy Now
-          </Button>
         </div>
       </div>
     </motion.div>
