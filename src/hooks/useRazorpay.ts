@@ -58,8 +58,8 @@ export const useRazorpay = () => {
 
       if (!res.ok) {
         const err = await res.json();
-        
-        // throw new Error(err.error || "Failed to create order");
+        console.log(err)
+        throw new Error(err.error || "Failed to create order");
       }
 
       const order = await res.json();
