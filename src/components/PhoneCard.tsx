@@ -60,12 +60,15 @@ const PhoneCard = ({ phone, index = 0 }: { phone: Phone; index?: number }) => {
         </div>
         <p className="text-xs text-muted-foreground line-clamp-2">{phone.shortDesc}</p>
         <div className="flex items-center gap-2 pt-2">
-          <Link to={`/product/${phone.slug}`} className="flex-1">
-            <Button variant="outline" size="sm" className="w-full text-xs hover:bg-[#00a9ff] hover:text-white hover:border-[#00a9ff] transition-colors">View Details</Button>
-          </Link>
-          <Button size="sm" className="flex-1 gap-1 text-xs gradient-cta border-0 text-primary-foreground" onClick={() => addToCart(phone)}>
-            <ShoppingCart className="h-3 w-3" /> Buy Now
-          </Button>
+          {phone.externalUrl ? (
+            <a href={phone.externalUrl} target="_blank" rel="noopener noreferrer" className="flex-1">
+              <Button variant="outline" size="sm" className="w-full text-xs hover:bg-[#00a9ff] hover:text-white hover:border-[#00a9ff] transition-colors">View Details</Button>
+            </a>
+          ) : (
+            <Link to={`/product/${phone.slug}`} className="flex-1">
+              <Button variant="outline" size="sm" className="w-full text-xs hover:bg-[#00a9ff] hover:text-white hover:border-[#00a9ff] transition-colors">View Details</Button>
+            </Link>
+          )}
         </div>
       </div>
     </motion.div>
