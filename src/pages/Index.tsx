@@ -283,7 +283,7 @@ const Index = () => (
     </section>
 
     {/* Newsletter */}
-    <section className="container py-10 sm:py-14 px-4 sm:px-6">
+    {/* <section className="container py-10 sm:py-14 px-4 sm:px-6">
       <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="rounded-2xl sm:rounded-3xl gradient-hero border border-border p-6 sm:p-10 md:p-14 text-center">
         <h2 className="text-xl font-bold sm:text-2xl md:text-3xl text-foreground">Stay in the Loop</h2>
         <p className="mt-2 text-sm sm:text-base text-muted-foreground">Get notified about new Pixel drops and exclusive offers</p>
@@ -292,7 +292,7 @@ const Index = () => (
           <Button className="gradient-cta border-0 text-primary-foreground rounded-full px-6">Subscribe</Button>
         </div>
       </motion.div>
-    </section>
+    </section> */}
   </div>
 );
 
