@@ -31,7 +31,8 @@ const fadeUp = {
 };
 
 const quantityOptions = [
-  "5 - 10 devices",
+  "1 - 5 devices",
+  "6 - 10 devices",
   "11 - 25 devices",
   "26 - 50 devices",
   "51 - 100 devices",
