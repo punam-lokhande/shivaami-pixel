@@ -32,7 +32,7 @@ const Footer = () => (
           <h4 className="font-semibold text-foreground">Contact</h4>
           <div className="mt-3 flex flex-col gap-2">
             <span className="text-sm text-muted-foreground">1001, 10th Floor, Runwal R Square, LBS Road, Mulund West, Mumbai - 400080</span>
-            <a href="tel:919022223600" className="text-sm text-muted-foreground hover:text-primary transition-colors">+91 90222 23600</a>
+            <a <a href="tel:+919022223600" className="text-sm text-muted-foreground hover:text-primary transition-colors">+91 90222 23600</a> className="text-sm text-muted-foreground hover:text-primary transition-colors">+91 90222 23600</a>
             <a href="mailto:pixel@shivaami.com" className="text-sm text-muted-foreground hover:text-primary transition-colors">pixel@shivaami.com</a>
           </div>
         </div>

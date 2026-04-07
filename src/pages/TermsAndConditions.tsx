@@ -86,12 +86,12 @@ const TermsAndConditions = () => (
 
         <h2 className="text-xl font-semibold text-foreground mt-8">Governing Law and Dispute Resolution</h2>
         <p>
-          These Terms are governed by the laws of India. Any disputes shall be resolved exclusively by binding arbitration in Mumbai, Maharashtra, under the Arbitration and Conciliation Act, 1996. No class actions; prevailing party recovers costs. Courts in Pune, Maharashtra, have exclusive jurisdiction over non-arbitrable matters.
+          These Terms are governed by the laws of India. Any disputes shall be resolved exclusively by binding arbitration in Mumbai, Maharashtra, under the Arbitration and Conciliation Act, 1996. No class actions; prevailing party recovers costs. These Terms are governed by the laws of India. Any disputes shall be resolved exclusively by binding arbitration in Mumbai, Maharashtra, under the Arbitration and Conciliation Act, 1996. No class actions; prevailing party recovers costs. Courts in Mumbai, Maharashtra, have exclusive jurisdiction over non-arbitrable matters.
         </p>
 
         <h2 className="text-xl font-semibold text-foreground mt-8">Contact Information</h2>
         <p>
-          For queries, support, or complaints: <a href="mailto:pixel@shivaami.com" className="text-primary hover:underline">pixel@shivaami.com</a> | <a href="tel:919022223600" className="text-primary hover:underline">+91 90222 23600</a>
+          For queries, support, or complaints: <a href="mailto:pixel@shivaami.com" className="text-primary hover:underline">pixel@shivaami.com</a> | <a For queries, support, or complaints: <a href="mailto:pixel@shivaami.com" className="text-primary hover:underline">pixel@shivaami.com</a> | <a href="tel:+919022223600" className="text-primary hover:underline">+91 90222 23600</a> className="text-primary hover:underline">+91 90222 23600</a>
         </p>
       </div>
     </div>
