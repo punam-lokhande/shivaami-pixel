@@ -39,8 +39,7 @@ const Cart = () => {
     if (items.length === 0) return;
     if (!validateForm()) return;
 
-    const gstTotal = items.reduce((sum, i) => sum + Math.round(i.phone.price * i.phone.gstRate / 100) * i.quantity, 0);
-    const grandTotal = totalPrice + gstTotal;
+    const grandTotal = totalPrice;
     const productNames = items.map(i => i.phone.name).join(", ");
 
     setIsProcessing(true);
@@ -101,7 +100,7 @@ const Cart = () => {
                   </div>
                   <div className="flex flex-col items-end gap-0.5">
                     <span className="font-semibold text-foreground">{formatPrice(item.phone.price * item.quantity)}</span>
-                    <span className="text-[10px] text-muted-foreground">+ GST: {formatPrice(Math.round(item.phone.price * item.phone.gstRate / 100) * item.quantity)}</span>
+                    <span className="text-[10px] text-muted-foreground">Including 18% GST</span>
                   </div>
                     <button onClick={() => removeFromCart(item.phone.id)} className="rounded-full p-1 text-destructive hover:bg-destructive/10"><Trash2 className="h-4 w-4" /></button>
                 </div>
@@ -145,14 +144,12 @@ const Cart = () => {
           <div className="rounded-2xl border border-border bg-card p-6 shadow-soft">
             <h3 className="font-semibold text-foreground">Order Summary</h3>
             {(() => {
-              const gstTotal = items.reduce((sum, i) => sum + Math.round(i.phone.price * i.phone.gstRate / 100) * i.quantity, 0);
-              const grandTotal = totalPrice + gstTotal;
+              const grandTotal = totalPrice;
               return (
                 <div className="mt-4 space-y-2">
-                  <div className="flex justify-between text-sm"><span className="text-muted-foreground">Subtotal</span><span className="text-foreground">{formatPrice(totalPrice)}</span></div>
-                  <div className="flex justify-between text-sm"><span className="text-muted-foreground">GST (18%)</span><span className="text-foreground">{formatPrice(gstTotal)}</span></div>
+                  <div className="flex justify-between text-sm"><span className="text-muted-foreground">Subtotal (incl. GST)</span><span className="text-foreground">{formatPrice(totalPrice)}</span></div>
                   <div className="flex justify-between text-sm"><span className="text-muted-foreground">Shipping</span><span className="text-google-green font-medium">Free</span></div>
-                  <div className="border-t border-border pt-2 flex justify-between font-semibold"><span>Total (incl. GST)</span><span>{formatPrice(grandTotal)}</span></div>
+                  <div className="border-t border-border pt-2 flex justify-between font-semibold"><span>Total</span><span>{formatPrice(grandTotal)}</span></div>
                 </div>
               );
             })()}
