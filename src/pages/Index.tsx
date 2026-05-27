@@ -59,10 +59,10 @@ const Index = () => (
             <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.25 }} className="mt-3 sm:mt-4 max-w-lg text-sm text-muted-foreground leading-relaxed sm:text-base md:text-lg mx-auto md:mx-0">
               <h2 className="text-lg sm:text-xl font-bold text-foreground mb-2">AI That Works While You Talk</h2>
               <ul className="space-y-1 text-sm sm:text-base">
-                <li>• Auto Note-Taking</li>
-                <li>• Call Summaries in Seconds</li>
-                <li>• Live Translation (Indian Languages)</li>
-                <li>• Built for an AI-First World.</li>
+                <li>• Corporate pricing + 18% GST input credit.</li>
+                <li>• Free 2 years accidental & liquid damage protection.</li>
+                <li>• Free pan-India doorstep pickup & drop for repairs - 2 Years.</li>
+                <li>• 1-year extended warranty (Total 2 years).</li>
               </ul>
             </motion.div>
 
