@@ -244,6 +244,80 @@ const Index = () => (
       </div>
     </section>
 
+    {/* Pixel SMB Advantage - B2B vs B2C */}
+    <section className="container py-10 sm:py-14 md:py-20 px-4 sm:px-6">
+      <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="max-w-5xl mx-auto">
+        <div className="text-center">
+          <span className="text-xs font-semibold uppercase tracking-widest text-primary">Google Pixel for Business</span>
+          <h2 className="mt-2 text-2xl font-bold sm:text-3xl md:text-4xl text-foreground">Pixel SMB Advantage</h2>
+          <p className="mt-2 text-sm sm:text-base italic text-muted-foreground">The All-in-One Program engineered for Growing Businesses</p>
+        </div>
+
+        <div className="mt-8 space-y-4 text-sm sm:text-base text-muted-foreground leading-relaxed">
+          <p>Shivaami Pixel combines the power of Google Pixel with enterprise-grade protection, AI-powered productivity, and business-ready support — helping organizations work smarter, stay secure, and scale efficiently.</p>
+          <p>From exclusive corporate pricing and GST benefits to 2-Year device protection, Pan-India pickup and drop service, paperless claims support, and authorized repairs, every benefit is designed to reduce downtime and provide complete peace of mind for your business.</p>
+          <p>With advanced Google AI features, powerful built-in security, and dedicated business support, Pixel for Business ensures your teams stay productive, protected, and ready from day one.</p>
+        </div>
+
+        <div className="mt-10">
+          <h3 className="text-xl sm:text-2xl font-bold text-foreground">Why Pixel SMB Advantage is the Smarter Choice for Growing Businesses</h3>
+          <p className="mt-3 text-sm sm:text-base text-muted-foreground leading-relaxed">The Pixel SMB Advantage program is designed to provide a complete, cost-effective solution for your business, combining exclusive benefits you cannot get anywhere else with the power of Google Pixel.</p>
+        </div>
+
+        <div className="mt-8">
+          <h3 className="text-lg sm:text-xl font-bold text-foreground mb-4">Shivaami Business via Pixel for Business vs. Retail Purchase</h3>
+          <div className="overflow-x-auto rounded-2xl border border-border">
+            <table className="w-full text-sm">
+              <thead>
+                <tr className="bg-secondary">
+                  <th className="text-left p-3 sm:p-4 font-semibold text-foreground"></th>
+                  <th className="p-3 sm:p-4 font-semibold text-foreground text-center">Shivaami Business via Pixel for Business</th>
+                  <th className="p-3 sm:p-4 font-semibold text-foreground text-center">Retail Purchase at any Store</th>
+                </tr>
+              </thead>
+              <tbody className="divide-y divide-border">
+                {([
+                  ["Exclusive Corporate Bulk Pricing", true, false],
+                  ["GST Input credit 18% Benefits", true, false],
+                  [<><span className="font-bold">FREE</span> 2-Year Protection Plan for (Accidental Accidental & Liquid Damage)</>, true, false],
+                  [<><span className="font-bold">FREE</span> 1-Year Extended Warranty (Total 2 years)</>, true, false],
+                  [<><span className="font-bold">FREE</span> Doorstep Pan India Pickup & Drop for repairs (for 2 years)</>, true, false],
+                  ["Paperless Claims Support (no paper work at the time of claim)", true, false],
+                  ["Zero Hidden Cost (Full Invoice value coverage No access fees No depreciation on claims)", true, false],
+                  ["Mobile Device Management (MDM)", true, false],
+                  ["AI Productivity Workshops", true, false],
+                  ["Google AI Features (Gemini)", true, true],
+                  ["Google One Benefits", true, true],
+                  ["Google AI Pro", true, true],
+                  ["Fitbit Premium", true, true],
+                  ["YouTube Premium", true, true],
+                  ["7 Years OS + Security Updates", true, true],
+                  ["GST number Mandatory", true, false],
+                  ["Pixel SMB Advantage Plan (something that usually costs 15% of your phone's value, completely FREE at Shivaami)", true, false],
+                ] as [React.ReactNode, boolean, boolean][]).map((row, i) => (
+                  <tr key={i} className="bg-card">
+                    <td className="p-3 sm:p-4 text-foreground">{row[0]}</td>
+                    <td className="p-3 sm:p-4 text-center text-lg">{row[1] ? <span className="text-google-green font-bold">✔</span> : <span className="text-google-red font-bold">✖</span>}</td>
+                    <td className="p-3 sm:p-4 text-center text-lg">{row[2] ? <span className="text-google-green font-bold">✔</span> : <span className="text-google-red font-bold">✖</span>}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div className="mt-8 rounded-2xl border border-border bg-card p-6">
+          <h4 className="font-bold text-foreground">Exclusive Corporate Benefits with Shivaami:</h4>
+          <ul className="mt-3 space-y-2 text-sm sm:text-base text-muted-foreground list-disc pl-5">
+            <li>2-Year Protection Plan covering Accidental Accidental & Liquid Damage</li>
+            <li>Pan India Doorstep Pickup & Drop Support for Repairs (for 2 Years)</li>
+            <li>1-Year Extended Warranty (Total Coverage: 2 Years)</li>
+          </ul>
+          <p className="mt-4 text-sm sm:text-base text-muted-foreground">These benefits that typically cost an additional 15%–20%, now available absolutely <span className="font-bold text-foreground">FREE</span> with Shivaami.</p>
+        </div>
+      </motion.div>
+    </section>
+
     {/* Comparison CTA */}
     <section className="container py-10 sm:py-14 md:py-20 px-4 sm:px-6">
       <motion.div initial={{ opacity: 0, scale: 0.98 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} className="relative overflow-hidden rounded-2xl sm:rounded-3xl border border-border p-6 sm:p-10 md:p-14 text-center">
