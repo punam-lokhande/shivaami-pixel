@@ -244,19 +244,13 @@ const Index = () => (
       </div>
     </section>
 
-    {/* Compare Before You Buy: Business vs. Retail */}
+    {/* Compare Before You Buy: Business VS Retail */}
     <section className="container py-10 sm:py-14 md:py-20 px-4 sm:px-6">
       <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="">
         <div className="text-center">
           <span className="text-xs font-semibold uppercase tracking-widest text-primary">Google Pixel for Business</span>
-          <h2 className="mt-2 text-2xl font-bold sm:text-3xl md:text-4xl text-foreground">Compare Before You Buy: Business vs. Retail</h2>
-          <p className="mt-2 text-sm sm:text-base italic text-muted-foreground">These benefits that typically cost an additional 15%–20%, now available absolutely FREE with Shivaami.</p>
-        </div>
-
-        <div className="mt-8 space-y-4 text-sm sm:text-base text-muted-foreground leading-relaxed">
-          <p>Shivaami Pixel combines the power of Google Pixel with enterprise-grade protection, AI-powered productivity, and business-ready support — helping organizations work smarter, stay secure, and scale efficiently.</p>
-          <p>From exclusive corporate pricing and GST benefits to 2-Year device protection, Pan-India pickup and drop service, paperless claims support, and authorized repairs, every benefit is designed to reduce downtime and provide complete peace of mind for your business.</p>
-          <p>With advanced Google AI features, powerful built-in security, and dedicated business support, Pixel for Business ensures your teams stay productive, protected, and ready from day one.</p>
+          <h2 className="mt-2 text-2xl font-bold sm:text-3xl md:text-4xl text-foreground">Compare Before You Buy: Business VS Retail</h2>
+          <p className="mt-2 text-sm sm:text-base italic text-muted-foreground"><span className="font-bold text-foreground">These benefits that typically cost an additional 15%–20%, now available absolutely FREE with Shivaami.</span></p>
         </div>
 
         <div className="mt-10">
