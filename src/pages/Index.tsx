@@ -246,7 +246,7 @@ const Index = () => (
 
     {/* Pixel SMB Advantage - B2B vs B2C */}
     <section className="container py-10 sm:py-14 md:py-20 px-4 sm:px-6">
-      <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="max-w-5xl mx-auto">
+      <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="">
         <div className="text-center">
           <span className="text-xs font-semibold uppercase tracking-widest text-primary">Google Pixel for Business</span>
           <h2 className="mt-2 text-2xl font-bold sm:text-3xl md:text-4xl text-foreground">Pixel SMB Advantage</h2>
