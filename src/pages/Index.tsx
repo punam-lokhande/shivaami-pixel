@@ -244,12 +244,12 @@ const Index = () => (
       </div>
     </section>
 
-    {/* Pixel SMB Advantage - B2B vs B2C */}
+    {/* Compare Before You Buy: Business vs. Retail */}
     <section className="container py-10 sm:py-14 md:py-20 px-4 sm:px-6">
       <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="">
         <div className="text-center">
           <span className="text-xs font-semibold uppercase tracking-widest text-primary">Google Pixel for Business</span>
-          <h2 className="mt-2 text-2xl font-bold sm:text-3xl md:text-4xl text-foreground">Pixel SMB Advantage</h2>
+          <h2 className="mt-2 text-2xl font-bold sm:text-3xl md:text-4xl text-foreground">Compare Before You Buy: Business vs. Retail</h2>
           <p className="mt-2 text-sm sm:text-base italic text-muted-foreground">The All-in-One Program engineered for Growing Businesses</p>
         </div>
 
@@ -260,8 +260,8 @@ const Index = () => (
         </div>
 
         <div className="mt-10">
-          <h3 className="text-xl sm:text-2xl font-bold text-foreground">Why Pixel SMB Advantage is the Smarter Choice for Growing Businesses</h3>
-          <p className="mt-3 text-sm sm:text-base text-muted-foreground leading-relaxed">The Pixel SMB Advantage program is designed to provide a complete, cost-effective solution for your business, combining exclusive benefits you cannot get anywhere else with the power of Google Pixel.</p>
+          <h3 className="text-xl sm:text-2xl font-bold text-foreground">Why Buying via Shivaami Business is the Smarter Choice for Growing Businesses</h3>
+          <p className="mt-3 text-sm sm:text-base text-muted-foreground leading-relaxed">The Shivaami Business program is designed to provide a complete, cost-effective solution for your business, combining exclusive benefits you cannot get anywhere else with the power of Google Pixel.</p>
         </div>
 
         <div className="mt-8">
