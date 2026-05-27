@@ -250,7 +250,7 @@ const Index = () => (
         <div className="text-center">
           <span className="text-xs font-semibold uppercase tracking-widest text-primary">Google Pixel for Business</span>
           <h2 className="mt-2 text-2xl font-bold sm:text-3xl md:text-4xl text-foreground">Compare Before You Buy: Business vs. Retail</h2>
-          <p className="mt-2 text-sm sm:text-base italic text-muted-foreground">The All-in-One Program engineered for Growing Businesses</p>
+          <p className="mt-2 text-sm sm:text-base italic text-muted-foreground">These benefits that typically cost an additional 15%–20%, now available absolutely FREE with Shivaami.</p>
         </div>
 
         <div className="mt-8 space-y-4 text-sm sm:text-base text-muted-foreground leading-relaxed">
@@ -265,7 +265,7 @@ const Index = () => (
         </div>
 
         <div className="mt-8">
-          <h3 className="text-lg sm:text-xl font-bold text-foreground mb-4">Shivaami Business via Pixel for Business vs. Retail Purchase</h3>
+          
           <div className="overflow-x-auto rounded-2xl border border-border">
             <table className="w-full text-sm">
               <thead>
