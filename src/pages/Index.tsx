@@ -299,16 +299,6 @@ const Index = () => (
             </table>
           </div>
         </div>
-
-        <div className="mt-8 rounded-2xl border border-border bg-card p-6">
-          <h4 className="font-bold text-foreground">Exclusive Corporate Benefits with Shivaami:</h4>
-          <ul className="mt-3 space-y-2 text-sm sm:text-base text-muted-foreground list-disc pl-5">
-            <li>2-Year Protection Plan covering Accidental Accidental & Liquid Damage</li>
-            <li>Pan India Doorstep Pickup & Drop Support for Repairs (for 2 Years)</li>
-            <li>1-Year Extended Warranty (Total Coverage: 2 Years)</li>
-          </ul>
-          <p className="mt-4 text-sm sm:text-base text-muted-foreground">These benefits that typically cost an additional 15%–20%, now available absolutely <span className="font-bold text-foreground">FREE</span> with Shivaami.</p>
-        </div>
       </motion.div>
     </section>
 
