@@ -95,7 +95,7 @@ const ProductDetail = () => {
                   {phone.originalPrice && (
                     <span className="text-xs text-muted-foreground line-through">{formatPrice(phone.originalPrice)}</span>
                   )}
-                  <span className="text-xs text-google-green font-medium">Exclusive of GST</span>
+                  <span className="text-xs text-google-green font-medium">Including 18% GST</span>
                 </div>
               </div>
             </div>
@@ -215,7 +215,7 @@ const ProductDetail = () => {
                   <p className="text-base text-muted-foreground line-through">{formatPrice(phone.originalPrice)}</p>
                 )}
               </div>
-              <p className="mt-1 text-xs font-medium text-google-green">Exclusive of GST</p>
+              <p className="mt-1 text-xs font-medium text-google-green">Including 18% GST</p>
               {phone.originalPrice && (
                 <p className="mt-1.5 text-xs font-semibold text-google-green">
                   Save {formatPrice(phone.originalPrice - phone.price)} on this purchase
