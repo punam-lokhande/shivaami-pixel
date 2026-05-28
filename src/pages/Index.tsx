@@ -273,7 +273,7 @@ const Index = () => (
                 {([
                   ["Exclusive Corporate Bulk Pricing", true, false],
                   ["GST Input credit 18% Benefits", true, false],
-                  [<><span className="font-bold">FREE</span> 2-Year Protection Plan for (Accidental Accidental & Liquid Damage)</>, true, false],
+                  [<><span className="font-bold">FREE</span> 2-Year Protection Plan for (Accidental & Liquid Damage)</>, true, false],
                   [<><span className="font-bold">FREE</span> 1-Year Extended Warranty (Total 2 years)</>, true, false],
                   [<><span className="font-bold">FREE</span> Doorstep Pan India Pickup & Drop for repairs (for 2 years)</>, true, false],
                   ["Paperless Claims Support (no paper work at the time of claim)", true, false],
