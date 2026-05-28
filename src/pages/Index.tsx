@@ -81,22 +81,6 @@ const Index = () => (
               </Link>
             </motion.div>
 
-            {/* Feature icons row */}
-            <motion.div initial={{ opacity: 0, y: 15 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.45 }} className="mt-5 sm:mt-6 flex flex-wrap justify-center md:justify-start gap-3 sm:gap-4">
-              {[
-                { icon: Camera, label: "50MP Camera", color: "text-google-blue", bg: "bg-google-blue/10" },
-                { icon: Battery, label: "30+ Hrs Battery", color: "text-google-green", bg: "bg-google-green/10" },
-                { icon: Cpu, label: "Tensor G5", color: "text-google-red", bg: "bg-google-red/10" },
-                { icon: Shield, label: "7 Years Updates", color: "text-google-yellow", bg: "bg-google-yellow/10" },
-              ].map((f, i) => (
-                <motion.div key={f.label} initial={{ opacity: 0, scale: 0.8 }} animate={{ opacity: 1, scale: 1 }} transition={{ delay: 0.55 + i * 0.08 }} className="flex items-center gap-1.5">
-                  <div className={`flex h-7 w-7 items-center justify-center rounded-lg ${f.bg}`}>
-                    <f.icon className={`h-3.5 w-3.5 ${f.color}`} />
-                  </div>
-                  <span className="text-xs font-medium text-foreground">{f.label}</span>
-                </motion.div>
-              ))}
-            </motion.div>
           </div>
 
           {/* Right - Phone with 3D effect */}
