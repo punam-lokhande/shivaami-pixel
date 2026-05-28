@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import {
-  Shield, Truck,
+  Shield, Settings, Truck,
   Smartphone, Briefcase, Users, Crown, Zap,
   ChevronRight, MessageCircle, ArrowRight,
   AlertTriangle, Lock, Clock, FileText,
