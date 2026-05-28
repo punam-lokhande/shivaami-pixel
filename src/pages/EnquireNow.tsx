@@ -316,6 +316,7 @@ const EnquireNow = () => {
           </div>
         </div>
       </section>
+      <ShivaamiAdvantage />
     </div>
   );
 };
