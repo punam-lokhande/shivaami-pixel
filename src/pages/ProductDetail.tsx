@@ -3,9 +3,9 @@ import { useParams, Link } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import {
   Star, Check, ChevronRight,
-  Camera, Cpu, Battery, Shield, Smartphone, Droplets, RefreshCw, Fingerprint,
-  ShieldCheck, Bot, GraduationCap, Cloud, Receipt, Settings, Sparkles, Truck,
-  Monitor, Wifi, Zap, Package
+  Camera, Cpu, Battery, Smartphone, Droplets, RefreshCw, Fingerprint,
+  Sparkles,
+  Monitor, Zap, Package
 } from "lucide-react";
 import { getPhoneBySlug, phones, formatPrice } from "@/data/phones";
 import { useCart } from "@/context/CartContext";
