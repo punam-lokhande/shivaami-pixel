@@ -144,13 +144,6 @@ const Index = () => (
         <div className="mt-8 sm:mt-14 grid gap-4 sm:gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
           {phones.map((phone, i) => <PhoneCard key={phone.id} phone={phone} index={i} />)}
         </div>
-        <div className="mt-10 text-center">
-          <Link to="/products">
-            <Button variant="outline" className="rounded-full gap-2 px-8">
-              View All Phones <ChevronRight className="h-4 w-4" />
-            </Button>
-          </Link>
-        </div>
       </div>
     </section>
 
