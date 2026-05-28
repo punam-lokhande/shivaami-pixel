@@ -1,5 +1,6 @@
 import { useLocation } from "react-router-dom";
 import { useEffect } from "react";
+import ShivaamiAdvantage from "@/components/ShivaamiAdvantage";
 
 const NotFound = () => {
   const location = useLocation();
