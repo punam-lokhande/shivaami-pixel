@@ -261,44 +261,7 @@ const SMB = () => {
       </section>
 
       {/* SECTION 5 - Shivaami Advantage */}
-      <section className="border-t border-border">
-        <div className="container px-4 sm:px-6 py-14 sm:py-20">
-          <motion.div {...fadeUp} className="text-center mb-10 sm:mb-14">
-            <span className="inline-flex items-center gap-1.5 rounded-full bg-primary px-4 py-1.5 text-xs font-bold text-primary-foreground uppercase tracking-wider mb-4">
-              <Sparkles className="h-3.5 w-3.5" /> Exclusive Benefits
-            </span>
-            <h2 className="text-2xl sm:text-3xl font-bold text-foreground">The Shivaami Advantage - Exclusively for SMBs</h2>
-            <p className="mt-3 text-muted-foreground max-w-2xl mx-auto">Every Pixel you buy from Shivaami comes with benefits no other reseller in India offers.</p>
-          </motion.div>
-          <div className="grid gap-4 sm:gap-5 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
-            {shivaamiAdvantages.map((item, i) => (
-              <motion.div
-                key={item.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: i * 0.06, duration: 0.5 }}
-                className="group flex items-start gap-3 rounded-xl border border-border bg-card p-5 hover:shadow-lg hover:border-primary/20 transition-all duration-300"
-              >
-                <div className={`flex h-10 w-10 shrink-0 items-center justify-center rounded-lg ${item.bg}`}>
-                  <item.icon className={`h-5 w-5 ${item.color}`} />
-                </div>
-                <div>
-                  <h4 className="text-sm font-bold text-foreground leading-tight">{item.title}</h4>
-                  <p className="mt-1.5 text-xs text-muted-foreground leading-relaxed">{item.desc}</p>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-          <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
-            <Link to="/enquire">
-              <Button size="lg" className="gradient-cta border-0 text-primary-foreground rounded-full px-8 py-6 text-base font-semibold shadow-lg shadow-primary/25 hover:shadow-xl hover:scale-[1.02] transition-all duration-300 gap-2">
-                Get a Bulk Quote Today <ArrowRight className="h-4 w-4" />
-              </Button>
-            </Link>
-          </div>
-        </div>
-      </section>
+      <ShivaamiAdvantage />
 
       {/* SECTION 6 - FAQ */}
       <section className="border-t border-border bg-secondary/30">
