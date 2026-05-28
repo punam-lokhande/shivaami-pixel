@@ -40,12 +40,13 @@ const quantityOptions = [
 ];
 
 const benefits = [
-  "Exclusive corporate pricing on all Pixel models",
-  "Proper GST invoicing with input tax credit",
-  "Free 2-year device protection by OneAssist",
-  "1 extra year of warranty — only at Shivaami",
-  "Zero Touch Deployment — devices arrive ready to use",
-  "Free pan-India pickup & drop in the first year",
+  "Free 2 years accidental & liquid damage protection",
+  "Free pan-India doorstep pickup & drop for repairs — 2 Years",
+  "1-year extended warranty (Total 2 years)",
+  "Corporate pricing + 18% GST input credit",
+  "AI workshops & special training by Google & Shivaami",
+  "Dedicated Shivaami support",
+  "Full invoice value coverage, zero depreciation",
 ];
 
 const EnquireNow = () => {
