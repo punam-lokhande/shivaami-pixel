@@ -120,8 +120,9 @@ const ProductDetail = () => {
 
           {/* LEFT - Phone image area */}
           <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="relative">
+            <div className="lg:sticky lg:top-24">
             {/* Phone image container */}
-            <div className="sticky top-24 rounded-2xl border border-border bg-secondary/30 p-6 sm:p-10 flex flex-col items-center justify-center min-h-[500px] sm:min-h-[650px] overflow-hidden">
+            <div className="rounded-2xl border border-border bg-secondary/30 p-6 sm:p-10 flex flex-col items-center justify-center min-h-[500px] sm:min-h-[650px] overflow-hidden relative">
               {/* Color tint overlay */}
               <AnimatePresence mode="wait">
                 <motion.div
