@@ -97,6 +97,7 @@ const TermsAndConditions = () => (
         </p>
       </div>
     </div>
+    <ShivaamiAdvantage />
   </div>
 );
 
