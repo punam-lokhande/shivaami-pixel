@@ -181,6 +181,7 @@ const ProductDetail = () => {
                 </div>
               ))}
             </div>
+            </div>
           </motion.div>
 
           {/* RIGHT - Configuration panel */}
