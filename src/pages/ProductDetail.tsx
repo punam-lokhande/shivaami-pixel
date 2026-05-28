@@ -270,13 +270,14 @@ const ProductDetail = () => {
 
             {/* CTA Buttons */}
             <div className="flex flex-col gap-3 pt-2">
-              <Button
-                size="lg"
-                className="w-full gradient-cta border-0 text-primary-foreground gap-2 rounded-full py-6 text-base font-semibold shadow-lg shadow-primary/25 hover:shadow-xl hover:scale-[1.02] transition-all duration-300"
-                onClick={() => addToCart(phone)}
-              >
-                <ShoppingCart className="h-5 w-5" /> Add to Cart
-              </Button>
+              <Link to="/enquire" className="w-full">
+                <Button
+                  size="lg"
+                  className="w-full gradient-cta border-0 text-primary-foreground gap-2 rounded-full py-6 text-base font-semibold shadow-lg shadow-primary/25 hover:shadow-xl hover:scale-[1.02] transition-all duration-300"
+                >
+                  Enquire Now <ChevronRight className="h-5 w-5" />
+                </Button>
+              </Link>
             </div>
 
             {/* Shivaami Advantage - icons only, link to full section */}
