@@ -15,7 +15,7 @@ const enquirySchema = z.object({
   company: z.string().trim().min(1, "Company name is required").max(100),
   email: z.string().trim().email("Invalid email address").max(255),
   phone: z.string().trim().min(10, "Valid phone number required").max(15),
-  gstNumber: z.string().trim().min(15, "Valid 15-character GST number required").max(15, "GST number must be 15 characters"),
+  gstNumber: z.string().trim().max(15, "GST number must be 15 characters").optional().or(z.literal("")),
   quantity: z.string().min(1, "Select quantity range"),
   model: z.string().min(1, "Select a model"),
   message: z.string().trim().max(1000).optional(),
@@ -214,7 +214,7 @@ const EnquireNow = () => {
                 </div>
 
                 <div>
-                  <label className="text-sm font-medium text-foreground mb-1.5 block">GST Number *</label>
+                  <label className="text-sm font-medium text-foreground mb-1.5 block">GST Number</label>
                   <Input
                     type="text"
                     placeholder="e.g. 22AAAAA0000A1Z5"
