@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 
 const shivaamiAdvantages = [
   { icon: ShieldCheck, title: "2-Year Device Protection", desc: "Drop it, spill on it, crack it, your Pixel is covered. Every bulk order includes free accidental and liquid damage protection by OneAssist, at zero extra cost.", color: "text-google-blue", bg: "bg-google-blue/10", accentBg: "bg-google-blue", border: "border-google-blue/20", highlight: true },
-  { icon: Truck, title: "FREE Doorstep Pan India Pickup & Drop for Repairs (For 2 Years)", desc: "Any return, replacement, or service request in the first year? We handle the full pickup and drop across all pincodes. Your team doesn't lift a finger.", color: "text-google-green", bg: "bg-google-green/10", accentBg: "bg-google-green", border: "border-google-green/20" },
+  { icon: Truck, title: "FREE Doorstep Pan India Pickup & Drop for Repairs (For 2 Years)", desc: "We handle the full pickup and drop across all pincodes. Your team doesn't lift a finger.", color: "text-google-green", bg: "bg-google-green/10", accentBg: "bg-google-green", border: "border-google-green/20" },
   { icon: Bot, title: "Google Gemini AI - Free with Every Device", desc: "Get 6 to 12 months of Google Gemini AI included, depending on your Pixel model. Your team starts working smarter from day one, and no extra purchase is needed.", color: "text-google-red", bg: "bg-google-red/10", accentBg: "bg-google-red", border: "border-google-red/20", highlight: true },
   { icon: Shield, title: "FREE 1-Year Extended Warranty (Total 2 Years)", desc: "Get 1 Year Standard Warranty + FREE 1 Year Extended Warranty. Total 2 years of protection on every Pixel. More coverage. More confidence. More value.", color: "text-google-yellow", bg: "bg-google-yellow/10", accentBg: "bg-google-yellow", border: "border-google-yellow/20", highlight: true },
   { icon: Cloud, title: "Free Google Cloud Storage", desc: "Never lose a contact, photo, or file again. Get up to 12 months of free Google Cloud Storage with every device. Choose 3, 6, or 12 months based on your plan.", color: "text-google-green", bg: "bg-google-green/10", accentBg: "bg-google-green", border: "border-google-green/20" },
@@ -14,7 +14,11 @@ const shivaamiAdvantages = [
   { icon: GraduationCap, title: "AI Workshops by Google & Shivaami", desc: "Buying devices is only half the job. We run hands-on AI workshops, so your team actually knows how to use what they have and gets real value from day one.", color: "text-google-yellow", bg: "bg-google-yellow/10", accentBg: "bg-google-yellow", border: "border-google-yellow/20" },
 ];
 
-const ShivaamiAdvantage = () => (
+interface ShivaamiAdvantageProps {
+  showCTA?: boolean;
+}
+
+const ShivaamiAdvantage = ({ showCTA = true }: ShivaamiAdvantageProps) => (
   <section className="relative py-10 sm:py-14 md:py-20 overflow-hidden">
     {/* Animated background accents */}
     <div className="absolute inset-0 bg-gradient-to-b from-secondary/40 via-background to-secondary/30" />
@@ -76,15 +80,17 @@ const ShivaamiAdvantage = () => (
       </div>
 
       {/* CTA */}
-      <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.5 }} className="mt-12 text-center">
-        <Link to="/products">
-          <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.97 }} className="inline-block">
-            <Button size="lg" className="gradient-cta border-0 text-primary-foreground gap-2 rounded-full px-10 py-6 text-base font-semibold shadow-lg shadow-primary/25 hover:shadow-xl transition-shadow duration-300">
-              Shop with Shivaami Advantage <ArrowRight className="h-5 w-5" />
-            </Button>
-          </motion.div>
-        </Link>
-      </motion.div>
+      {showCTA && (
+        <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.5 }} className="mt-12 text-center">
+          <Link to="/products">
+            <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.97 }} className="inline-block">
+              <Button size="lg" className="gradient-cta border-0 text-primary-foreground gap-2 rounded-full px-10 py-6 text-base font-semibold shadow-lg shadow-primary/25 hover:shadow-xl transition-shadow duration-300">
+                Shop with Shivaami Advantage <ArrowRight className="h-5 w-5" />
+              </Button>
+            </motion.div>
+          </Link>
+        </motion.div>
+      )}
     </div>
   </section>
 );
