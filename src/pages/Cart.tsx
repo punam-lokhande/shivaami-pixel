@@ -165,6 +165,7 @@ const Cart = () => {
           </div>
         </div>
       </div>
+      <ShivaamiAdvantage />
     </div>
   );
 };
