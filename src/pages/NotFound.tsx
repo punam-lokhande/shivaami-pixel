@@ -18,6 +18,7 @@ const NotFound = () => {
           Return to Home
         </a>
       </div>
+      <ShivaamiAdvantage />
     </div>
   );
 };
