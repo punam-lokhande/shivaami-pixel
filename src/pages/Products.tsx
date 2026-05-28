@@ -49,7 +49,7 @@ const Products = () => {
         {filtered.map((phone, i) => <PhoneCard key={phone.id} phone={phone} index={i} />)}
       </div>
 
-      <ShivaamiAdvantage />
+      <ShivaamiAdvantage showCTA={false} />
     </div>
   );
 };

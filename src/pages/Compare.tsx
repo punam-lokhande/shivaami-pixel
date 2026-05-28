@@ -64,7 +64,7 @@ const Compare = () => (
         </tbody>
       </table>
     </motion.div>
-    <ShivaamiAdvantage />
+    
   </div>
 );
 
