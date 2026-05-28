@@ -1,6 +1,7 @@
 import { useCart } from "@/context/CartContext";
 import { formatPrice } from "@/data/phones";
 import { Trash2, Plus, Minus, ShoppingBag } from "lucide-react";
+import ShivaamiAdvantage from "@/components/ShivaamiAdvantage";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
