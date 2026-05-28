@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { useParams, Link } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import {
-  ShoppingCart, Star, Check, ChevronRight,
+  Star, Check, ChevronRight,
   Camera, Cpu, Battery, Shield, Smartphone, Droplets, RefreshCw, Fingerprint,
   ShieldCheck, Bot, GraduationCap, Cloud, Receipt, Settings, Sparkles, Truck,
   Monitor, Wifi, Zap, Package
@@ -11,6 +11,7 @@ import { getPhoneBySlug, phones, formatPrice } from "@/data/phones";
 import { useCart } from "@/context/CartContext";
 import { Button } from "@/components/ui/button";
 import PhoneCard from "@/components/PhoneCard";
+import ShivaamiAdvantage from "@/components/ShivaamiAdvantage";
 
 // Map spec keys to icons
 const specIconMap: Record<string, React.ElementType> = {
