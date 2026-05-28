@@ -299,37 +299,9 @@ const ProductDetail = () => {
           </div>
         </section>
 
-        {/* All Shivaami Advantages */}
-        <section id="shivaami-advantage" className="border-t border-border bg-secondary/20 scroll-mt-20">
-          <div className="container px-4 sm:px-6 py-10 sm:py-14">
-            <div className="flex items-center gap-3 mb-6">
-              <span className="inline-flex items-center gap-1.5 rounded-full bg-primary px-4 py-1.5 text-xs font-bold text-primary-foreground uppercase tracking-wider">
-                <Sparkles className="h-3.5 w-3.5" /> Exclusive Benefits
-              </span>
-              <h2 className="text-xl font-bold sm:text-2xl text-foreground">The Shivaami Advantage</h2>
-            </div>
-            <div className="grid gap-3 sm:gap-4 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
-              {shivaamiAdvantages.map((item, i) => (
-                <motion.div
-                  key={item.title}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: i * 0.05 }}
-                  className="group flex items-start gap-3 rounded-xl border border-border bg-card p-4 hover:shadow-lg hover:border-primary/20 transition-all duration-300"
-                >
-                  <div className={`flex h-10 w-10 shrink-0 items-center justify-center rounded-lg ${item.bg}`}>
-                    <item.icon className={`h-5 w-5 ${item.color}`} />
-                  </div>
-                  <div>
-                    <h4 className="text-sm font-bold text-foreground leading-tight">{item.title}</h4>
-                    <p className="mt-1 text-xs text-muted-foreground leading-relaxed">{item.desc}</p>
-                  </div>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-        </section>
+        <div id="shivaami-advantage">
+          <ShivaamiAdvantage />
+        </div>
 
         {/* You May Also Like */}
         <section className="border-t border-border bg-secondary/20">
