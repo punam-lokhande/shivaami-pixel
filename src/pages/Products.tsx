@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { phones, Phone } from "@/data/phones";
 import PhoneCard from "@/components/PhoneCard";
-import ShivaamiAdvantage from "@/components/ShivaamiAdvantage";
 
 type SortKey = "price-asc" | "price-desc" | "rating";
 type CategoryFilter = "all" | "flagship" | "mid-range" | "foldable";
