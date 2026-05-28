@@ -7,6 +7,7 @@ import {
   AlertTriangle, Lock, Clock, FileText,
   Camera, Cpu, Battery, Sparkles
 } from "lucide-react";
+import ShivaamiAdvantage from "@/components/ShivaamiAdvantage";
 import { Button } from "@/components/ui/button";
 import heroTeamImg from "@/assets/smb-hero-team.jpg";
 import {
