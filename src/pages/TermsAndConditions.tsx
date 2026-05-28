@@ -1,3 +1,5 @@
+import ShivaamiAdvantage from "@/components/ShivaamiAdvantage";
+
 const TermsAndConditions = () => (
   <div className="min-h-screen bg-background">
     <div className="container max-w-4xl py-12 px-4 sm:px-6">
@@ -95,6 +97,7 @@ const TermsAndConditions = () => (
         </p>
       </div>
     </div>
+    <ShivaamiAdvantage />
   </div>
 );
 

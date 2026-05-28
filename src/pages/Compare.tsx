@@ -2,6 +2,7 @@ import { phones, formatPrice } from "@/data/phones";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
+import ShivaamiAdvantage from "@/components/ShivaamiAdvantage";
 
 const specKeys = [
   { key: "display", label: "Display" },
@@ -63,6 +64,7 @@ const Compare = () => (
         </tbody>
       </table>
     </motion.div>
+    <ShivaamiAdvantage />
   </div>
 );
 

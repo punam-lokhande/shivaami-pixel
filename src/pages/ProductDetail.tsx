@@ -2,15 +2,16 @@ import { useState, useEffect } from "react";
 import { useParams, Link } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import {
-  ShoppingCart, Star, Check, ChevronRight,
-  Camera, Cpu, Battery, Shield, Smartphone, Droplets, RefreshCw, Fingerprint,
-  ShieldCheck, Bot, GraduationCap, Cloud, Receipt, Settings, Sparkles, Truck,
-  Monitor, Wifi, Zap, Package
+  Star, Check, ChevronRight,
+  Camera, Cpu, Battery, Smartphone, Droplets, RefreshCw, Fingerprint,
+  Sparkles,
+  Monitor, Zap, Package
 } from "lucide-react";
 import { getPhoneBySlug, phones, formatPrice } from "@/data/phones";
 import { useCart } from "@/context/CartContext";
 import { Button } from "@/components/ui/button";
 import PhoneCard from "@/components/PhoneCard";
+import ShivaamiAdvantage from "@/components/ShivaamiAdvantage";
 
 // Map spec keys to icons
 const specIconMap: Record<string, React.ElementType> = {
@@ -23,17 +24,6 @@ const specIconMap: Record<string, React.ElementType> = {
   os: Smartphone,
   ai: Sparkles,
 };
-
-const shivaamiAdvantages = [
-  { icon: ShieldCheck, title: "2-Year Device Protection", desc: "Drop it, spill on it, crack it, your Pixel is covered. Every bulk order includes free accidental and liquid damage protection by OneAssist, at zero extra cost.", color: "text-google-blue", bg: "bg-google-blue/10" },
-  { icon: Truck, title: "Free Pan-India Pickup & Drop - First Year", desc: "Any return, replacement, or service request in the first year? We handle the full pickup and drop across all pincodes. Your team doesn't lift a finger.", color: "text-google-green", bg: "bg-google-green/10" },
-  { icon: Bot, title: "Google Gemini AI - Free with Every Device", desc: "Get 6 to 12 months of Google Gemini AI included, depending on your Pixel model. Your team starts working smarter from day one, and no extra purchase is needed.", color: "text-google-red", bg: "bg-google-red/10" },
-  { icon: Shield, title: "1+1 Warranty Advantage — Only at Shivaami", desc: "Get 2 years of total protection on every Pixel. More coverage. More confidence. More value.", color: "text-google-yellow", bg: "bg-google-yellow/10" },
-  { icon: Cloud, title: "Free Google Cloud Storage", desc: "Never lose a contact, photo, or file again. Get up to 12 months of free Google Cloud Storage with every device. Choose 3, 6, or 12 months based on your plan.", color: "text-google-green", bg: "bg-google-green/10" },
-  { icon: Receipt, title: "Corporate Pricing + GST Savings", desc: "Better prices. Full GST benefits. More value on every order.", color: "text-google-blue", bg: "bg-google-blue/10" },
-  { icon: Settings, title: "Zero Touch Deployment", desc: "No IT headaches. Devices arrive fully configured and ready to use straight out of the box. Your team just switches on and gets to work.", color: "text-google-red", bg: "bg-google-red/10" },
-  { icon: GraduationCap, title: "AI Workshops by Google & Shivaami", desc: "Buying devices is only half the job. We run hands-on AI workshops, so your team actually knows how to use what they have and gets real value from day one.", color: "text-google-yellow", bg: "bg-google-yellow/10" },
-];
 
 // Quick highlight icons per category
 const getHighlightFeatures = (phone: ReturnType<typeof getPhoneBySlug>) => {
@@ -281,29 +271,6 @@ const ProductDetail = () => {
                 </Button>
               </Link>
             </div>
-
-            {/* Shivaami Advantage - icons only, link to full section */}
-            <div className="rounded-2xl border-2 border-primary/20 bg-gradient-to-br from-primary/5 via-transparent to-google-green/5 p-5">
-              <div className="flex items-center gap-2 mb-4">
-                <span className="inline-flex items-center gap-1.5 rounded-full bg-primary px-3 py-1 text-[10px] font-bold text-primary-foreground uppercase tracking-wider">
-                  <Sparkles className="h-3 w-3" /> Exclusive
-                </span>
-                <h3 className="text-sm font-bold text-foreground">The Shivaami Advantage</h3>
-              </div>
-              <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
-                {shivaamiAdvantages.map((item) => (
-                  <div key={item.title} className="flex flex-col items-center gap-1.5 text-center">
-                    <div className={`flex h-9 w-9 items-center justify-center rounded-lg ${item.bg}`}>
-                      <item.icon className={`h-4.5 w-4.5 ${item.color}`} />
-                    </div>
-                    <span className="text-[10px] font-semibold text-foreground leading-tight">{item.title}</span>
-                  </div>
-                ))}
-              </div>
-              <a href="#shivaami-advantage" className="mt-4 flex items-center justify-center gap-1 text-xs font-semibold text-primary hover:underline">
-                View all benefits <ChevronRight className="h-3 w-3" />
-              </a>
-            </div>
           </motion.div>
         </div>
       </div>
@@ -332,37 +299,9 @@ const ProductDetail = () => {
           </div>
         </section>
 
-        {/* All Shivaami Advantages */}
-        <section id="shivaami-advantage" className="border-t border-border bg-secondary/20 scroll-mt-20">
-          <div className="container px-4 sm:px-6 py-10 sm:py-14">
-            <div className="flex items-center gap-3 mb-6">
-              <span className="inline-flex items-center gap-1.5 rounded-full bg-primary px-4 py-1.5 text-xs font-bold text-primary-foreground uppercase tracking-wider">
-                <Sparkles className="h-3.5 w-3.5" /> Exclusive Benefits
-              </span>
-              <h2 className="text-xl font-bold sm:text-2xl text-foreground">The Shivaami Advantage</h2>
-            </div>
-            <div className="grid gap-3 sm:gap-4 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
-              {shivaamiAdvantages.map((item, i) => (
-                <motion.div
-                  key={item.title}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: i * 0.05 }}
-                  className="group flex items-start gap-3 rounded-xl border border-border bg-card p-4 hover:shadow-lg hover:border-primary/20 transition-all duration-300"
-                >
-                  <div className={`flex h-10 w-10 shrink-0 items-center justify-center rounded-lg ${item.bg}`}>
-                    <item.icon className={`h-5 w-5 ${item.color}`} />
-                  </div>
-                  <div>
-                    <h4 className="text-sm font-bold text-foreground leading-tight">{item.title}</h4>
-                    <p className="mt-1 text-xs text-muted-foreground leading-relaxed">{item.desc}</p>
-                  </div>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-        </section>
+        <div id="shivaami-advantage">
+          <ShivaamiAdvantage />
+        </div>
 
         {/* You May Also Like */}
         <section className="border-t border-border bg-secondary/20">

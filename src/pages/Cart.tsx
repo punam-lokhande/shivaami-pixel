@@ -1,6 +1,7 @@
 import { useCart } from "@/context/CartContext";
 import { formatPrice } from "@/data/phones";
 import { Trash2, Plus, Minus, ShoppingBag } from "lucide-react";
+import ShivaamiAdvantage from "@/components/ShivaamiAdvantage";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
@@ -75,6 +76,7 @@ const Cart = () => {
         <h2 className="mt-4 text-2xl font-bold">Your cart is empty</h2>
         <p className="mt-1 text-muted-foreground">Start shopping to add items</p>
         <Link to="/products"><Button className="mt-6 gradient-cta border-0 text-primary-foreground">Browse Phones</Button></Link>
+        <ShivaamiAdvantage />
       </div>
     );
   }
@@ -163,6 +165,7 @@ const Cart = () => {
           </div>
         </div>
       </div>
+      <ShivaamiAdvantage />
     </div>
   );
 };

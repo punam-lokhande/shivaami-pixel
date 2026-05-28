@@ -1,12 +1,13 @@
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import {
-  ShieldCheck, Bot, GraduationCap, Cloud, Receipt, Settings, Shield, Truck,
+  Shield, Settings, Truck,
   Smartphone, Briefcase, Users, Crown, Zap,
   ChevronRight, MessageCircle, ArrowRight,
   AlertTriangle, Lock, Clock, FileText,
   Camera, Cpu, Battery, Sparkles
 } from "lucide-react";
+import ShivaamiAdvantage from "@/components/ShivaamiAdvantage";
 import { Button } from "@/components/ui/button";
 import heroTeamImg from "@/assets/smb-hero-team.jpg";
 import {
@@ -116,16 +117,6 @@ const roleRecommendations = [
   },
 ];
 
-const shivaamiAdvantages = [
-  { icon: ShieldCheck, title: "2-Year Device Protection", desc: "Drop it, spill on it, crack it, your Pixel is covered. Every bulk order includes free accidental and liquid damage protection by OneAssist, at zero extra cost.", color: "text-google-blue", bg: "bg-google-blue/10" },
-  { icon: Truck, title: "Free Pan-India Pickup & Drop - First Year", desc: "Any return, replacement, or service request in the first year? We handle the full pickup and drop across all pincodes. Your team doesn't lift a finger.", color: "text-google-green", bg: "bg-google-green/10" },
-  { icon: Bot, title: "Google Gemini AI - Free with Every Device", desc: "Get 6 to 12 months of Google Gemini AI included, depending on your Pixel model. Your team starts working smarter from day one, and no extra purchase is needed.", color: "text-google-red", bg: "bg-google-red/10" },
-  { icon: Shield, title: "1+1 Warranty Advantage — Only at Shivaami", desc: "Get 2 years of total protection on every Pixel. More coverage. More confidence. More value.", color: "text-google-yellow", bg: "bg-google-yellow/10" },
-  { icon: Cloud, title: "Free Google Cloud Storage", desc: "Never lose a contact, photo, or file again. Get up to 12 months of free Google Cloud Storage with every device. Choose 3, 6, or 12 months based on your plan.", color: "text-google-green", bg: "bg-google-green/10" },
-  { icon: Receipt, title: "Corporate Pricing + GST Savings", desc: "Better prices. Full GST benefits. More value on every order.", color: "text-google-blue", bg: "bg-google-blue/10" },
-  { icon: Settings, title: "Zero Touch Deployment", desc: "No IT headaches. Devices arrive fully configured and ready to use straight out of the box. Your team just switches on and gets to work.", color: "text-google-red", bg: "bg-google-red/10" },
-  { icon: GraduationCap, title: "AI Workshops by Google & Shivaami", desc: "Buying devices is only half the job. We run hands-on AI workshops, so your team actually knows how to use what they have and gets real value from day one.", color: "text-google-yellow", bg: "bg-google-yellow/10" },
-];
 
 const faqs = [
   { q: "What is the minimum order for bulk pricing?", a: "Bulk corporate pricing applies to 5 devices and above. Contact us for a custom quote based on your team size and budget." },
@@ -270,44 +261,7 @@ const SMB = () => {
       </section>
 
       {/* SECTION 5 - Shivaami Advantage */}
-      <section className="border-t border-border">
-        <div className="container px-4 sm:px-6 py-14 sm:py-20">
-          <motion.div {...fadeUp} className="text-center mb-10 sm:mb-14">
-            <span className="inline-flex items-center gap-1.5 rounded-full bg-primary px-4 py-1.5 text-xs font-bold text-primary-foreground uppercase tracking-wider mb-4">
-              <Sparkles className="h-3.5 w-3.5" /> Exclusive Benefits
-            </span>
-            <h2 className="text-2xl sm:text-3xl font-bold text-foreground">The Shivaami Advantage - Exclusively for SMBs</h2>
-            <p className="mt-3 text-muted-foreground max-w-2xl mx-auto">Every Pixel you buy from Shivaami comes with benefits no other reseller in India offers.</p>
-          </motion.div>
-          <div className="grid gap-4 sm:gap-5 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
-            {shivaamiAdvantages.map((item, i) => (
-              <motion.div
-                key={item.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: i * 0.06, duration: 0.5 }}
-                className="group flex items-start gap-3 rounded-xl border border-border bg-card p-5 hover:shadow-lg hover:border-primary/20 transition-all duration-300"
-              >
-                <div className={`flex h-10 w-10 shrink-0 items-center justify-center rounded-lg ${item.bg}`}>
-                  <item.icon className={`h-5 w-5 ${item.color}`} />
-                </div>
-                <div>
-                  <h4 className="text-sm font-bold text-foreground leading-tight">{item.title}</h4>
-                  <p className="mt-1.5 text-xs text-muted-foreground leading-relaxed">{item.desc}</p>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-          <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
-            <Link to="/enquire">
-              <Button size="lg" className="gradient-cta border-0 text-primary-foreground rounded-full px-8 py-6 text-base font-semibold shadow-lg shadow-primary/25 hover:shadow-xl hover:scale-[1.02] transition-all duration-300 gap-2">
-                Get a Bulk Quote Today <ArrowRight className="h-4 w-4" />
-              </Button>
-            </Link>
-          </div>
-        </div>
-      </section>
+      <ShivaamiAdvantage />
 
       {/* SECTION 6 - FAQ */}
       <section className="border-t border-border bg-secondary/30">

@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { phones, Phone } from "@/data/phones";
 import PhoneCard from "@/components/PhoneCard";
+import ShivaamiAdvantage from "@/components/ShivaamiAdvantage";
 
 type SortKey = "price-asc" | "price-desc" | "rating";
 type CategoryFilter = "all" | "flagship" | "mid-range" | "foldable";
@@ -47,6 +48,8 @@ const Products = () => {
       <div className="mt-6 sm:mt-8 grid gap-4 sm:gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
         {filtered.map((phone, i) => <PhoneCard key={phone.id} phone={phone} index={i} />)}
       </div>
+
+      <ShivaamiAdvantage />
     </div>
   );
 };
