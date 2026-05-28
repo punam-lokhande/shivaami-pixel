@@ -271,29 +271,6 @@ const ProductDetail = () => {
                 </Button>
               </Link>
             </div>
-
-            {/* Shivaami Advantage - icons only, link to full section */}
-            <div className="rounded-2xl border-2 border-primary/20 bg-gradient-to-br from-primary/5 via-transparent to-google-green/5 p-5">
-              <div className="flex items-center gap-2 mb-4">
-                <span className="inline-flex items-center gap-1.5 rounded-full bg-primary px-3 py-1 text-[10px] font-bold text-primary-foreground uppercase tracking-wider">
-                  <Sparkles className="h-3 w-3" /> Exclusive
-                </span>
-                <h3 className="text-sm font-bold text-foreground">The Shivaami Advantage</h3>
-              </div>
-              <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
-                {shivaamiAdvantages.map((item) => (
-                  <div key={item.title} className="flex flex-col items-center gap-1.5 text-center">
-                    <div className={`flex h-9 w-9 items-center justify-center rounded-lg ${item.bg}`}>
-                      <item.icon className={`h-4.5 w-4.5 ${item.color}`} />
-                    </div>
-                    <span className="text-[10px] font-semibold text-foreground leading-tight">{item.title}</span>
-                  </div>
-                ))}
-              </div>
-              <a href="#shivaami-advantage" className="mt-4 flex items-center justify-center gap-1 text-xs font-semibold text-primary hover:underline">
-                View all benefits <ChevronRight className="h-3 w-3" />
-              </a>
-            </div>
           </motion.div>
         </div>
       </div>
