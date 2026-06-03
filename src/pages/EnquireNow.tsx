@@ -114,24 +114,6 @@ const EnquireNow = () => {
     }
   };
 
-  if (submitted) {
-    return (
-      <div className="min-h-screen bg-background flex items-center justify-center px-4">
-        <motion.div initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }} className="max-w-md text-center">
-          <div className="mx-auto mb-6 flex h-20 w-20 items-center justify-center rounded-full bg-google-green/10">
-            <CheckCircle2 className="h-10 w-10 text-google-green" />
-          </div>
-          <h2 className="text-2xl font-bold text-foreground mb-3">Thank You!</h2>
-          <p className="text-muted-foreground mb-6">
-            Your bulk order enquiry has been submitted successfully. Our team will reach out to you within 24 hours with a custom quote.
-          </p>
-          <Button onClick={() => setSubmitted(false)} variant="outline" className="rounded-full px-6">
-            Submit Another Enquiry
-          </Button>
-        </motion.div>
-      </div>
-    );
-  }
 
   return (
     <div className="min-h-screen bg-background">
