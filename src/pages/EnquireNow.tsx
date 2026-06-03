@@ -100,7 +100,7 @@ const EnquireNow = () => {
       }
 
       setErrors({});
-      setSubmitted(true);
+      navigate("/thank-you");
       toast({ title: "Enquiry Submitted!", description: "Our team will get back to you within 24 hours." });
     } catch (error) {
       console.error("Failed to submit enquiry:", error);
