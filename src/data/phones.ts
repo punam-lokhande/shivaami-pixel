@@ -81,7 +81,6 @@ export const phones: Phone[] = [
     color: "Lavender",
     colors: [
       { name: "Lavender", hex: "#7B8CDE", image: pixel10aLavender },
-      { name: "Berry", hex: "#FF6B6B", image: pixel10aBerry },
       { name: "Fog", hex: "#D4E4D0", image: pixel10aFog },
       { name: "Obsidian", hex: "#3C4043", image: pixel10aObsidian },
     ],
@@ -199,9 +198,7 @@ export const phones: Phone[] = [
     color: "Moonstone",
     colors: [
       { name: "Moonstone", hex: "#8E9AAB", image: pixel10ProXlMoonstone },
-      { name: "Jade", hex: "#A8C5A0", image: pixel10ProXlJade },
       { name: "Obsidian", hex: "#2D2D2D", image: pixel10ProXlObsidian },
-      { name: "Porcelain", hex: "#F1EDE6", image: pixel10ProXlPorcelain },
     ],
     category: "flagship",
     specs: {
@@ -235,11 +232,9 @@ export const phones: Phone[] = [
     shortDesc: "Magic made simple. Stunning photos, all-day battery.",
     description:
       "Google Pixel 9a delivers stunning photos and videos effortlessly. With 30+ hours of battery, up to 256 GB storage, lasting durability, water resistance, and Gemini across your apps — it's magic, made simple.",
-    image: pixel9aIris,
-    color: "Iris",
+    image: pixel9aObsidian,
+    color: "Obsidian",
     colors: [
-      { name: "Iris", hex: "#8B80C8", image: pixel9aIris },
-      { name: "Porcelain", hex: "#F1EDE6", image: pixel9aPorcelain },
       { name: "Obsidian", hex: "#3C3C3C", image: pixel9aObsidian },
     ],
     category: "mid-range",
