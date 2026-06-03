@@ -52,7 +52,7 @@ const benefits = [
 
 const EnquireNow = () => {
   const { toast } = useToast();
-  const [submitted, setSubmitted] = useState(false);
+  const navigate = useNavigate();
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [errors, setErrors] = useState<Partial<Record<keyof EnquiryForm, string>>>({});
   const [form, setForm] = useState<EnquiryForm>({
