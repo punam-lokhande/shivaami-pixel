@@ -15,6 +15,7 @@ import Compare from "./pages/Compare";
 import Cart from "./pages/Cart";
 import SMB from "./pages/SMB";
 import EnquireNow from "./pages/EnquireNow";
+import ThankYou from "./pages/ThankYou";
 import TermsAndConditions from "./pages/TermsAndConditions";
 import NotFound from "./pages/NotFound";
 
@@ -37,6 +38,7 @@ const App = () => (
             <Route path="/cart" element={<Cart />} />
             <Route path="/smb" element={<SMB />} />
             <Route path="/enquire" element={<EnquireNow />} />
+            <Route path="/thank-you" element={<ThankYou />} />
             <Route path="/terms" element={<TermsAndConditions />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
