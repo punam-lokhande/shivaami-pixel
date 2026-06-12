@@ -3,6 +3,7 @@ import { lazy, Suspense } from "react";
 import { motion } from "framer-motion";
 import { Camera, Cpu, Battery, Shield, ArrowRight, Sparkles, Zap, ChevronRight } from "lucide-react";
 import ShivaamiAdvantage from "@/components/ShivaamiAdvantage";
+import EnquiryForm from "@/components/EnquiryForm";
 import { phones, formatPrice } from "@/data/phones";
 import PhoneCard from "@/components/PhoneCard";
 import { Button } from "@/components/ui/button";
@@ -223,23 +224,34 @@ const Index = () => (
       </motion.div>
     </section>
 
-    {/* Feature Highlights (Why Pixel) */}
+    {/* Feature Highlights (Why Pixel) + Enquiry Form */}
     <section className="container py-10 sm:py-14 md:py-20 px-4 sm:px-6">
       <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center">
         <span className="text-xs font-semibold uppercase tracking-widest text-primary">Why Pixel</span>
         <h2 className="mt-2 text-2xl font-bold sm:text-3xl md:text-4xl text-foreground">Built Different. Built Better.</h2>
         <p className="mt-3 text-sm sm:text-base text-muted-foreground max-w-lg mx-auto">Every Pixel phone is designed with cutting-edge AI, premium materials, and Google's best software.</p>
       </motion.div>
-      <div className="mt-8 sm:mt-14 grid gap-4 sm:gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
-        {features.map((f, i) => (
-          <motion.div key={f.title} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.1 }} className="group rounded-2xl border border-border bg-card p-6 shadow-soft text-center transition-all duration-300 hover:shadow-hover hover:-translate-y-1">
-            <div className={`mx-auto flex h-14 w-14 items-center justify-center rounded-2xl ${f.bg} transition-transform duration-300 group-hover:scale-110`}>
-              <f.icon className={`h-7 w-7 ${f.color}`} />
-            </div>
-            <h3 className="mt-4 font-semibold text-foreground">{f.title}</h3>
-            <p className="mt-2 text-sm text-muted-foreground">{f.desc}</p>
-          </motion.div>
-        ))}
+
+      <div className="mt-8 sm:mt-14 grid gap-6 lg:gap-10 lg:grid-cols-2 items-start">
+        {/* Left — Form */}
+        <motion.div initial={{ opacity: 0, x: -20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} className="rounded-2xl border border-border bg-card p-5 sm:p-7 shadow-soft">
+          <h3 className="text-lg sm:text-xl font-bold text-foreground mb-1">Get a Custom Quote</h3>
+          <p className="text-sm text-muted-foreground mb-5">Tell us your requirement, our team replies within 24 hours.</p>
+          <EnquiryForm />
+        </motion.div>
+
+        {/* Right — Feature grid (2x2) */}
+        <div className="grid gap-4 sm:gap-6 grid-cols-1 sm:grid-cols-2">
+          {features.map((f, i) => (
+            <motion.div key={f.title} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.1 }} className="group rounded-2xl border border-border bg-card p-6 shadow-soft text-center transition-all duration-300 hover:shadow-hover hover:-translate-y-1">
+              <div className={`mx-auto flex h-14 w-14 items-center justify-center rounded-2xl ${f.bg} transition-transform duration-300 group-hover:scale-110`}>
+                <f.icon className={`h-7 w-7 ${f.color}`} />
+              </div>
+              <h3 className="mt-4 font-semibold text-foreground">{f.title}</h3>
+              <p className="mt-2 text-sm text-muted-foreground">{f.desc}</p>
+            </motion.div>
+          ))}
+        </div>
       </div>
     </section>
 
