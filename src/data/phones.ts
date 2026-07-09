@@ -72,7 +72,7 @@ export const phones: Phone[] = [
     name: "Google Pixel 10a",
     slug: "pixel-10a",
     externalUrl: "https://www.shivaami.com/shop/product/google-pixel-10a-256gb-ai-smartphone-for-business/",
-    price: 46999,
+    price: 52999,
     gstRate: 18,
     shortDesc: "The real deal. Built for real life — powered by Google AI.",
     description:
@@ -112,7 +112,7 @@ export const phones: Phone[] = [
     name: "Google Pixel 10",
     slug: "pixel-10",
     externalUrl: "https://www.shivaami.com/shop/product/google-pixel-10-256gb-phone/",
-    price: 67999,
+    price: 64999,
     gstRate: 18,
     shortDesc: "Do spectacular things, every day. All-new telephoto lens.",
     description:
@@ -227,7 +227,7 @@ export const phones: Phone[] = [
     name: "Google Pixel 9a",
     slug: "pixel-9a",
     externalUrl: "https://www.shivaami.com/shop/product/google-pixel-9a-256gb-ai-smartphone/",
-    price: 36999,
+    price: 39999,
     gstRate: 18,
     shortDesc: "Magic made simple. Stunning photos, all-day battery.",
     description:
