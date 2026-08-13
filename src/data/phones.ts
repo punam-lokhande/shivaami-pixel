@@ -3,6 +3,14 @@ import pixel11Pistachio from "@/assets/pixel-11-pistachio.png";
 import pixel11Hibiscus from "@/assets/pixel-11-hibiscus.png";
 import pixel11Obsidian from "@/assets/pixel-11-obsidian.png";
 
+import pixel11ProCanyon from "@/assets/pixel-11-pro-canyon.png";
+import pixel11ProOlive from "@/assets/pixel-11-pro-olive.png";
+import pixel11ProFog from "@/assets/pixel-11-pro-fog.png";
+import pixel11ProObsidian from "@/assets/pixel-11-pro-obsidian.png";
+import pixel11ProFoldOlive from "@/assets/pixel-11-pro-fold-olive.png";
+import pixel11ProFoldObsidian from "@/assets/pixel-11-pro-fold-obsidian.png";
+
+
 import pixel10 from "@/assets/pixel-10.png";
 import pixel10Pro from "@/assets/pixel-10-pro.jpg"; // kept import for potential future use
 import pixel10Frost from "@/assets/pixel-10-frost.png";
