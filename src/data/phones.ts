@@ -69,6 +69,46 @@ export const formatPriceWithGst = (price: number, rate: number) =>
 
 export const phones: Phone[] = [
   {
+    id: "pixel-11",
+    name: "Google Pixel 11",
+    slug: "pixel-11",
+    price: 89999,
+    gstRate: 18,
+    shortDesc: "Refined to the edge. Powered by Tensor G6 and Gemini.",
+    description:
+      "Google Pixel 11 brings refined hardware built to last, upgraded cameras and more proactive Gemini support — powered by the new Google Tensor G6 chip. A slimmer camera bar, brighter Actua display, satin metal frame and the fastest Pixel charging yet.",
+    image: pixel11Frost,
+    color: "Frost",
+    colors: [
+      { name: "Frost", hex: "#D8DEE4", image: pixel11Frost },
+      { name: "Pistachio", hex: "#B9DCA6", image: pixel11Pistachio },
+      { name: "Hibiscus", hex: "#C9315B", image: pixel11Hibiscus },
+      { name: "Obsidian", hex: "#2D2D2D", image: pixel11Obsidian },
+    ],
+    category: "flagship",
+    tag: "New Launch",
+    specs: {
+      display: '6.3" Actua OLED, 120Hz, 3,000 nits',
+      camera: "48MP wide + 13MP ultrawide + 10.8MP 5x telephoto",
+      battery: "4,985 mAh, 30W wired + 25W Qi2.2 wireless",
+      processor: "Google Tensor G6",
+      ram: "12 GB",
+      storage: "256 GB",
+      os: "Android 17",
+      ai: "Gemini Nano with Gemini Intelligence",
+    },
+    features: [
+      "Tensor G6 with Gemini Intelligence",
+      "40% slimmer camera bar",
+      "Titan M3 security chip",
+      "Pixelsnap + Qi 2.2 25W wireless charging",
+      "HiLight camera flash notifications",
+      "7 years of updates",
+    ],
+    rating: 4.9,
+    reviews: 412,
+  },
+  {
     id: "pixel-10a",
     name: "Google Pixel 10a",
     slug: "pixel-10a",
@@ -86,7 +126,6 @@ export const phones: Phone[] = [
       { name: "Obsidian", hex: "#3C4043", image: pixel10aObsidian },
     ],
     category: "mid-range",
-    tag: "New Launch",
     specs: {
       display: '6.3" OLED, 120Hz',
       camera: "50MP main + 13MP ultrawide",
@@ -223,47 +262,6 @@ export const phones: Phone[] = [
     rating: 4.9,
     reviews: 3241,
   },
-  {
-    id: "pixel-11",
-    name: "Google Pixel 11",
-    slug: "pixel-11",
-    price: 89999,
-    gstRate: 18,
-    shortDesc: "Refined to the edge. Powered by Tensor G6 and Gemini.",
-    description:
-      "Google Pixel 11 brings refined hardware built to last, upgraded cameras and more proactive Gemini support — powered by the new Google Tensor G6 chip. A slimmer camera bar, brighter Actua display, satin metal frame and the fastest Pixel charging yet.",
-    image: pixel11Frost,
-    color: "Frost",
-    colors: [
-      { name: "Frost", hex: "#D8DEE4", image: pixel11Frost },
-      { name: "Pistachio", hex: "#B9DCA6", image: pixel11Pistachio },
-      { name: "Hibiscus", hex: "#C9315B", image: pixel11Hibiscus },
-      { name: "Obsidian", hex: "#2D2D2D", image: pixel11Obsidian },
-    ],
-    category: "flagship",
-    tag: "New Launch",
-    specs: {
-      display: '6.3" Actua OLED, 120Hz, 3,000 nits',
-      camera: "48MP wide + 13MP ultrawide + 10.8MP 5x telephoto",
-      battery: "4,985 mAh, 30W wired + 25W Qi2.2 wireless",
-      processor: "Google Tensor G6",
-      ram: "12 GB",
-      storage: "256 GB",
-      os: "Android 17",
-      ai: "Gemini Nano with Gemini Intelligence",
-    },
-    features: [
-      "Tensor G6 with Gemini Intelligence",
-      "40% slimmer camera bar",
-      "Titan M3 security chip",
-      "Pixelsnap + Qi 2.2 25W wireless charging",
-      "HiLight camera flash notifications",
-      "7 years of updates",
-    ],
-    rating: 4.9,
-    reviews: 412,
-  },
-
 ];
 
 export const getPhoneBySlug = (slug: string) =>
