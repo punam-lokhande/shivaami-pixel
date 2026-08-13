@@ -8,7 +8,8 @@ import { phones, formatPrice } from "@/data/phones";
 import PhoneCard from "@/components/PhoneCard";
 import { Button } from "@/components/ui/button";
 import pixelLogo from "@/assets/pixel-logo.svg";
-import heroPhoneImg from "@/assets/pixel-10a-hero.png";
+import heroPhoneImg from "@/assets/pixel-11-frost.png";
+
 
 const Phone3DViewer = lazy(() => import("@/components/Phone3DViewer"));
 
@@ -20,7 +21,7 @@ const features = [
 ];
 
 
-const heroPhone = phones.find((p) => p.id === "pixel-10a")!;
+const heroPhone = phones.find((p) => p.id === "pixel-11")!;
 
 const Index = () => (
   <div className="min-h-screen">
@@ -94,29 +95,18 @@ const Index = () => (
             {/* Vibrant glow behind phone */}
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-[250px] sm:h-[350px] md:h-[450px] w-[250px] sm:w-[350px] md:w-[450px] rounded-full bg-gradient-to-br from-google-blue/25 via-primary/20 to-google-green/15 blur-[60px] sm:blur-[80px] animate-pulse-glow" />
 
-            {/* Static image on mobile, 3D viewer on desktop */}
+            {/* Hero product image */}
             <div className="relative z-10 w-full h-full">
-              {/* Mobile: static image for fast loading */}
-              <div className="flex items-center justify-center h-full md:hidden">
-                <img src={heroPhoneImg} alt={heroPhone.name} className="h-[280px] sm:h-[360px] w-auto object-contain drop-shadow-2xl" loading="eager" />
-              </div>
-              {/* Desktop: 3D viewer */}
-              <div className="hidden md:block h-full">
-                <Suspense fallback={
-                  <div className="flex items-center justify-center h-full">
-                    <img src={heroPhoneImg} alt={heroPhone.name} className="h-[460px] lg:h-[520px] w-auto object-contain animate-pulse" />
-                  </div>
-                }>
-                  <Phone3DViewer modelSrc="/pixel-10a.glb" alt={heroPhone.name} poster={heroPhoneImg} />
-                </Suspense>
-                <p className="absolute bottom-0 left-1/2 -translate-x-1/2 text-[10px] text-muted-foreground/60 select-none">Drag to rotate</p>
+              <div className="flex items-center justify-center h-full">
+                <img src={heroPhoneImg} alt={heroPhone.name} className="h-[280px] sm:h-[360px] md:h-[460px] lg:h-[520px] w-auto object-contain drop-shadow-2xl" loading="eager" />
               </div>
             </div>
 
             {/* New Launch badge */}
             <motion.div initial={{ scale: 0 }} animate={{ scale: 1 }} transition={{ delay: 0.7, type: "spring", stiffness: 200 }} className="absolute top-[8%] sm:top-[3%] right-[5%] sm:right-[15%] flex items-center gap-1.5 rounded-full bg-google-red px-2.5 sm:px-3 py-1 sm:py-1.5 text-[9px] sm:text-xs font-bold text-primary-foreground shadow-lg shadow-google-red/30 z-20">
-              <Sparkles className="h-2.5 sm:h-3 w-2.5 sm:w-3" /> New Launch — Pixel 10a
+              <Sparkles className="h-2.5 sm:h-3 w-2.5 sm:w-3" /> New Launch — Pixel 11
             </motion.div>
+
           </motion.div>
         </div>
       </div>

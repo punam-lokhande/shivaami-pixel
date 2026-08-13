@@ -68,12 +68,13 @@ const roleRecommendations = [
   {
     role: "Always On the Move?",
     team: "Field Teams & Sales",
-    model: "Pixel 9a",
+    model: "Pixel 11",
     color: "border-google-green/30",
     accent: "text-google-green",
     bg: "bg-google-green/5",
     icon: Smartphone,
-    slug: "pixel-9a",
+    slug: "pixel-11",
+
   },
   {
     role: "Smart & Budget-Friendly?",
