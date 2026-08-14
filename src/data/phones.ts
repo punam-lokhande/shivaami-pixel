@@ -8,7 +8,6 @@ import pixel11ProOlive from "@/assets/pixel-11-pro-olive.png";
 import pixel11ProFog from "@/assets/pixel-11-pro-fog.png";
 import pixel11ProObsidian from "@/assets/pixel-11-pro-obsidian.png";
 import pixel11ProFoldOlive from "@/assets/pixel-11-pro-fold-olive.png";
-import pixel11ProFoldObsidian from "@/assets/pixel-11-pro-fold-obsidian.png";
 
 
 import pixel10 from "@/assets/pixel-10.png";
@@ -209,7 +208,6 @@ export const phones: Phone[] = [
     color: "Olive",
     colors: [
       { name: "Olive", hex: "#8B8F63", image: pixel11ProFoldOlive },
-      { name: "Obsidian", hex: "#3A3A3C", image: pixel11ProFoldObsidian },
     ],
     category: "foldable",
     tag: "New Launch",
