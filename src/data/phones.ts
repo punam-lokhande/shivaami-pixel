@@ -35,6 +35,11 @@ export interface ColorOption {
   image?: string;
 }
 
+export interface StorageOption {
+  size: string;
+  price: number;
+}
+
 export interface Phone {
   id: string;
   name: string;
@@ -47,6 +52,7 @@ export interface Phone {
   image: string;
   color: string;
   colors: ColorOption[];
+  storageOptions?: StorageOption[];
   category: "flagship" | "mid-range" | "foldable";
   tag?: string;
   specs: {
