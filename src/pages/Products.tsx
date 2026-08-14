@@ -39,6 +39,7 @@ const Products = () => {
           ))}
         </div>
         <select value={sort} onChange={(e) => setSort(e.target.value as SortKey)} className="sm:ml-auto rounded-lg border border-border bg-card px-3 py-1.5 text-xs outline-none w-full sm:w-auto">
+          <option value="featured">Featured</option>
           <option value="price-asc">Price: Low to High</option>
           <option value="price-desc">Price: High to Low</option>
           <option value="rating">Top Rated</option>
