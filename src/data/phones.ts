@@ -188,7 +188,7 @@ export const phones: Phone[] = [
     ],
     storageOptions: [
       { size: "256GB", price: 124999 },
-      { size: "512GB", price: 134999 },
+      { size: "512GB", price: 139999 },
     ],
     category: "flagship",
     tag: "New Launch",
