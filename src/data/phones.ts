@@ -209,7 +209,6 @@ export const phones: Phone[] = [
     color: "Olive",
     colors: [
       { name: "Olive", hex: "#8B8F63", image: pixel11ProFoldOlive },
-      { name: "Obsidian", hex: "#3A3A3C", image: pixel11ProFoldObsidian },
     ],
     category: "foldable",
     tag: "New Launch",
