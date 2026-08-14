@@ -48,6 +48,7 @@ const ProductDetail = () => {
   const phone = getPhoneBySlug(slug || "");
   const { addToCart } = useCart();
   const [selectedColor, setSelectedColor] = useState(0);
+  const [selectedStorage, setSelectedStorage] = useState(0);
   const [showStickyBar, setShowStickyBar] = useState(false);
 
   useEffect(() => {
@@ -202,7 +203,9 @@ const ProductDetail = () => {
             {/* Price */}
             <div className="rounded-xl border border-border bg-card p-4">
               <div className="flex items-baseline gap-3">
-                <p className="text-2xl font-bold text-foreground">{formatPrice(phone.price)}</p>
+                <p className="text-2xl font-bold text-foreground">
+                  {formatPrice(phone.storageOptions?.[selectedStorage]?.price ?? phone.price)}
+                </p>
                 {phone.originalPrice && (
                   <p className="text-base text-muted-foreground line-through">{formatPrice(phone.originalPrice)}</p>
                 )}
@@ -246,6 +249,30 @@ const ProductDetail = () => {
                 ))}
               </div>
             </div>
+
+            {/* Storage variant */}
+            {phone.storageOptions && phone.storageOptions.length > 0 && (
+              <div>
+                <h3 className="text-base font-bold text-foreground mb-1">Storage</h3>
+                <p className="text-xs text-muted-foreground mb-3">Select your variant.</p>
+                <div className="flex flex-wrap items-center gap-3">
+                  {phone.storageOptions.map((o, i) => (
+                    <button
+                      key={o.size}
+                      onClick={() => setSelectedStorage(i)}
+                      className={`rounded-xl border px-4 py-3 text-left transition-all ${
+                        selectedStorage === i
+                          ? "border-primary ring-2 ring-primary/30 bg-primary/5"
+                          : "border-border hover:border-foreground/30"
+                      }`}
+                    >
+                      <span className="block text-sm font-semibold text-foreground">{o.size}</span>
+                      <span className="block text-xs text-muted-foreground">{formatPrice(o.price)}</span>
+                    </button>
+                  ))}
+                </div>
+              </div>
+            )}
 
             {/* Key Features */}
             <div>
