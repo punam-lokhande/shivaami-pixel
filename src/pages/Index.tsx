@@ -7,7 +7,7 @@ import { phones, formatPrice } from "@/data/phones";
 import PhoneCard from "@/components/PhoneCard";
 import { Button } from "@/components/ui/button";
 import pixelLogo from "@/assets/pixel-logo.svg";
-import heroPhoneImg from "@/assets/pixel-11-frost.png";
+import heroPhoneImg from "@/assets/pixel-11-pro-canyon-hero.png";
 
 
 const features = [
