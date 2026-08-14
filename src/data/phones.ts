@@ -98,6 +98,10 @@ export const phones: Phone[] = [
       { name: "Hibiscus", hex: "#D6006E", image: pixel11Hibiscus },
       { name: "Obsidian", hex: "#353837", image: pixel11Obsidian },
     ],
+    storageOptions: [
+      { size: "256GB", price: 89999 },
+      { size: "512GB", price: 99999 },
+    ],
     category: "flagship",
     tag: "New Launch",
     specs: {
@@ -137,6 +141,10 @@ export const phones: Phone[] = [
       { name: "Olive", hex: "#8B8F63", image: pixel11ProOlive },
       { name: "Fog", hex: "#CBDCD3", image: pixel11ProFog },
       { name: "Obsidian", hex: "#3A3A3C", image: pixel11ProObsidian },
+    ],
+    storageOptions: [
+      { size: "256GB", price: 109999 },
+      { size: "512GB", price: 119999 },
     ],
     category: "flagship",
     tag: "New Launch",
@@ -178,6 +186,10 @@ export const phones: Phone[] = [
       { name: "Olive", hex: "#8B8F63", image: pixel11ProOlive },
       { name: "Fog", hex: "#CBDCD3", image: pixel11ProFog },
     ],
+    storageOptions: [
+      { size: "256GB", price: 124999 },
+      { size: "512GB", price: 134999 },
+    ],
     category: "flagship",
     tag: "New Launch",
     specs: {
@@ -214,6 +226,9 @@ export const phones: Phone[] = [
     color: "Olive",
     colors: [
       { name: "Olive", hex: "#8B8F63", image: pixel11ProFoldOlive },
+    ],
+    storageOptions: [
+      { size: "512GB", price: 179999 },
     ],
     category: "foldable",
     tag: "New Launch",
