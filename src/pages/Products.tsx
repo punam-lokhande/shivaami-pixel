@@ -2,16 +2,17 @@ import { useState } from "react";
 import { phones, Phone } from "@/data/phones";
 import PhoneCard from "@/components/PhoneCard";
 
-type SortKey = "price-asc" | "price-desc" | "rating";
+type SortKey = "featured" | "price-asc" | "price-desc" | "rating";
 type CategoryFilter = "all" | "flagship" | "mid-range" | "foldable";
 
 const Products = () => {
-  const [sort, setSort] = useState<SortKey>("price-asc");
+  const [sort, setSort] = useState<SortKey>("featured");
   const [category, setCategory] = useState<CategoryFilter>("all");
 
   const filtered = phones
     .filter((p) => category === "all" || p.category === category)
     .sort((a, b) => {
+      if (sort === "featured") return 0;
       if (sort === "price-asc") return a.price - b.price;
       if (sort === "price-desc") return b.price - a.price;
       return b.rating - a.rating;
@@ -38,6 +39,7 @@ const Products = () => {
           ))}
         </div>
         <select value={sort} onChange={(e) => setSort(e.target.value as SortKey)} className="sm:ml-auto rounded-lg border border-border bg-card px-3 py-1.5 text-xs outline-none w-full sm:w-auto">
+          <option value="featured">Featured</option>
           <option value="price-asc">Price: Low to High</option>
           <option value="price-desc">Price: High to Low</option>
           <option value="rating">Top Rated</option>
