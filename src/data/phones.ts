@@ -85,7 +85,7 @@ export const phones: Phone[] = [
     id: "pixel-11",
     name: "Google Pixel 11",
     slug: "pixel-11",
-    price: 89999,
+    price: 82999,
     gstRate: 18,
     shortDesc: "Refined to the edge. Powered by Tensor G6 and Gemini.",
     description:
@@ -99,8 +99,8 @@ export const phones: Phone[] = [
       { name: "Obsidian", hex: "#353837", image: pixel11Obsidian },
     ],
     storageOptions: [
-      { size: "256GB", price: 89999 },
-      { size: "512GB", price: 99999 },
+      { size: "256GB", price: 82999 },
+      { size: "512GB", price: 97999 },
     ],
     category: "flagship",
     tag: "New Launch",
