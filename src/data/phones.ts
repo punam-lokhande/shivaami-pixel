@@ -8,7 +8,6 @@ import pixel11ProOlive from "@/assets/pixel-11-pro-olive.png";
 import pixel11ProFog from "@/assets/pixel-11-pro-fog.png";
 import pixel11ProObsidian from "@/assets/pixel-11-pro-obsidian.png";
 import pixel11ProFoldOlive from "@/assets/pixel-11-pro-fold-olive.png";
-import pixel11ProFoldObsidian from "@/assets/pixel-11-pro-fold-obsidian.png";
 
 
 import pixel10 from "@/assets/pixel-10.png";
