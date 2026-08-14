@@ -7,7 +7,7 @@ import { phones, formatPrice } from "@/data/phones";
 import PhoneCard from "@/components/PhoneCard";
 import { Button } from "@/components/ui/button";
 import pixelLogo from "@/assets/pixel-logo.svg";
-import heroPhoneImg from "@/assets/pixel-11-frost.png";
+import heroPhoneImg from "@/assets/pixel-11-pro-canyon-hero.png";
 
 
 const features = [
@@ -95,7 +95,15 @@ const Index = () => (
             {/* Hero product image */}
             <div className="relative z-10 w-full h-full">
               <div className="flex items-center justify-center h-full">
-                <img src={heroPhoneImg} alt={heroPhone.name} className="h-[280px] sm:h-[360px] md:h-[460px] lg:h-[520px] w-auto object-contain drop-shadow-2xl" loading="eager" />
+                <motion.img
+                  src={heroPhoneImg}
+                  alt={heroPhone.name}
+                  className="h-[280px] sm:h-[360px] md:h-[460px] lg:h-[520px] w-auto object-contain drop-shadow-2xl"
+                  loading="eager"
+                  animate={{ y: [0, -18, 0], rotate: [0, 1.5, 0, -1.5, 0] }}
+                  transition={{ repeat: Infinity, duration: 6, ease: "easeInOut" }}
+                  style={{ willChange: "transform" }}
+                />
               </div>
             </div>
 
