@@ -337,7 +337,7 @@ export const phones: Phone[] = [
     name: "Google Pixel 10 Pro Fold",
     slug: "pixel-10-pro-fold",
     externalUrl: "https://www.shivaami.com/shop/product/google-pixel-10-pro-fold-256gb-foldable-ai-phone/",
-    price: 162999,
+    price: 157999,
     gstRate: 18,
     shortDesc: "Unfold extraordinary. Our best phone for multitasking.",
     description:
@@ -374,7 +374,7 @@ export const phones: Phone[] = [
     name: "Google Pixel 10 Pro XL",
     slug: "pixel-10-pro-xl",
     externalUrl: "https://www.shivaami.com/shop/product/google-pixel-10-pro-xl-256gb/",
-    price: 114999,
+    price: 109999,
     gstRate: 18,
     shortDesc: "Maximum screen, maximum power — the ultimate Pro experience.",
     description:
