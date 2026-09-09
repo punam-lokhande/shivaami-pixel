@@ -297,7 +297,7 @@ export const phones: Phone[] = [
     name: "Google Pixel 10",
     slug: "pixel-10",
     externalUrl: "https://www.shivaami.com/shop/product/google-pixel-10-256gb-phone/",
-    price: 64999,
+    price: 66999,
     gstRate: 18,
     shortDesc: "Do spectacular things, every day. All-new telephoto lens.",
     description:
