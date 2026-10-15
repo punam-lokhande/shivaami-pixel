@@ -16,8 +16,6 @@ import pixel10Frost from "@/assets/pixel-10-frost.png";
 import pixel10Indigo from "@/assets/pixel-10-indigo.webp";
 import pixel10Lemongrass from "@/assets/pixel-10-lemongrass.png";
 import pixel10Obsidian from "@/assets/pixel-10-obsidian.png";
-import pixel10ProFoldMoonstone from "@/assets/pixel-10-pro-fold-moonstone.png";
-import pixel10ProFold from "@/assets/pixel-10-pro-fold.png";
 import pixel10ProXl from "@/assets/pixel-10-pro-xl.png";
 import pixel10ProXlJade from "@/assets/pixel-10-pro-xl-jade.png";
 import pixel10ProXlMoonstone from "@/assets/pixel-10-pro-xl-moonstone.png";
@@ -331,43 +329,6 @@ export const phones: Phone[] = [
     ],
     rating: 4.8,
     reviews: 2156,
-  },
-  {
-    id: "pixel-10-pro-fold",
-    name: "Google Pixel 10 Pro Fold",
-    slug: "pixel-10-pro-fold",
-    externalUrl: "https://www.shivaami.com/shop/product/google-pixel-10-pro-fold-256gb-foldable-ai-phone/",
-    price: 157999,
-    gstRate: 18,
-    shortDesc: "Unfold extraordinary. Our best phone for multitasking.",
-    description:
-      "The Pixel 10 Pro Fold features an 8\" Super Actua Flex display — our largest yet. Ultra-thin when folded, it handles 10+ years of folding. With advanced AI, Split Screen multitasking, and the Pixel Camera folded in.",
-    image: pixel10ProFoldMoonstone,
-    color: "Moonstone",
-    colors: [
-      { name: "Moonstone", hex: "#8E9AAB", image: pixel10ProFoldMoonstone },
-    ],
-    category: "foldable",
-    specs: {
-      display: '8" inner Super Actua Flex + 6.4" outer Actua, 120Hz',
-      camera: "48MP wide + 10.5MP ultrawide + 10.8MP telephoto",
-      battery: "24+ hours, fast + wireless charging",
-      processor: "Google Tensor G5",
-      ram: "16 GB",
-      storage: "256 GB",
-      os: "Android 16",
-      ai: "Gemini Advanced + Google AI Pro",
-    },
-    features: [
-      '8" Super Actua Flex display',
-      "Split Screen multitasking",
-      "Instant View photos",
-      "10+ years fold durability",
-      "Video Boost",
-      "7 years of updates",
-    ],
-    rating: 4.8,
-    reviews: 987,
   },
   {
     id: "pixel-10-pro-xl",

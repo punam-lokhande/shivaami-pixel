@@ -109,12 +109,12 @@ const roleRecommendations = [
   {
     role: "Need to Do It All?",
     team: "Founders & Power Users",
-    model: "Pixel 10 Pro Fold",
+    model: "Pixel 11 Pro Fold",
     color: "border-google-red/30",
     accent: "text-google-red",
     bg: "bg-google-red/5",
     icon: Crown,
-    slug: "pixel-10-pro-fold",
+    slug: "pixel-11-pro-fold",
   },
 ];
 
