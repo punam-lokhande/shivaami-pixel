@@ -85,7 +85,7 @@ export const phones: Phone[] = [
     id: "pixel-11",
     name: "Google Pixel 11",
     slug: "pixel-11",
-    price: 82999,
+    price: 74999,
     gstRate: 18,
     shortDesc: "Refined to the edge. Powered by Tensor G6 and Gemini.",
     description:
@@ -99,8 +99,8 @@ export const phones: Phone[] = [
       { name: "Obsidian", hex: "#353837", image: pixel11Obsidian },
     ],
     storageOptions: [
-      { size: "256GB", price: 82999 },
-      { size: "512GB", price: 97999 },
+      { size: "256GB", price: 74999 },
+      { size: "512GB", price: 87999 },
     ],
     category: "flagship",
     tag: "New Launch",
@@ -129,7 +129,7 @@ export const phones: Phone[] = [
     id: "pixel-11-pro",
     name: "Google Pixel 11 Pro",
     slug: "pixel-11-pro",
-    price: 109999,
+    price: 100999,
     gstRate: 18,
     shortDesc: "Pro power in 6.3\". Tensor G6, 120x Pro Zoom and Gemini Intelligence.",
     description:
@@ -143,8 +143,8 @@ export const phones: Phone[] = [
       { name: "Obsidian", hex: "#3A3A3C", image: pixel11ProObsidian },
     ],
     storageOptions: [
-      { size: "256GB", price: 109999 },
-      { size: "512GB", price: 124999 },
+      { size: "256GB", price: 100999 },
+      { size: "512GB", price: 115999 },
     ],
     category: "flagship",
     tag: "New Launch",
@@ -173,7 +173,7 @@ export const phones: Phone[] = [
     id: "pixel-11-pro-xl",
     name: "Google Pixel 11 Pro XL",
     slug: "pixel-11-pro-xl",
-    price: 124999,
+    price: 115999,
     gstRate: 18,
     shortDesc: "Maximum 6.8\" screen, maximum battery, the ultimate Pro experience.",
     description:
@@ -187,8 +187,8 @@ export const phones: Phone[] = [
       { name: "Fog", hex: "#CBDCD3", image: pixel11ProFog },
     ],
     storageOptions: [
-      { size: "256GB", price: 124999 },
-      { size: "512GB", price: 139999 },
+      { size: "256GB", price: 115999 },
+      { size: "512GB", price: 128999 },
     ],
     category: "flagship",
     tag: "New Launch",
@@ -217,7 +217,7 @@ export const phones: Phone[] = [
     id: "pixel-11-pro-fold",
     name: "Google Pixel 11 Pro Fold",
     slug: "pixel-11-pro-fold",
-    price: 176999,
+    price: 163999,
     gstRate: 18,
     shortDesc: "Unfold extraordinary. The most powerful Pixel for multitasking.",
     description:
@@ -228,7 +228,7 @@ export const phones: Phone[] = [
       { name: "Olive", hex: "#8B8F63", image: pixel11ProFoldOlive },
     ],
     storageOptions: [
-      { size: "512GB", price: 176999 },
+      { size: "512GB", price: 163999 },
     ],
     category: "foldable",
     tag: "New Launch",
@@ -258,7 +258,7 @@ export const phones: Phone[] = [
     name: "Google Pixel 10a",
     slug: "pixel-10a",
     externalUrl: "https://www.shivaami.com/shop/product/google-pixel-10a-256gb-ai-smartphone-for-business/",
-    price: 52999,
+    price: 48999,
     gstRate: 18,
     shortDesc: "The real deal. Built for real life — powered by Google AI.",
     description:
