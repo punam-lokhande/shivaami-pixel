@@ -148,7 +148,7 @@ const SMB = () => {
                 <span className="text-gradient">Make Sure Their Tools Are Too.</span>
               </motion.h1>
               <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.25 }} className="mt-4 max-w-lg text-sm text-muted-foreground leading-relaxed sm:text-base md:text-lg mx-auto md:mx-0">
-                Give every employee a phone that works as hard as they do, with AI built in, security out of the box, and zero setup needed. Starting at <span className="font-bold text-foreground">&#8377;40,627 + GST</span>.
+                Give every employee a phone that works as hard as they do, with AI built in, security out of the box, and zero setup needed. Starting at <span className="font-bold text-foreground">&#8377;41,525 + GST</span>.
               </motion.p>
               <motion.div initial={{ opacity: 0, y: 15 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.35 }} className="mt-5 sm:mt-6 flex flex-col sm:flex-row justify-center md:justify-start gap-3">
                 <Link to="/enquire">
