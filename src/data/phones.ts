@@ -127,7 +127,7 @@ export const phones: Phone[] = [
     id: "pixel-11-pro",
     name: "Google Pixel 11 Pro",
     slug: "pixel-11-pro",
-    price: 100999,
+    price: 101999,
     gstRate: 18,
     shortDesc: "Pro power in 6.3\". Tensor G6, 120x Pro Zoom and Gemini Intelligence.",
     description:
@@ -141,7 +141,7 @@ export const phones: Phone[] = [
       { name: "Obsidian", hex: "#3A3A3C", image: pixel11ProObsidian },
     ],
     storageOptions: [
-      { size: "256GB", price: 100999 },
+      { size: "256GB", price: 101999 },
       { size: "512GB", price: 115999 },
     ],
     category: "flagship",
