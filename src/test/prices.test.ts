@@ -5,14 +5,14 @@ import { phones, formatPrice } from "@/data/phones";
 const expected: Record<string, number> = {
   "pixel-10a": 48999,
   "pixel-11": 74999,
-  "pixel-11-pro": 100999,
+  "pixel-11-pro": 101999,
   "pixel-11-pro-xl": 115999,
   "pixel-11-pro-fold": 163999,
 };
 
 const expectedStorage: Record<string, Record<string, number>> = {
   "pixel-11": { "256GB": 74999, "512GB": 87999 },
-  "pixel-11-pro": { "256GB": 100999, "512GB": 115999 },
+  "pixel-11-pro": { "256GB": 101999, "512GB": 115999 },
   "pixel-11-pro-xl": { "256GB": 115999, "512GB": 128999 },
   "pixel-11-pro-fold": { "512GB": 163999 },
 };
